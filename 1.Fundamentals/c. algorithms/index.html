@@ -1,0 +1,2757 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>📘 Introduction to Algorithms - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Introduction</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">1.Fundamentals</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../a.%20programming_principles/" class="dropdown-item">🔮 Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../b.%20data_structures/" class="dropdown-item">🔮 Data Structures</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">📘 Introduction to Algorithms</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">2.Interviews</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../2.Interviews/b.%20technical%20interviews/" class="dropdown-item">🚀 The Ultimate Python Technical Interview Guide</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../b.%20data_structures/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../2.Interviews/b.%20technical%20interviews/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#introduction-to-algorithms" class="nav-link">📘 Introduction to Algorithms</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#sorting-algorithms_1" class="nav-link">🔄 Sorting Algorithms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#basic-sorting-algorithms" class="nav-link">🔍 Basic Sorting Algorithms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#advanced-sorting-algorithms" class="nav-link">🔄 Advanced Sorting Algorithms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#searching-algorithms_1" class="nav-link">🔍 Searching Algorithms</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduction_1" class="nav-link">📘 Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#algorithm-comparison" class="nav-link">📊 Algorithm Comparison</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#graph-algorithms_1" class="nav-link">🕸️ Graph Algorithms</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduction_2" class="nav-link">📘 Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#key-graph-concepts" class="nav-link">🔑 Key Graph Concepts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#basic-graph-traversal" class="nav-link">🔍 Basic Graph Traversal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#algorithm-comparison_1" class="nav-link">📊 Algorithm Comparison</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#shortest-path-algorithms" class="nav-link">🛣️ Shortest Path Algorithms</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#overview_2" class="nav-link">📘 Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#advanced-path-finding-algorithms" class="nav-link">🔍 Advanced Path-Finding Algorithms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#algorithm-comparison_2" class="nav-link">📊 Algorithm Comparison</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#greedy-algorithms_1" class="nav-link">💫 Greedy Algorithms</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduction_3" class="nav-link">📘 Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#algorithm-deep-dive" class="nav-link">🔍 Algorithm Deep Dive</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#algorithm-comparison_3" class="nav-link">📊 Algorithm Comparison</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#advanced-greedy-algorithms" class="nav-link">🌊 Advanced Greedy Algorithms</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#network-flow-and-spanning-tree-algorithms" class="nav-link">📘 Network Flow and Spanning Tree Algorithms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#algorithm-details" class="nav-link">🔍 Algorithm Details</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#algorithm-comparison_4" class="nav-link">📊 Algorithm Comparison</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#substring-search-algorithms-guide" class="nav-link">🔍 Substring Search Algorithms Guide</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduction_4" class="nav-link">📘 Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#basic-search-algorithms_1" class="nav-link">🔍 Basic Search Algorithms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#algorithm-comparison_5" class="nav-link">📊 Algorithm Comparison</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#advanced-substring-search-algorithms" class="nav-link">🔍 Advanced Substring Search Algorithms</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#overview_3" class="nav-link">📘 Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#advanced-algorithms" class="nav-link">🔍 Advanced Algorithms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#algorithm-comparison_6" class="nav-link">📊 Algorithm Comparison</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="introduction-to-algorithms">📘 Introduction to Algorithms</h1>
+<p><img alt="Algorithms" src="https://i.postimg.cc/gjyywYK3/temp-Image-VGnp-Ri.avif" /></p>
+<p>Algorithms are systematic procedures for solving computational problems and manipulating data. Understanding algorithms is crucial for developing efficient software solutions and optimizing program performance. This guide explores essential algorithms, their implementations, and practical applications in software engineering.</p>
+<h3 id="why-algorithms-matter">🎯 Why Algorithms Matter</h3>
+<ul>
+<li>🚀  <strong>Performance Optimization</strong>: Choose the right algorithm to dramatically improve execution speed</li>
+<li>💻  <strong>System Scalability</strong>: Build solutions that efficiently handle growing data volumes</li>
+<li>💼  <strong>Technical Interviews</strong>: Essential knowledge for coding interviews at top tech companies</li>
+<li>🔄  <strong>Problem-Solving</strong>: Master fundamental approaches to computational challenges</li>
+<li>🌟  <strong>Competitive Programming</strong>: Critical for algorithmic contests and competitions</li>
+</ul>
+<h3 id="guide-structure">📚 Guide Structure</h3>
+<p>Each algorithm section covers:</p>
+<ul>
+<li>Step-by-step explanation</li>
+<li>Implementation details</li>
+<li>Time and space complexity analysis</li>
+<li>Common optimization techniques</li>
+<li>Best practices and use cases</li>
+<li>Code examples and gotchas</li>
+</ul>
+<h3 id="categories-of-algorithms">🗂️ Categories of Algorithms</h3>
+<h3 id="sorting-algorithms">📊 Sorting Algorithms</h3>
+<p>Transform unordered collections into ordered sequences:</p>
+<ul>
+<li><strong>Bubble Sort</strong>:<ul>
+<li>Simple comparison-based sorting</li>
+<li>Best for: Educational purposes, tiny datasets</li>
+</ul>
+</li>
+<li><strong>Selection Sort</strong>:<ul>
+<li>In-place comparison sorting</li>
+<li>Best for: Small arrays, minimal memory</li>
+</ul>
+</li>
+<li><strong>Insertion Sort</strong>:<ul>
+<li>Adaptive, stable sorting</li>
+<li>Best for: Nearly sorted data, online sorting</li>
+</ul>
+</li>
+<li><strong>Heap Sort</strong>:<ul>
+<li>Comparison-based sorting using heap</li>
+<li>Best for: Large datasets, guaranteed performance</li>
+</ul>
+</li>
+<li><strong>Quick Sort</strong>:<ul>
+<li>Divide-and-conquer approach</li>
+<li>Best for: General-purpose sorting, large datasets</li>
+</ul>
+</li>
+<li><strong>Merge Sort</strong>:<ul>
+<li>Stable, divide-and-conquer sorting</li>
+<li>Best for: Linked lists, external sorting</li>
+</ul>
+</li>
+</ul>
+<h3 id="searching-algorithms">🔍 Searching Algorithms</h3>
+<p>Efficiently locate elements in datasets:</p>
+<ul>
+<li><strong>Linear Search</strong>:<ul>
+<li>Sequential element checking</li>
+<li>Best for: Small or unsorted datasets</li>
+</ul>
+</li>
+<li><strong>Binary Search</strong>:<ul>
+<li>Divide-and-conquer searching</li>
+<li>Best for: Sorted arrays, large datasets</li>
+</ul>
+</li>
+</ul>
+<h3 id="graph-algorithms">🕸️ Graph Algorithms</h3>
+<p>Navigate and analyze network structures:</p>
+<ul>
+<li><strong>Breadth First Search (BFS)</strong>:<ul>
+<li>Level-by-level traversal</li>
+<li>Best for: Shortest paths, web crawling</li>
+</ul>
+</li>
+<li><strong>Depth First Search (DFS)</strong>:<ul>
+<li>Deep traversal exploration</li>
+<li>Best for: Maze solving, topological sorting</li>
+</ul>
+</li>
+<li><strong>Bellman Ford's Algorithm</strong>:<ul>
+<li>Single-source shortest paths</li>
+<li>Best for: Graphs with negative edges</li>
+</ul>
+</li>
+<li><strong>Dijkstra's Algorithm</strong>:<ul>
+<li>Efficient shortest path finding</li>
+<li>Best for: GPS, network routing</li>
+</ul>
+</li>
+<li>__A_  Algorithm_*:<ul>
+<li>Heuristic pathfinding</li>
+<li>Best for: Game AI, navigation systems</li>
+</ul>
+</li>
+</ul>
+<h3 id="greedy-algorithms">🎯 Greedy Algorithms</h3>
+<p>Make locally optimal choices:</p>
+<ul>
+<li><strong>Huffman Coding</strong>:<ul>
+<li>Data compression</li>
+<li>Best for: File compression, encoding</li>
+</ul>
+</li>
+<li><strong>Kruskal's Algorithm</strong>:<ul>
+<li>Minimum spanning tree</li>
+<li>Best for: Network design</li>
+</ul>
+</li>
+<li><strong>Ford-Fulkerson Algorithm</strong>:<ul>
+<li>Maximum flow problems</li>
+<li>Best for: Network flow optimization</li>
+</ul>
+</li>
+<li><strong>Prim's Algorithm</strong>:<ul>
+<li>Minimum spanning tree</li>
+<li>Best for: Dense graphs</li>
+</ul>
+</li>
+</ul>
+<h3 id="substring-search-algorithms">🔤 Substring Search Algorithms</h3>
+<p>Pattern matching in text:</p>
+<ul>
+<li><strong>Brute Force Search</strong>:<ul>
+<li>Simple pattern matching</li>
+<li>Best for: Short patterns</li>
+</ul>
+</li>
+<li><strong>Rabin-Karp</strong>:<ul>
+<li>Hash-based pattern matching</li>
+<li>Best for: Multiple pattern search</li>
+</ul>
+</li>
+<li><strong>Knuth-Morris-Pratt</strong>:<ul>
+<li>Efficient single pattern matching</li>
+<li>Best for: Single pattern in large text</li>
+</ul>
+</li>
+<li><strong>Boyer-Moore</strong>:<ul>
+<li>Fast pattern matching</li>
+<li>Best for: Long patterns</li>
+</ul>
+</li>
+</ul>
+<h3 id="time-complexity-overview">⏱️ Time Complexity Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Best Case</th>
+<th>Average Case</th>
+<th>Worst Case</th>
+<th>Space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bubble Sort</td>
+<td>O(n)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Selection Sort</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Insertion Sort</td>
+<td>O(n)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Heap Sort</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Quick Sort</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n²)</td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<td>Merge Sort</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Linear Search</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Binary Search</td>
+<td>O(1)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>BFS</td>
+<td>O(V + E)</td>
+<td>O(V + E)</td>
+<td>O(V + E)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>DFS</td>
+<td>O(V + E)</td>
+<td>O(V + E)</td>
+<td>O(V + E)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Bellman Ford</td>
+<td>O(VE)</td>
+<td>O(VE)</td>
+<td>O(VE)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Dijkstra</td>
+<td>O(E log V)</td>
+<td>O(E log V)</td>
+<td>O(E log V)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>A*</td>
+<td>O(E)</td>
+<td>O(E)</td>
+<td>O(V²)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Huffman Coding</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Kruskal's Algorithm</td>
+<td>O(E log E)</td>
+<td>O(E log E)</td>
+<td>O(E log E)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Ford-Fulkerson</td>
+<td>O(EF)*</td>
+<td>O(EF)*</td>
+<td>O(EF)*</td>
+<td>O(V + E)</td>
+</tr>
+<tr>
+<td>Prim's Algorithm</td>
+<td>O(E log V)</td>
+<td>O(E log V)</td>
+<td>O(E log V)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Brute Force Search</td>
+<td>O(n)</td>
+<td>O(mn)</td>
+<td>O(mn)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Rabin-Karp</td>
+<td>O(m + n)</td>
+<td>O(m + n)</td>
+<td>O(mn)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Knuth-Morris-Pratt</td>
+<td>O(m + n)</td>
+<td>O(m + n)</td>
+<td>O(m + n)</td>
+<td>O(m)</td>
+</tr>
+<tr>
+<td>Boyer-Moore</td>
+<td>O(n/m)</td>
+<td>O(n)</td>
+<td>O(mn)</td>
+<td>O(m)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<p><a href="https://drive.google.com/file/d/1LaF74WE-jMvdlZ0FLwSWRxKVjO75iv8z/view?usp=sharing">Data Structures and Algorithms Notes</a></p>
+<h2 id="sorting-algorithms_1">🔄 Sorting Algorithms</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Sorting algorithms are fundamental procedures that arrange elements in a specific order, typically in ascending or descending sequence. Understanding these algorithms is crucial for efficient data manipulation and problem-solving in software development.</p>
+<h3 id="overview">📘 Overview</h3>
+<p>Sorting algorithms are fundamental procedures that organize data in a specific order. Understanding these algorithms is crucial for:</p>
+<ul>
+<li>🎯  <strong>Efficient Data Organization</strong>: Transform unordered data into ordered sequences</li>
+<li>💻  <strong>Performance Optimization</strong>: Choose the right algorithm for your data size and type</li>
+<li>🔍  <strong>Interview Preparation</strong>: Common technical interview topic</li>
+<li>🧮  <strong>Algorithm Foundation</strong>: Building block for more complex algorithms</li>
+<li>📊  <strong>Data Analysis</strong>: Essential for data processing and analysis</li>
+</ul>
+<h3 id="common-characteristics">📝 Common Characteristics</h3>
+<h3 id="algorithm-properties">🎯 Algorithm Properties</h3>
+<ul>
+<li><strong>Stability</strong>: Whether relative order of equal elements is preserved</li>
+<li><strong>In-Place</strong>: Whether additional space is required</li>
+<li><strong>Adaptivity</strong>: Whether performance improves with partially sorted data</li>
+</ul>
+<h3 id="performance-metrics">⚡ Performance Metrics</h3>
+<ul>
+<li><strong>Time Complexity</strong>: How runtime scales with input size</li>
+<li><strong>Space Complexity</strong>: How memory usage scales with input size</li>
+<li><strong>Best/Worst Cases</strong>: Performance bounds under different conditions</li>
+</ul>
+<h2 id="basic-sorting-algorithms">🔍 Basic Sorting Algorithms</h2>
+<h3 id="implementation-details">🔎 Implementation Details</h3>
+<h3 id="1-bubble-sort">1️⃣ Bubble Sort</h3>
+<p>A simple comparison-based algorithm that repeatedly steps through the list.</p>
+<h3 id="properties">📊 Properties</h3>
+<ul>
+<li>✅ In-place sorting</li>
+<li>✅ Stable algorithm</li>
+<li>✅ Adaptive behavior</li>
+<li>🔄 Time: O(n²) worst/average, O(n) best</li>
+<li>💾 Space: O(1)</li>
+</ul>
+<h3 id="best-used-for">💡 Best Used For:</h3>
+<ul>
+<li>Educational purposes</li>
+<li>Tiny datasets</li>
+<li>When simplicity is preferred over efficiency</li>
+<li>Teaching sorting concepts</li>
+</ul>
+<pre><code class="language-java">public static &lt;T&gt; void bubbleSort(T[] arr, Comparator&lt;T&gt; comparator) {
+    if (arr == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Inputs cannot be null&quot;);
+    }
+
+    for (int i = 0; i &lt; arr.length - 1; i++) {
+        boolean swapped = false;
+        for (int j = 0; j &lt; arr.length - i - 1; j++) {
+            if (comparator.compare(arr[j], arr[j + 1]) &gt; 0) {
+                // Swap elements
+                T temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swapped = true;
+            }
+        }
+        // If no swapping occurred, array is sorted
+        if (!swapped) break;
+    }
+}
+</code></pre>
+<h3 id="key-tips">🔑 Key Tips:</h3>
+<ul>
+<li>Use swapped flag to optimize for already sorted arrays</li>
+<li>Each pass bubbles up the largest element</li>
+<li>Consider cocktail sort variation for better performance</li>
+<li>Good for visualizing sorting algorithms</li>
+</ul>
+<h3 id="reference">Reference</h3>
+<p><a href="https://youtu.be/Jdtq5uKz-w4?si=q0_frwVK6Lp4NNtM">Bubble Sort</a></p>
+<h3 id="2-selection-sort">2️⃣ Selection Sort</h3>
+<p>An in-place comparison sorting algorithm that divides the input into a sorted and unsorted region.</p>
+<h3 id="properties_1">📊 Properties</h3>
+<ul>
+<li>✅ In-place sorting</li>
+<li>❌ Not stable</li>
+<li>❌ Not adaptive</li>
+<li>🔄 Time: O(n²) all cases</li>
+<li>💾 Space: O(1)</li>
+</ul>
+<h3 id="best-used-for_1">💡 Best Used For:</h3>
+<ul>
+<li>Small arrays</li>
+<li>When memory is limited</li>
+<li>When number of swaps needs to be minimized</li>
+<li>Systems where write operations are costly</li>
+</ul>
+<pre><code class="language-java">public static &lt;T&gt; void selectionSort(T[] arr, Comparator&lt;T&gt; comparator) {
+    if (arr == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Inputs cannot be null&quot;);
+    }
+
+    for (int i = 0; i &lt; arr.length - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j &lt; arr.length; j++) {
+            if (comparator.compare(arr[j], arr[minIndex]) &lt; 0) {
+                minIndex = j;
+            }
+        }
+        // Swap with minimum element
+        T temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp;
+    }
+}
+</code></pre>
+<h3 id="key-tips_1">🔑 Key Tips:</h3>
+<ul>
+<li>Makes minimum number of swaps (O(n))</li>
+<li>Good when memory writes are expensive</li>
+<li>Always performs O(n²) comparisons</li>
+<li>Can be modified to be stable with additional space</li>
+</ul>
+<h3 id="references_1">References</h3>
+<p><a href="https://youtu.be/GUDLRan2DWM?si=tJoeaVl2doS9oR7Q">Selection Sort</a></p>
+<h3 id="3-insertion-sort">3️⃣ Insertion Sort</h3>
+<p>A simple and adaptive sorting algorithm that builds the final sorted array one element at a time.</p>
+<h3 id="properties_2">📊 Properties</h3>
+<ul>
+<li>✅ In-place sorting</li>
+<li>✅ Stable algorithm</li>
+<li>✅ Adaptive behavior</li>
+<li>🔄 Time: O(n²) worst/average, O(n) best</li>
+<li>💾 Space: O(1)</li>
+</ul>
+<h3 id="best-used-for_2">💡 Best Used For:</h3>
+<ul>
+<li>Small datasets (&lt; 50 elements)</li>
+<li>Nearly sorted arrays</li>
+<li>Online sorting (real-time data)</li>
+<li>When simplicity is required</li>
+</ul>
+<pre><code class="language-java">public static &lt;T&gt; void insertionSort(T[] arr, Comparator&lt;T&gt; comparator) {
+    if (arr == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Inputs cannot be null&quot;);
+    }
+
+    for (int i = 1; i &lt; arr.length; i++) {
+        T key = arr[i];
+        int j = i - 1;
+        while (j &gt;= 0 &amp;&amp; comparator.compare(arr[j], key) &gt; 0) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+</code></pre>
+<h3 id="key-tips_2">🔑 Key Tips:</h3>
+<ul>
+<li>Excellent for small datasets</li>
+<li>Very efficient for nearly sorted arrays</li>
+<li>Works well with continuous insertions</li>
+<li>Often used in hybrid sorting algorithms</li>
+</ul>
+<h3 id="common-implementation-pitfalls">📚 Common Implementation Pitfalls</h3>
+<ul>
+<li>⚠️ Forgetting null checks for array and comparator</li>
+<li>⚠️ Incorrect boundary conditions in loops</li>
+<li>⚠️ Unnecessary swaps that can be avoided</li>
+<li>⚠️ Not considering stability requirements</li>
+</ul>
+<h3 id="references_2">References</h3>
+<p><a href="https://youtu.be/i-SKeOcBwko?si=svEhnHfJc4wyISjv">Insertion Sort</a></p>
+<h3 id="quick-tips-for-basic-sorting">💡 Quick Tips for Basic Sorting</h3>
+<ul>
+<li>🎯 Choose Insertion Sort for tiny arrays or nearly sorted data</li>
+<li>🔄 Use Selection Sort when memory writes are expensive</li>
+<li>📊 Bubble Sort is mainly for educational purposes</li>
+<li>🧪 Test with different input sizes and patterns</li>
+<li>📝 Consider stability requirements when choosing an algorithm</li>
+</ul>
+<h2 id="advanced-sorting-algorithms">🔄 Advanced Sorting Algorithms</h2>
+<h3 id="overview_1">🚀 Overview</h3>
+<p>These algorithms represent more sophisticated sorting approaches, offering better performance for larger datasets:</p>
+<ul>
+<li>📈  <strong>Scalable Performance</strong>: Efficient for large datasets</li>
+<li>🔄  <strong>Divide &amp; Conquer</strong>: Break complex problems into smaller ones</li>
+<li>💫  <strong>Advanced Techniques</strong>: Utilize sophisticated sorting strategies</li>
+<li>🎯  <strong>Production Ready</strong>: Commonly used in real-world applications</li>
+</ul>
+<h3 id="implementation-details_1">🔍 Implementation Details</h3>
+<h3 id="1-heap-sort">1️⃣ Heap Sort</h3>
+<p>A comparison-based sorting algorithm using a binary heap data structure.</p>
+<h3 id="properties_3">📊 Properties</h3>
+<ul>
+<li>✅ In-place sorting</li>
+<li>❌ Not stable</li>
+<li>❌ Not adaptive</li>
+<li>🔄 Time: O(n log n) all cases</li>
+<li>💾 Space: O(1)</li>
+</ul>
+<h3 id="best-used-for_3">💡 Best Used For:</h3>
+<ul>
+<li>Large datasets</li>
+<li>Memory-constrained systems</li>
+<li>When stable sorting isn't required</li>
+<li>Systems requiring guaranteed O(n log n)</li>
+</ul>
+<pre><code class="language-java">public static int[] heapSort(List&lt;Integer&gt; data) {
+    if (data == null) {
+        throw new IllegalArgumentException(&quot;List cannot be null&quot;);
+    }
+
+    // Using Java's PriorityQueue for heap implementation
+    PriorityQueue&lt;Integer&gt; heap = new PriorityQueue&lt;&gt;(data);
+    int[] sorted = new int[data.size()];
+
+    // Extract elements from heap in sorted order
+    for (int i = 0; !heap.isEmpty(); i++) {
+        sorted[i] = heap.remove();
+    }
+
+    return sorted;
+}
+</code></pre>
+<h3 id="key-tips_3">🔑 Key Tips:</h3>
+<ul>
+<li>Use built-in PriorityQueue for simple implementation</li>
+<li>Helpful for implementing priority scheduling</li>
+<li>Excellent for top-K problems</li>
+<li>In-place sorting saves memory</li>
+</ul>
+<h3 id="references_3">References</h3>
+<p><a href="https://youtu.be/2DmK_H7IdTo?si=zBP8gooaej_fUyis">Heap Sort</a></p>
+<h3 id="2-quick-sort">2️⃣ Quick Sort</h3>
+<p>A highly efficient, comparison-based algorithm using divide-and-conquer strategy.</p>
+<h3 id="properties_4">📊 Properties</h3>
+<ul>
+<li>✅ In-place sorting</li>
+<li>❌ Not stable</li>
+<li>❌ Not adaptive</li>
+<li>🔄 Time: O(n²) worst, O(n log n) average/best</li>
+<li>💾 Space: O(log n)</li>
+</ul>
+<h3 id="best-used-for_4">💡 Best Used For:</h3>
+<ul>
+<li>Large datasets</li>
+<li>Systems with good cache locality</li>
+<li>General-purpose sorting</li>
+<li>When average case performance is important</li>
+</ul>
+<pre><code class="language-java">public static &lt;T&gt; void quickSort(T[] arr, Comparator&lt;T&gt; comparator, Random rand) {
+    if (arr == null || comparator == null || rand == null) {
+        throw new IllegalArgumentException(&quot;Inputs cannot be null&quot;);
+    }
+    quickSortHelper(arr, comparator, rand, 0, arr.length - 1);
+}
+
+private static &lt;T&gt; void quickSortHelper(T[] arr, Comparator&lt;T&gt; comp, 
+    Random rand, int start, int end) {
+    if (start &lt; end) {
+        // Choose random pivot
+        int pivotIdx = rand.nextInt(end - start + 1) + start;
+        T pivot = arr[pivotIdx];
+
+        // Move pivot to start
+        swap(arr, start, pivotIdx);
+
+        // Partition
+        int i = start + 1;
+        int j = end;
+        while (i &lt;= j) {
+            while (i &lt;= j &amp;&amp; comp.compare(arr[i], pivot) &lt;= 0) i++;
+            while (i &lt;= j &amp;&amp; comp.compare(arr[j], pivot) &gt; 0) j--;
+            if (i &lt; j) swap(arr, i, j);
+        }
+
+        // Place pivot in correct position
+        swap(arr, start, j);
+
+        // Recursive calls
+        quickSortHelper(arr, comp, rand, start, j - 1);
+        quickSortHelper(arr, comp, rand, j + 1, end);
+    }
+}
+</code></pre>
+<h3 id="key-tips_4">🔑 Key Tips:</h3>
+<ul>
+<li>Use random pivot selection to avoid worst case</li>
+<li>Consider median-of-three for pivot selection</li>
+<li>Switch to insertion sort for small subarrays</li>
+<li>Be cautious with already sorted arrays</li>
+</ul>
+<h3 id="references_4">References</h3>
+<p><a href="https://youtu.be/COk73cpQbFQ?si=CBZe5ErZfr4Ugq2M">Quick Sort</a></p>
+<h3 id="3-merge-sort">3️⃣ Merge Sort</h3>
+<p>A stable, divide-and-conquer algorithm with guaranteed performance.</p>
+<h3 id="properties_5">📊 Properties</h3>
+<ul>
+<li>❌ Not in-place</li>
+<li>✅ Stable algorithm</li>
+<li>❌ Not adaptive</li>
+<li>🔄 Time: O(n log n) all cases</li>
+<li>💾 Space: O(n)</li>
+</ul>
+<h3 id="best-used-for_5">💡 Best Used For:</h3>
+<ul>
+<li>Large datasets</li>
+<li>When stability is required</li>
+<li>External sorting</li>
+<li>Linked list sorting</li>
+</ul>
+<pre><code class="language-java">public static &lt;T&gt; void mergeSort(T[] arr, Comparator&lt;T&gt; comparator) {
+    if (arr == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Inputs cannot be null&quot;);
+    }
+
+    if (arr.length &gt; 1) {
+        T[] firstHalf = (T[]) new Object[arr.length / 2];
+        T[] secondHalf = (T[]) new Object[arr.length - arr.length / 2];
+
+        // Split array into halves
+        System.arraycopy(arr, 0, firstHalf, 0, firstHalf.length);
+        System.arraycopy(arr, firstHalf.length, secondHalf, 0, secondHalf.length);
+
+        // Recursive sorting
+        mergeSort(firstHalf, comparator);
+        mergeSort(secondHalf, comparator);
+        merge(firstHalf, secondHalf, arr, comparator);
+    }
+}
+
+private static &lt;T&gt; void merge(T[] firstHalf, T[] secondHalf, T[] arr, 
+                            Comparator&lt;T&gt; comparator) {
+    int i = 0;  // Index for firstHalf array
+    int j = 0;  // Index for secondHalf array
+    int k = 0;  // Index for merged array
+
+    // Compare and merge elements from both halves
+    while (i &lt; firstHalf.length &amp;&amp; j &lt; secondHalf.length) {
+        if (comparator.compare(firstHalf[i], secondHalf[j]) &lt;= 0) {
+            arr[k++] = firstHalf[i++];
+        } else {
+            arr[k++] = secondHalf[j++];
+        }
+    }
+
+    // Copy remaining elements from firstHalf (if any)
+    while (i &lt; firstHalf.length) {
+        arr[k++] = firstHalf[i++];
+    }
+
+    // Copy remaining elements from secondHalf (if any)
+    while (j &lt; secondHalf.length) {
+        arr[k++] = secondHalf[j++];
+    }
+}
+</code></pre>
+<h3 id="key-tips_5">🔑 Key Tips:</h3>
+<ul>
+<li>Perfect for external sorting</li>
+<li>Great for parallel processing</li>
+<li>Stable sorting guaranteed</li>
+<li>Consider in-place merge for space optimization</li>
+</ul>
+<h3 id="additional-merge-tips">🔑 Additional Merge Tips:</h3>
+<ul>
+<li>The  <code>&lt;=</code>  in the comparison ensures stability</li>
+<li>Using separate arrays avoids complex in-place merging</li>
+<li>Sequential access pattern is cache-friendly</li>
+<li>Can be optimized for nearly sorted arrays</li>
+</ul>
+<h3 id="references_5">References</h3>
+<p><a href="https://youtu.be/TzeBrDU-JaY?si=o-hPGeX8YGxKGM7W">Merge Sort</a></p>
+<h3 id="advanced-implementation-strategies">🎯 Advanced Implementation Strategies</h3>
+<h3 id="optimization-tips">💡 Optimization Tips</h3>
+<ul>
+<li>🔄 Use hybrid approaches for better performance</li>
+<li>📊 Consider input size for algorithm selection</li>
+<li>💾 Balance memory usage vs. speed</li>
+<li>⚡ Optimize for cache efficiency</li>
+</ul>
+<h3 id="common-pitfalls">⚠️ Common Pitfalls</h3>
+<ul>
+<li>Memory management in recursive implementations</li>
+<li>Pivot selection in QuickSort</li>
+<li>Improper handling of equal elements</li>
+<li>Not considering stability requirements</li>
+</ul>
+<h3 id="merge-function-pitfalls">⚠️ Merge Function Pitfalls:</h3>
+<ul>
+<li>Not handling empty arrays properly</li>
+<li>Incorrect index management</li>
+<li>Forgetting to copy remaining elements</li>
+<li>Improper comparison for stability</li>
+</ul>
+<h1 id="searching-algorithms_1">🔍 Searching Algorithms</h1>
+<h2 id="introduction_1">📘 Introduction</h2>
+<p>Searching algorithms are fundamental techniques for finding specific elements within data structures. Understanding these algorithms is crucial for:</p>
+<ul>
+<li>🎯  <strong>Data Retrieval</strong>: Efficiently locate specific elements</li>
+<li>💻  <strong>Algorithm Design</strong>: Foundation for more complex algorithms</li>
+<li>🔍  <strong>Interview Preparation</strong>: Common technical interview topic</li>
+<li>🧮  <strong>Problem Solving</strong>: Essential for many programming tasks</li>
+<li>📊  <strong>Performance Optimization</strong>: Choose right approach for your data</li>
+</ul>
+<h3 id="basic-search-algorithms">🔍 Basic Search Algorithms</h3>
+<h3 id="1-linear-search">1️⃣ Linear Search</h3>
+<p>A simple sequential search algorithm that checks each element until a match is found.</p>
+<h3 id="properties_6">📊 Properties</h3>
+<ul>
+<li>✅ Works on unsorted data</li>
+<li>✅ Simple implementation</li>
+<li>✅ Minimal space requirement</li>
+<li>🔄 Time: O(n) worst/average, O(1) best</li>
+<li>💾 Space: O(1)</li>
+</ul>
+<h3 id="best-used-for_6">💡 Best Used For:</h3>
+<ul>
+<li>Small datasets</li>
+<li>Unsorted collections</li>
+<li>One-time searches</li>
+<li>When simplicity is preferred</li>
+<li>Finding all occurrences</li>
+</ul>
+<pre><code class="language-java">public static &lt;T&gt; int linearSearch(T[] arr, T target, Comparator&lt;T&gt; comparator) {
+    if (arr == null || target == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Inputs cannot be null&quot;);
+    }
+
+    for (int i = 0; i &lt; arr.length; i++) {
+        if (comparator.compare(arr[i], target) == 0) {
+            return i;  // Element found, return index
+        }
+    }
+    return -1;  // Element not found
+}
+</code></pre>
+<h3 id="key-tips_6">🔑 Key Tips:</h3>
+<ul>
+<li>Consider early termination if possible</li>
+<li>Use for unsorted or small datasets</li>
+<li>Good for finding multiple occurrences</li>
+<li>Consider parallel search for large datasets</li>
+</ul>
+<h3 id="2-binary-search">2️⃣ Binary Search</h3>
+<p>An efficient algorithm that requires sorted data and uses divide-and-conquer strategy.</p>
+<h3 id="properties_7">📊 Properties</h3>
+<ul>
+<li>✅ Very efficient for large datasets</li>
+<li>❌ Requires sorted data</li>
+<li>✅ Logarithmic time complexity</li>
+<li>🔄 Time: O(log n) worst/average, O(1) best</li>
+<li>💾 Space: O(1) iterative, O(log n) recursive</li>
+</ul>
+<h3 id="best-used-for_7">💡 Best Used For:</h3>
+<ul>
+<li>Large sorted datasets</li>
+<li>Frequent searches</li>
+<li>When data is already sorted</li>
+<li>Finding insertion points</li>
+<li>Range queries</li>
+</ul>
+<pre><code class="language-java">// Iterative Implementation
+public static &lt;T&gt; int binarySearch(T[] arr, T target, Comparator&lt;T&gt; comparator) {
+    if (arr == null || target == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Inputs cannot be null&quot;);
+    }
+
+    int left = 0;
+    int right = arr.length - 1;
+
+    while (left &lt;= right) {
+        int mid = left + (right - left) / 2;
+        int comparison = comparator.compare(arr[mid], target);
+
+        if (comparison == 0) {
+            return mid;  // Element found
+        } else if (comparison &lt; 0) {
+            left = mid + 1;  // Search right half
+        } else {
+            right = mid - 1;  // Search left half
+        }
+    }
+    return -1;  // Element not found
+}
+
+// Recursive Implementation
+public static &lt;T&gt; int binarySearchRecursive(T[] arr, T target, 
+                                          Comparator&lt;T&gt; comparator) {
+    if (arr == null || target == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Inputs cannot be null&quot;);
+    }
+    return binarySearchHelper(arr, target, comparator, 0, arr.length - 1);
+}
+
+private static &lt;T&gt; int binarySearchHelper(T[] arr, T target, 
+                                        Comparator&lt;T&gt; comparator, 
+                                        int left, int right) {
+    if (left &gt; right) {
+        return -1;
+    }
+
+    int mid = left + (right - left) / 2;
+    int comparison = comparator.compare(arr[mid], target);
+
+    if (comparison == 0) {
+        return mid;
+    } else if (comparison &lt; 0) {
+        return binarySearchHelper(arr, target, comparator, mid + 1, right);
+    } else {
+        return binarySearchHelper(arr, target, comparator, left, mid - 1);
+    }
+}
+</code></pre>
+<h3 id="key-tips_7">🔑 Key Tips:</h3>
+<ul>
+<li>Use  <code>left + (right - left) / 2</code>  to avoid integer overflow</li>
+<li>Consider iterative vs recursive based on needs</li>
+<li>Useful for finding insertion points</li>
+<li>Can be modified for fuzzy searching</li>
+</ul>
+<h3 id="references_6">References</h3>
+<p><a href="https://youtu.be/j5uXyPJ0Pew?si=-49mGr1l7lVuQWdF">Binary Search</a></p>
+<h2 id="algorithm-comparison">📊 Algorithm Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Linear Search</th>
+<th>Binary Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time Complexity (Worst)</td>
+<td>O(n)</td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<td>Time Complexity (Best)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Space Complexity</td>
+<td>O(1)</td>
+<td>O(1) iterative, O(log n) recursive</td>
+</tr>
+<tr>
+<td>Sorted Data Required</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Multiple Occurrences</td>
+<td>Easy to find all</td>
+<td>Finds one occurrence</td>
+</tr>
+<tr>
+<td>Implementation Complexity</td>
+<td>Simple</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Cache Performance</td>
+<td>Good for small data</td>
+<td>May have cache misses</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementation-best-practices">💡 Implementation Best Practices</h3>
+<h3 id="general-tips">🎯 General Tips</h3>
+<ul>
+<li>Always validate input parameters</li>
+<li>Handle edge cases (empty arrays, null values)</li>
+<li>Consider return type (index vs boolean vs element)</li>
+<li>Use appropriate comparator functions</li>
+</ul>
+<h3 id="common-pitfalls_1">⚠️ Common Pitfalls</h3>
+<ul>
+<li>Off-by-one errors in binary search</li>
+<li>Not checking for null values</li>
+<li>Assuming data is sorted for binary search</li>
+<li>Integer overflow in mid-point calculation</li>
+</ul>
+<h3 id="advanced-considerations">🔍 Advanced Considerations</h3>
+<ul>
+<li>Duplicate elements handling</li>
+<li>Custom comparison logic</li>
+<li>Parallel search for large datasets</li>
+<li>Cache-friendly implementations</li>
+</ul>
+<h3 id="when-to-use-each">🎯 When to Use Each</h3>
+<ul>
+<li>📌  <strong>Linear Search</strong>:<ul>
+<li>Small datasets</li>
+<li>Unsorted data</li>
+<li>Finding all occurrences</li>
+<li>Simple implementation needed</li>
+</ul>
+</li>
+<li>📌  <strong>Binary Search</strong>:<ul>
+<li>Large sorted datasets</li>
+<li>Frequent searches</li>
+<li>Finding insertion points</li>
+<li>Performance critical operations</li>
+</ul>
+</li>
+</ul>
+<h1 id="graph-algorithms_1">🕸️ Graph Algorithms</h1>
+<h2 id="introduction_2">📘 Introduction</h2>
+<p>Graph algorithms are essential techniques for solving problems that involve network-like structures. Understanding these algorithms is crucial for:</p>
+<ul>
+<li>🗺️  <strong>Network Analysis</strong>: Navigate and analyze complex networks</li>
+<li>🔍  <strong>Path Finding</strong>: Find optimal routes between nodes</li>
+<li>🌐  <strong>Web Crawling</strong>: Systematically browse and analyze web pages</li>
+<li>🎮  <strong>Game Development</strong>: Power AI and navigation systems</li>
+<li>📱  <strong>Social Networks</strong>: Analyze relationships and connections</li>
+</ul>
+<h2 id="key-graph-concepts">🔑 Key Graph Concepts</h2>
+<ul>
+<li><strong>Vertex (Node)</strong>: Points in the graph</li>
+<li><strong>Edge</strong>: Connections between vertices</li>
+<li><strong>Path</strong>: Sequence of vertices connected by edges</li>
+<li><strong>Cycle</strong>: Path that starts and ends at same vertex</li>
+<li><strong>Connected Component</strong>: Group of connected vertices</li>
+</ul>
+<h2 id="basic-graph-traversal">🔍 Basic Graph Traversal</h2>
+<h3 id="1-breadth-first-search-bfs">1️⃣ Breadth First Search (BFS)</h3>
+<p>A traversal algorithm that explores a graph level by level.</p>
+<h3 id="properties_8">📊 Properties</h3>
+<ul>
+<li>✅ Finds shortest path in unweighted graphs</li>
+<li>✅ Explores nodes level by level</li>
+<li>✅ Uses queue data structure</li>
+<li>🔄 Time: O(V + E)</li>
+<li>💾 Space: O(V)</li>
+</ul>
+<h3 id="best-used-for_8">💡 Best Used For:</h3>
+<ul>
+<li>Finding shortest paths</li>
+<li>Level-order traversal</li>
+<li>Web crawling</li>
+<li>Network broadcasting</li>
+<li>Finding connected components</li>
+</ul>
+<pre><code class="language-java">public class Graph {
+    private Map&lt;Vertex, List&lt;Vertex&gt;&gt; adjList;
+
+    public void bfs(Vertex start) {
+        if (start == null) {
+            throw new IllegalArgumentException(&quot;Start vertex cannot be null&quot;);
+        }
+
+        Queue&lt;Vertex&gt; queue = new LinkedList&lt;&gt;();
+        Set&lt;Vertex&gt; visited = new HashSet&lt;&gt;();
+
+        // Start the traversal
+        queue.offer(start);
+        visited.add(start);
+
+        while (!queue.isEmpty()) {
+            Vertex current = queue.poll();
+            System.out.println(&quot;Visiting: &quot; + current.getValue());
+
+            // Process all neighbors
+            for (Vertex neighbor : adjList.get(current)) {
+                if (!visited.contains(neighbor)) {
+                    visited.add(neighbor);
+                    queue.offer(neighbor);
+                }
+            }
+        }
+    }
+
+    // Version that tracks paths
+    public Map&lt;Vertex, Vertex&gt; bfsWithPaths(Vertex start) {
+        Queue&lt;Vertex&gt; queue = new LinkedList&lt;&gt;();
+        Map&lt;Vertex, Vertex&gt; parentMap = new HashMap&lt;&gt;();
+
+        queue.offer(start);
+        parentMap.put(start, null);
+
+        while (!queue.isEmpty()) {
+            Vertex current = queue.poll();
+
+            for (Vertex neighbor : adjList.get(current)) {
+                if (!parentMap.containsKey(neighbor)) {
+                    parentMap.put(neighbor, current);
+                    queue.offer(neighbor);
+                }
+            }
+        }
+
+        return parentMap;
+    }
+}
+</code></pre>
+<h3 id="key-tips_8">🔑 Key Tips:</h3>
+<ul>
+<li>Use for shortest path in unweighted graphs</li>
+<li>Great for level-by-level exploration</li>
+<li>Consider space requirements for large graphs</li>
+<li>Can be modified to find shortest path</li>
+</ul>
+<h3 id="references_7">References</h3>
+<p><a href="https://youtu.be/oDqjPvD54Ss?si=Grejcv1Q6z6BgCzu">Breadth First Search</a></p>
+<h3 id="2-depth-first-search-dfs">2️⃣ Depth First Search (DFS)</h3>
+<p>A traversal algorithm that explores a graph by going as deep as possible before backtracking.</p>
+<h3 id="properties_9">📊 Properties</h3>
+<ul>
+<li>✅ Memory efficient for deep graphs</li>
+<li>✅ Natural recursive implementation</li>
+<li>✅ Can detect cycles</li>
+<li>🔄 Time: O(V + E)</li>
+<li>💾 Space: O(V) worst case</li>
+</ul>
+<h3 id="best-used-for_9">💡 Best Used For:</h3>
+<ul>
+<li>Topological sorting</li>
+<li>Cycle detection</li>
+<li>Maze solving</li>
+<li>Path finding</li>
+<li>Connected components</li>
+</ul>
+<pre><code class="language-java">public class Graph {
+    private Map&lt;Vertex, List&lt;Vertex&gt;&gt; adjList;
+
+    // Recursive DFS
+    public void dfs(Vertex start) {
+        if (start == null) {
+            throw new IllegalArgumentException(&quot;Start vertex cannot be null&quot;);
+        }
+
+        Set&lt;Vertex&gt; visited = new HashSet&lt;&gt;();
+        dfsHelper(start, visited);
+    }
+
+    private void dfsHelper(Vertex current, Set&lt;Vertex&gt; visited) {
+        visited.add(current);
+        System.out.println(&quot;Visiting: &quot; + current.getValue());
+
+        for (Vertex neighbor : adjList.get(current)) {
+            if (!visited.contains(neighbor)) {
+                dfsHelper(neighbor, visited);
+            }
+        }
+    }
+
+    // Iterative DFS using Stack
+    public void dfsIterative(Vertex start) {
+        if (start == null) {
+            throw new IllegalArgumentException(&quot;Start vertex cannot be null&quot;);
+        }
+
+        Stack&lt;Vertex&gt; stack = new Stack&lt;&gt;();
+        Set&lt;Vertex&gt; visited = new HashSet&lt;&gt;();
+
+        stack.push(start);
+
+        while (!stack.isEmpty()) {
+            Vertex current = stack.pop();
+
+            if (!visited.contains(current)) {
+                visited.add(current);
+                System.out.println(&quot;Visiting: &quot; + current.getValue());
+
+                // Add all unvisited neighbors to stack
+                for (Vertex neighbor : adjList.get(current)) {
+                    if (!visited.contains(neighbor)) {
+                        stack.push(neighbor);
+                    }
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="key-tips_9">🔑 Key Tips:</h3>
+<ul>
+<li>Choose between recursive and iterative based on graph depth</li>
+<li>Use for finding paths in mazes</li>
+<li>Efficient for deep graph structures</li>
+<li>Can be modified for cycle detection</li>
+</ul>
+<h3 id="references_8">References</h3>
+<p><a href="https://youtu.be/7fujbpJ0LB4?si=2BL0b9mKllr7XcCd">Depth First Search</a></p>
+<h2 id="algorithm-comparison_1">📊 Algorithm Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>BFS</th>
+<th>DFS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time Complexity</td>
+<td>O(V + E)</td>
+<td>O(V + E)</td>
+</tr>
+<tr>
+<td>Space Complexity</td>
+<td>O(V)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Queue-based</td>
+<td>Stack/Recursive</td>
+</tr>
+<tr>
+<td>Path Finding</td>
+<td>Shortest in unweighted</td>
+<td>Any valid path</td>
+</tr>
+<tr>
+<td>Memory Usage</td>
+<td>More for wide graphs</td>
+<td>More for deep graphs</td>
+</tr>
+<tr>
+<td>Use Case</td>
+<td>Level-wise traversal</td>
+<td>Deep traversal</td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td>Complete</td>
+<td>Complete</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementation-best-practices_1">💡 Implementation Best Practices</h3>
+<h3 id="general-tips_1">🎯 General Tips</h3>
+<ul>
+<li>Always validate input parameters</li>
+<li>Handle disconnected components</li>
+<li>Consider space-time tradeoffs</li>
+<li>Use appropriate data structures</li>
+</ul>
+<h3 id="common-pitfalls_2">⚠️ Common Pitfalls</h3>
+<ul>
+<li>Forgetting to mark nodes as visited</li>
+<li>Infinite loops in cyclic graphs</li>
+<li>Stack overflow in recursive DFS</li>
+<li>Not handling disconnected components</li>
+</ul>
+<h3 id="advanced-considerations_1">🔍 Advanced Considerations</h3>
+<ul>
+<li>Graph representation choice</li>
+<li>Memory management</li>
+<li>Performance optimization</li>
+<li>Edge case handling</li>
+</ul>
+<h1 id="shortest-path-algorithms">🛣️ Shortest Path Algorithms</h1>
+<h2 id="overview_2">📘 Overview</h2>
+<p>Shortest path algorithms are essential for finding optimal routes between vertices in a graph. These algorithms are crucial for:</p>
+<ul>
+<li>🗺️  <strong>Navigation Systems</strong>: Finding optimal routes</li>
+<li>🌐  <strong>Network Routing</strong>: Optimizing network traffic</li>
+<li>💰  <strong>Financial Markets</strong>: Currency exchange optimization</li>
+<li>🎮  <strong>Game Development</strong>: Path-finding for AI</li>
+<li>📡  <strong>Network Design</strong>: Infrastructure planning</li>
+</ul>
+<h2 id="advanced-path-finding-algorithms">🔍 Advanced Path-Finding Algorithms</h2>
+<h3 id="1-bellman-ford-algorithm">1️⃣ Bellman-Ford Algorithm</h3>
+<p>An algorithm that finds shortest paths from a source vertex to all other vertices, even with negative edge weights.</p>
+<h3 id="properties_10">📊 Properties</h3>
+<ul>
+<li>✅ Handles negative edge weights</li>
+<li>✅ Detects negative cycles</li>
+<li>✅ Simple implementation</li>
+<li>🔄 Time: O(VE)</li>
+<li>💾 Space: O(V)</li>
+</ul>
+<h3 id="best-used-for_10">💡 Best Used For:</h3>
+<ul>
+<li>Graphs with negative weights</li>
+<li>Detecting negative cycles</li>
+<li>Currency exchange calculations</li>
+<li>Network routing protocols</li>
+<li>When edge weights can be negative</li>
+</ul>
+<pre><code class="language-java">public class Graph {
+    private List&lt;Edge&gt; edges;
+    private int V; // Number of vertices
+
+    public class Edge {
+        int source, destination, weight;
+
+        Edge(int source, int destination, int weight) {
+            this.source = source;
+            this.destination = destination;
+            this.weight = weight;
+        }
+    }
+
+    public int[] bellmanFord(int source) {
+        // Initialize distances
+        int[] distances = new int[V];
+        Arrays.fill(distances, Integer.MAX_VALUE);
+        distances[source] = 0;
+
+        // Relax all edges V-1 times
+        for (int i = 0; i &lt; V - 1; i++) {
+            for (Edge edge : edges) {
+                int u = edge.source;
+                int v = edge.destination;
+                int weight = edge.weight;
+
+                if (distances[u] != Integer.MAX_VALUE &amp;&amp; 
+                    distances[u] + weight &lt; distances[v]) {
+                    distances[v] = distances[u] + weight;
+                }
+            }
+        }
+
+        // Check for negative weight cycles
+        for (Edge edge : edges) {
+            int u = edge.source;
+            int v = edge.destination;
+            int weight = edge.weight;
+
+            if (distances[u] != Integer.MAX_VALUE &amp;&amp; 
+                distances[u] + weight &lt; distances[v]) {
+                throw new IllegalStateException(&quot;Graph contains negative weight cycle&quot;);
+            }
+        }
+
+        return distances;
+    }
+}
+</code></pre>
+<h3 id="key-tips_10">🔑 Key Tips:</h3>
+<ul>
+<li>Use for detecting negative cycles</li>
+<li>Good for small to medium graphs</li>
+<li>Consider memory efficiency</li>
+<li>Handle infinity values carefully</li>
+</ul>
+<h3 id="references_9">References</h3>
+<p><a href="https://youtu.be/j0OUwduDOS0?si=nmbGXqfOW95lCaga">Shortest Path Algorithms (Bellman Ford &amp; Dijkstra)</a></p>
+<h3 id="2-dijkstras-algorithm">2️⃣ Dijkstra's Algorithm</h3>
+<p>A greedy algorithm that finds the shortest path between nodes in a graph with non-negative edge weights.</p>
+<h3 id="properties_11">📊 Properties</h3>
+<ul>
+<li>✅ Efficient for non-negative weights</li>
+<li>✅ Finds optimal paths</li>
+<li>❌ Doesn't work with negative weights</li>
+<li>🔄 Time: O(E log V) with binary heap</li>
+<li>💾 Space: O(V)</li>
+</ul>
+<h3 id="best-used-for_11">💡 Best Used For:</h3>
+<ul>
+<li>Road navigation systems</li>
+<li>Network routing</li>
+<li>Social networks</li>
+<li>Games pathfinding</li>
+<li>Resource distribution</li>
+</ul>
+<pre><code class="language-java">public class Graph {
+    private Map&lt;Integer, List&lt;Edge&gt;&gt; adjList;
+
+    public class Edge {
+        int destination;
+        int weight;
+
+        Edge(int destination, int weight) {
+            this.destination = destination;
+            this.weight = weight;
+        }
+    }
+
+    public Map&lt;Integer, Integer&gt; dijkstra(int source) {
+        // Priority queue for vertices with their distances
+        PriorityQueue&lt;Node&gt; pq = new PriorityQueue&lt;&gt;(
+            Comparator.comparingInt(node -&gt; node.distance)
+        );
+
+        // Track distances and previous nodes
+        Map&lt;Integer, Integer&gt; distances = new HashMap&lt;&gt;();
+        Map&lt;Integer, Integer&gt; previous = new HashMap&lt;&gt;();
+
+        // Initialize distances
+        for (int vertex : adjList.keySet()) {
+            distances.put(vertex, Integer.MAX_VALUE);
+        }
+        distances.put(source, 0);
+        pq.offer(new Node(source, 0));
+
+        while (!pq.isEmpty()) {
+            Node current = pq.poll();
+            int u = current.vertex;
+
+            // Skip if we've found a better path
+            if (current.distance &gt; distances.get(u)) {
+                continue;
+            }
+
+            // Check all neighboring vertices
+            for (Edge edge : adjList.get(u)) {
+                int v = edge.destination;
+                int newDist = distances.get(u) + edge.weight;
+
+                if (newDist &lt; distances.get(v)) {
+                    distances.put(v, newDist);
+                    previous.put(v, u);
+                    pq.offer(new Node(v, newDist));
+                }
+            }
+        }
+
+        return distances;
+    }
+
+    private class Node {
+        int vertex;
+        int distance;
+
+        Node(int vertex, int distance) {
+            this.vertex = vertex;
+            this.distance = distance;
+        }
+    }
+}
+</code></pre>
+<h3 id="key-tips_11">🔑 Key Tips:</h3>
+<ul>
+<li>Use priority queue for efficiency</li>
+<li>Only works with non-negative weights</li>
+<li>Consider path reconstruction</li>
+<li>Can be optimized for specific use cases</li>
+</ul>
+<h2 id="algorithm-comparison_2">📊 Algorithm Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Bellman-Ford</th>
+<th>Dijkstra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time Complexity</td>
+<td>O(VE)</td>
+<td>O(E log V)</td>
+</tr>
+<tr>
+<td>Space Complexity</td>
+<td>O(V)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Handles Negative Weights</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Detects Negative Cycles</td>
+<td>Yes</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Simple</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Use Case</td>
+<td>Negative weights</td>
+<td>Positive weights</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Slower</td>
+<td>Faster</td>
+</tr>
+<tr>
+<td>Memory Usage</td>
+<td>Lower</td>
+<td>Higher</td>
+</tr>
+<tr>
+<td>### 💡 Implementation Best Practices</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="general-tips_2">🎯 General Tips</h3>
+<ul>
+<li>Validate input graphs and weights</li>
+<li>Handle unreachable vertices</li>
+<li>Consider path reconstruction</li>
+<li>Implement proper error handling</li>
+</ul>
+<h3 id="common-pitfalls_3">⚠️ Common Pitfalls</h3>
+<ul>
+<li>Integer overflow in distance calculations</li>
+<li>Not handling disconnected components</li>
+<li>Improper handling of infinity values</li>
+<li>Forgetting to check for negative cycles</li>
+</ul>
+<h3 id="advanced-optimizations">🔍 Advanced Optimizations</h3>
+<ul>
+<li>Use Fibonacci heap for better theoretical performance</li>
+<li>Bidirectional search for specific endpoints</li>
+<li>A* modifications for heuristic improvements</li>
+<li>Early termination for single-target searches</li>
+</ul>
+<h3 id="references_10">References</h3>
+<p><a href="https://youtu.be/j0OUwduDOS0?si=nmbGXqfOW95lCaga">Shortest Path Algorithms (Bellman Ford &amp; Dijkstras)</a></p>
+<h1 id="greedy-algorithms_1">💫 Greedy Algorithms</h1>
+<h2 id="introduction_3">📘 Introduction</h2>
+<p>Greedy algorithms make locally optimal choices at each step, aiming for a global optimum. These algorithms are essential for:</p>
+<ul>
+<li>🎯  <strong>Optimization Problems</strong>: Finding best solutions efficiently</li>
+<li>💻  <strong>Resource Management</strong>: Allocating resources optimally</li>
+<li>🌐  <strong>Network Design</strong>: Creating efficient network structures</li>
+<li>📊  <strong>Data Compression</strong>: Reducing data size effectively</li>
+<li>🔄  <strong>Dynamic Solutions</strong>: Solving problems step by step</li>
+</ul>
+<h2 id="algorithm-deep-dive">🔍 Algorithm Deep Dive</h2>
+<h3 id="1-huffman-coding">1️⃣ Huffman Coding</h3>
+<p>A data compression technique that assigns variable-length codes to characters based on their frequencies.</p>
+<h3 id="properties_12">📊 Properties</h3>
+<ul>
+<li>✅ Optimal prefix codes</li>
+<li>✅ Lossless compression</li>
+<li>✅ Variable-length encoding</li>
+<li>🔄 Time: O(n log n)</li>
+<li>💾 Space: O(n)</li>
+</ul>
+<h3 id="how-it-works">💡 How It Works</h3>
+<ol>
+<li><strong>Frequency Analysis</strong>:<ul>
+<li>Count frequency of each character</li>
+<li>Create leaf nodes for each character</li>
+</ul>
+</li>
+<li><strong>Tree Construction</strong>:<ul>
+<li>Create min-heap of nodes</li>
+<li>Repeatedly merge two lowest frequency nodes</li>
+<li>New node's frequency = sum of children</li>
+</ul>
+</li>
+<li><strong>Code Generation</strong>:<ul>
+<li>Traverse tree from root to leaves</li>
+<li>Left edge = 0, Right edge = 1</li>
+<li>Path to leaf = character's code</li>
+</ul>
+</li>
+</ol>
+<h3 id="example">🎯 Example</h3>
+<p>For string: "HELLO WORLD"</p>
+<pre><code class="language-java">Character frequencies:
+H: 1, E: 1, L: 3, O: 2, W: 1, R: 1, D: 1, (space): 1
+
+Resulting codes might be:
+L: 00
+O: 01
+H: 100
+E: 101
+W: 110
+R: 1110
+D: 1111
+(space): 1000
+</code></pre>
+<h3 id="key-applications">🔑 Key Applications</h3>
+<ul>
+<li>Text file compression</li>
+<li>Data transmission</li>
+<li>Multimedia encoding</li>
+<li>Network protocols</li>
+<li>Storage optimization</li>
+</ul>
+<h3 id="references_11">References</h3>
+<p><a href="https://youtu.be/B3y0RsVCyrw?si=djkN8j3NGkqGNCPp">Huffman Coding</a></p>
+<h3 id="2-kruskals-algorithm">2️⃣ Kruskal's Algorithm</h3>
+<p>A minimum spanning tree algorithm that builds the tree by selecting edges in increasing order of weight.</p>
+<h3 id="properties_13">📊 Properties</h3>
+<ul>
+<li>✅ Finds global minimum</li>
+<li>✅ Works on disconnected graphs</li>
+<li>✅ Edge-focused approach</li>
+<li>🔄 Time: O(E log E)</li>
+<li>💾 Space: O(V)</li>
+</ul>
+<h3 id="how-it-works_1">💡 How It Works</h3>
+<ol>
+<li>Sort all edges by weight</li>
+<li>Process edges in ascending order</li>
+<li>Add edge if it doesn't create cycle</li>
+<li>Use Union-Find data structure to detect cycles</li>
+</ol>
+<pre><code class="language-java">public class KruskalMST {
+    private static class Edge implements Comparable&lt;Edge&gt; {
+        int src, dest, weight;
+
+        Edge(int src, int dest, int weight) {
+            this.src = src;
+            this.dest = dest;
+            this.weight = weight;
+        }
+
+        @Override
+        public int compareTo(Edge other) {
+            return Integer.compare(this.weight, other.weight);
+        }
+    }
+
+    private static class UnionFind {
+        private final int[] parent;
+        private final int[] rank;
+
+        UnionFind(int size) {
+            parent = new int[size];
+            rank = new int[size];
+
+            // Initialize each vertex as its own set
+            for (int i = 0; i &lt; size; i++) {
+                parent[i] = i;
+            }
+        }
+
+        // Find with path compression
+        int find(int x) {
+            if (parent[x] != x) {
+                parent[x] = find(parent[x]);
+            }
+            return parent[x];
+        }
+
+        // Union by rank
+        void union(int x, int y) {
+            int rootX = find(x);
+            int rootY = find(y);
+
+            if (rootX != rootY) {
+                if (rank[rootX] &lt; rank[rootY]) {
+                    parent[rootX] = rootY;
+                } else if (rank[rootX] &gt; rank[rootY]) {
+                    parent[rootY] = rootX;
+                } else {
+                    parent[rootY] = rootX;
+                    rank[rootX]++;
+                }
+            }
+        }
+    }
+
+    public List&lt;Edge&gt; findMST(int V, List&lt;Edge&gt; edges) {
+        List&lt;Edge&gt; mst = new ArrayList&lt;&gt;();
+        UnionFind uf = new UnionFind(V);
+
+        // Sort edges by weight
+        edges.sort(Edge::compareTo);
+
+        for (Edge edge : edges) {
+            // If including this edge doesn't create a cycle
+            if (uf.find(edge.src) != uf.find(edge.dest)) {
+                mst.add(edge);
+                uf.union(edge.src, edge.dest);
+            }
+        }
+
+        return mst;
+    }
+}
+</code></pre>
+<h3 id="key-tips_12">🔑 Key Tips</h3>
+<ul>
+<li><strong>Edge Sorting</strong>:<ul>
+<li>Sort edges first for optimal selection</li>
+<li>Consider custom comparator for complex weights</li>
+</ul>
+</li>
+<li><strong>Union-Find Optimization</strong>:<ul>
+<li>Use path compression</li>
+<li>Implement union by rank</li>
+<li>Keep track of set sizes</li>
+</ul>
+</li>
+<li><strong>Implementation Considerations</strong>:<ul>
+<li>Handle disconnected components</li>
+<li>Validate input edges</li>
+<li>Consider edge cases (empty graph, single vertex)</li>
+</ul>
+</li>
+<li><strong>Performance Optimization</strong>:<ul>
+<li>Use efficient sorting algorithm</li>
+<li>Optimize Union-Find operations</li>
+<li>Consider early termination</li>
+</ul>
+</li>
+</ul>
+<h3 id="references_12">References</h3>
+<p><a href="https://youtu.be/JZBQLXgSGfs?si=e2XfI4BE5C00paqB">Kruskal's Algorithm Introduction</a>
+<a href="https://youtu.be/71UQH7Pr9kU?si=ji5cX99eGYXfmSdK">Kruskal's Algorithm in 2 mins</a></p>
+<h2 id="algorithm-comparison_3">📊 Algorithm Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Huffman Coding</th>
+<th>Kruskal's Algorithm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time Complexity</td>
+<td>O(n log n)</td>
+<td>O(E log E)</td>
+</tr>
+<tr>
+<td>Space Complexity</td>
+<td>O(n)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Primary Use</td>
+<td>Data Compression</td>
+<td>Network Design</td>
+</tr>
+<tr>
+<td>Data Structure</td>
+<td>Priority Queue &amp; Tree</td>
+<td>Union-Find</td>
+</tr>
+<tr>
+<td>Approach</td>
+<td>Bottom-up</td>
+<td>Global Greedy</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Moderate</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Prefix Codes</td>
+<td>Minimum Spanning Tree</td>
+</tr>
+</tbody>
+</table>
+<h3 id="best-practices">💡 Best Practices</h3>
+<h3 id="general-tips_3">🎯 General Tips</h3>
+<ul>
+<li>Validate input data</li>
+<li>Handle edge cases</li>
+<li>Use appropriate data structures</li>
+<li>Consider performance optimizations</li>
+</ul>
+<h3 id="common-pitfalls_4">⚠️ Common Pitfalls</h3>
+<ul>
+<li>Not handling empty inputs</li>
+<li>Incorrect cycle detection</li>
+<li>Inefficient set operations</li>
+<li>Poor edge weight handling</li>
+</ul>
+<h1 id="advanced-greedy-algorithms">🌊 Advanced Greedy Algorithms</h1>
+<h2 id="network-flow-and-spanning-tree-algorithms">📘 Network Flow and Spanning Tree Algorithms</h2>
+<p>These algorithms solve complex network optimization problems, essential for:</p>
+<ul>
+<li>🌐  <strong>Network Flow</strong>: Maximizing throughput in networks</li>
+<li>🔄  <strong>Resource Allocation</strong>: Optimal distribution of resources</li>
+<li>🌳  <strong>Tree Construction</strong>: Building optimal spanning trees</li>
+<li>📊  <strong>Network Design</strong>: Creating efficient network topologies</li>
+<li>🚰  <strong>Flow Networks</strong>: Modeling pipeline and traffic systems</li>
+</ul>
+<h2 id="algorithm-details">🔍 Algorithm Details</h2>
+<h3 id="1-ford-fulkerson-algorithm">1️⃣ Ford-Fulkerson Algorithm</h3>
+<p>A method for computing maximum flow in a flow network.</p>
+<h3 id="properties_14">📊 Properties</h3>
+<ul>
+<li>✅ Finds maximum flow</li>
+<li>✅ Uses augmenting paths</li>
+<li>✅ Iterative improvement</li>
+<li>🔄 Time: O(EF) where F is max flow</li>
+<li>💾 Space: O(V + E)</li>
+</ul>
+<h3 id="best-used-for_12">💡 Best Used For:</h3>
+<ul>
+<li>Network capacity planning</li>
+<li>Traffic routing</li>
+<li>Resource distribution</li>
+<li>Bipartite matching</li>
+<li>Pipeline optimization</li>
+</ul>
+<pre><code class="language-java">public class FordFulkerson {
+    private static class Edge {
+        int dest, capacity, flow;
+        Edge reverse;  // Reference to reverse edge
+
+        Edge(int dest, int capacity) {
+            this.dest = dest;
+            this.capacity = capacity;
+            this.flow = 0;
+        }
+
+        int remainingCapacity() {
+            return capacity - flow;
+        }
+
+        void addFlow(int amount) {
+            flow += amount;
+            reverse.flow -= amount;
+        }
+    }
+
+    private final List&lt;List&lt;Edge&gt;&gt; graph;
+    private final int V;
+
+    public FordFulkerson(int vertices) {
+        this.V = vertices;
+        this.graph = new ArrayList&lt;&gt;(V);
+        for (int i = 0; i &lt; V; i++) {
+            graph.add(new ArrayList&lt;&gt;());
+        }
+    }
+
+    public void addEdge(int from, int to, int capacity) {
+        // Create forward and reverse edges
+        Edge forward = new Edge(to, capacity);
+        Edge reverse = new Edge(from, 0);
+
+        // Link the edges
+        forward.reverse = reverse;
+        reverse.reverse = forward;
+
+        // Add edges to graph
+        graph.get(from).add(forward);
+        graph.get(to).add(reverse);
+    }
+
+    public int maxFlow(int source, int sink) {
+        int maxFlow = 0;
+
+        while (true) {
+            // Find augmenting path using BFS
+            int[] parent = new int[V];
+            Edge[] parentEdge = new Edge[V];
+            Arrays.fill(parent, -1);
+
+            Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();
+            queue.offer(source);
+            parent[source] = source;
+
+            while (!queue.isEmpty() &amp;&amp; parent[sink] == -1) {
+                int current = queue.poll();
+
+                for (Edge edge : graph.get(current)) {
+                    if (parent[edge.dest] == -1 &amp;&amp; edge.remainingCapacity() &gt; 0) {
+                        parent[edge.dest] = current;
+                        parentEdge[edge.dest] = edge;
+                        queue.offer(edge.dest);
+                    }
+                }
+            }
+
+            // If no augmenting path found, break
+            if (parent[sink] == -1) break;
+
+            // Find minimum residual capacity along the path
+            int bottleneck = Integer.MAX_VALUE;
+            for (int v = sink; v != source; v = parent[v]) {
+                bottleneck = Math.min(bottleneck, parentEdge[v].remainingCapacity());
+            }
+
+            // Update flow along the path
+            for (int v = sink; v != source; v = parent[v]) {
+                parentEdge[v].addFlow(bottleneck);
+            }
+
+            maxFlow += bottleneck;
+        }
+
+        return maxFlow;
+    }
+}
+</code></pre>
+<h3 id="key-tips_13">🔑 Key Tips:</h3>
+<ul>
+<li>Implement residual graph carefully</li>
+<li>Use BFS for finding augmenting paths</li>
+<li>Track reverse edges</li>
+<li>Handle bottleneck calculations properly</li>
+</ul>
+<h3 id="references_13">References</h3>
+<p><a href="https://youtu.be/LdOnanfc5TM?si=CWSkBFibazbFskMp">Ford-Fulkerson Algorithm</a>
+<a href="https://youtu.be/Tl90tNtKvxs?si=NCyoulWAu_-4fPVe">Ford-Fulkerson Algorithm</a></p>
+<h3 id="2-prims-algorithm">2️⃣ Prim's Algorithm</h3>
+<p>A greedy approach for finding minimum spanning tree, growing from a single vertex.</p>
+<h3 id="properties_15">📊 Properties</h3>
+<ul>
+<li>✅ Optimal solution</li>
+<li>✅ Local optimization</li>
+<li>✅ Vertex-based approach</li>
+<li>🔄 Time: O(E log V)</li>
+<li>💾 Space: O(V)</li>
+</ul>
+<h3 id="best-used-for_13">💡 Best Used For:</h3>
+<ul>
+<li>Network design</li>
+<li>Cluster analysis</li>
+<li>Circuit design</li>
+<li>Cost minimization</li>
+<li>Network optimization</li>
+</ul>
+<pre><code class="language-java">public class PrimMST {
+    private static class Edge {
+        int dest, weight;
+
+        Edge(int dest, int weight) {
+            this.dest = dest;
+            this.weight = weight;
+        }
+    }
+
+    private static class Vertex implements Comparable&lt;Vertex&gt; {
+        int id, key;
+
+        Vertex(int id, int key) {
+            this.id = id;
+            this.key = key;
+        }
+
+        @Override
+        public int compareTo(Vertex other) {
+            return Integer.compare(this.key, other.key);
+        }
+    }
+
+    public List&lt;Edge&gt; findMST(List&lt;List&lt;Edge&gt;&gt; graph) {
+        int V = graph.size();
+        List&lt;Edge&gt; mst = new ArrayList&lt;&gt;();
+
+        // Priority queue for selecting minimum weight edge
+        PriorityQueue&lt;Vertex&gt; pq = new PriorityQueue&lt;&gt;();
+        int[] key = new int[V];
+        int[] parent = new int[V];
+        boolean[] inMST = new boolean[V];
+
+        // Initialize keys and parent
+        Arrays.fill(key, Integer.MAX_VALUE);
+        Arrays.fill(parent, -1);
+
+        // Start with vertex 0
+        key[0] = 0;
+        pq.offer(new Vertex(0, 0));
+
+        while (!pq.isEmpty()) {
+            int u = pq.poll().id;
+
+            // Skip if already processed
+            if (inMST[u]) continue;
+
+            inMST[u] = true;
+
+            // Add edge to MST if not root
+            if (parent[u] != -1) {
+                mst.add(new Edge(u, key[u]));
+            }
+
+            // Update keys of adjacent vertices
+            for (Edge edge : graph.get(u)) {
+                int v = edge.dest;
+                if (!inMST[v] &amp;&amp; edge.weight &lt; key[v]) {
+                    key[v] = edge.weight;
+                    parent[v] = u;
+                    pq.offer(new Vertex(v, key[v]));
+                }
+            }
+        }
+
+        return mst;
+    }
+}
+</code></pre>
+<h3 id="key-tips_14">🔑 Key Tips:</h3>
+<ul>
+<li>Use priority queue for efficiency</li>
+<li>Maintain key values properly</li>
+<li>Handle disconnected components</li>
+<li>Consider dense vs sparse graphs</li>
+</ul>
+<h3 id="references_14">References</h3>
+<p><a href="https://youtu.be/YyLaRffCdk4?si=MlqRXZRcsY-OG7ZK">Prim's Algorithm</a>
+<a href="https://youtu.be/jsmMtJpPnhU?si=yJdtLBHxKf6yOw-k">Prim's MST Algorithm</a></p>
+<h2 id="algorithm-comparison_4">📊 Algorithm Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Ford-Fulkerson</th>
+<th>Prim's Algorithm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time Complexity</td>
+<td>O(EF)</td>
+<td>O(E log V)</td>
+</tr>
+<tr>
+<td>Space Complexity</td>
+<td>O(V + E)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Primary Use</td>
+<td>Max Flow</td>
+<td>Minimum Spanning Tree</td>
+</tr>
+<tr>
+<td>Data Structure</td>
+<td>Residual Graph</td>
+<td>Priority Queue</td>
+</tr>
+<tr>
+<td>Approach</td>
+<td>Iterative Improvement</td>
+<td>Greedy Growth</td>
+</tr>
+<tr>
+<td>Graph Type</td>
+<td>Directed</td>
+<td>Undirected</td>
+</tr>
+<tr>
+<td>Key Feature</td>
+<td>Augmenting Paths</td>
+<td>Local Optimization</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementation-best-practices_2">💡 Implementation Best Practices</h3>
+<h3 id="general-tips_4">🎯 General Tips</h3>
+<ul>
+<li>Validate input graphs</li>
+<li>Handle edge cases</li>
+<li>Use efficient data structures</li>
+<li>Consider performance optimizations</li>
+</ul>
+<h3 id="common-pitfalls_5">⚠️ Common Pitfalls</h3>
+<ul>
+<li>Incorrect flow updates</li>
+<li>Memory management issues</li>
+<li>Infinite loops</li>
+<li>Edge weight handling</li>
+</ul>
+<h1 id="substring-search-algorithms-guide">🔍 Substring Search Algorithms Guide</h1>
+<h2 id="introduction_4">📘 Introduction</h2>
+<p>Substring search algorithms are fundamental techniques for finding pattern matches within text. These algorithms are essential for:</p>
+<ul>
+<li>📝  <strong>Text Processing</strong>: Finding words or patterns in documents</li>
+<li>🔎  <strong>Search Engines</strong>: Locating specific content</li>
+<li>🧬  <strong>DNA Sequence Analysis</strong>: Finding genetic patterns</li>
+<li>📚  <strong>Plagiarism Detection</strong>: Identifying text matches</li>
+<li>🔄  <strong>Data Validation</strong>: Pattern matching in strings</li>
+</ul>
+<h2 id="basic-search-algorithms_1">🔍 Basic Search Algorithms</h2>
+<h3 id="1-brute-force-search">1️⃣ Brute Force Search</h3>
+<p>A straightforward approach that checks every possible position in the text.</p>
+<h3 id="properties_16">📊 Properties</h3>
+<ul>
+<li>✅ Simple implementation</li>
+<li>✅ No preprocessing required</li>
+<li>✅ Works with any pattern</li>
+<li>🔄 Time: O(mn)</li>
+<li>💾 Space: O(1)</li>
+</ul>
+<h3 id="best-used-for_14">💡 Best Used For:</h3>
+<ul>
+<li>Short patterns</li>
+<li>Short texts</li>
+<li>Simple implementations</li>
+<li>When preprocessing overhead isn't worth it</li>
+<li>When pattern varies frequently</li>
+</ul>
+<pre><code class="language-java">public static List&lt;Integer&gt; bruteForce(CharSequence pattern, CharSequence text,
+                                     CharacterComparator comparator) {
+    if (pattern == null || pattern.length() == 0) {
+        throw new IllegalArgumentException(&quot;Pattern cannot be null or empty&quot;);
+    }
+    if (text == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Text and comparator cannot be null&quot;);
+    }
+
+    List&lt;Integer&gt; matches = new ArrayList&lt;&gt;();
+    int n = text.length();
+    int m = pattern.length();
+
+    // Check each possible position in text
+    for (int i = 0; i &lt;= n - m; i++) {
+        boolean found = true;
+        // Check pattern match starting at position i
+        for (int j = 0; j &lt; m; j++) {
+            if (comparator.compare(pattern.charAt(j), 
+                                 text.charAt(i + j)) != 0) {
+                found = false;
+                break;
+            }
+        }
+        if (found) {
+            matches.add(i);
+        }
+    }
+    return matches;
+}
+</code></pre>
+<h3 id="key-tips_15">🔑 Key Tips:</h3>
+<ul>
+<li>Early termination on mismatch</li>
+<li>Handle edge cases properly</li>
+<li>Consider text/pattern lengths</li>
+<li>Validate inputs carefully</li>
+</ul>
+<h3 id="2-rabin-karp-algorithm">2️⃣ Rabin-Karp Algorithm</h3>
+<p>Uses hashing to find exact pattern matches in text.</p>
+<h3 id="properties_17">📊 Properties</h3>
+<ul>
+<li>✅ Efficient for multiple patterns</li>
+<li>✅ Rolling hash function</li>
+<li>✅ Good average case</li>
+<li>🔄 Time: Average O(n+m), Worst O(mn)</li>
+<li>💾 Space: O(1)</li>
+</ul>
+<h3 id="best-used-for_15">💡 Best Used For:</h3>
+<ul>
+<li>Multiple pattern matching</li>
+<li>Long texts</li>
+<li>Pattern finding in streams</li>
+<li>Plagiarism detection</li>
+<li>When preprocessing pattern is beneficial</li>
+</ul>
+<pre><code class="language-java">public static List&lt;Integer&gt; rabinKarp(CharSequence pattern, CharSequence text,
+                                    CharacterComparator comparator) {
+    if (pattern == null || pattern.length() == 0) {
+        throw new IllegalArgumentException(&quot;Pattern cannot be null or empty&quot;);
+    }
+    if (text == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Text and comparator cannot be null&quot;);
+    }
+
+    List&lt;Integer&gt; matches = new ArrayList&lt;&gt;();
+    int m = pattern.length();
+    int n = text.length();
+
+    if (m &gt; n) return matches;
+
+    // Calculate pattern hash and first window hash
+    int base = 113;  // Prime base
+    int patternHash = 0;
+    int windowHash = 0;
+    int highestPow = 1;
+
+    // Calculate highest power of base needed
+    for (int i = 0; i &lt; m - 1; i++) {
+        highestPow = highestPow * base;
+    }
+
+    // Calculate initial hashes
+    for (int i = 0; i &lt; m; i++) {
+        patternHash = patternHash * base + pattern.charAt(i);
+        windowHash = windowHash * base + text.charAt(i);
+    }
+
+    // Slide window and check matches
+    for (int i = 0; i &lt;= n - m; i++) {
+        if (patternHash == windowHash) {
+            // Verify character by character
+            boolean match = true;
+            for (int j = 0; j &lt; m; j++) {
+                if (comparator.compare(pattern.charAt(j), 
+                                     text.charAt(i + j)) != 0) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) {
+                matches.add(i);
+            }
+        }
+
+        // Calculate hash for next window
+        if (i &lt; n - m) {
+            windowHash = (windowHash - text.charAt(i) * highestPow) * base
+                        + text.charAt(i + m);
+        }
+    }
+
+    return matches;
+}
+</code></pre>
+<h3 id="key-tips_16">🔑 Key Tips:</h3>
+<ul>
+<li>Choose appropriate hash function</li>
+<li>Handle hash collisions</li>
+<li>Use efficient rolling hash</li>
+<li>Consider modulo operations for large texts</li>
+</ul>
+<h3 id="references_15">References</h3>
+<p><a href="https://youtu.be/oxd_Z1osgCk?si=Ih9xqcuHlnqcHz5Q">Rabin Karp Algorithm</a></p>
+<h2 id="algorithm-comparison_5">📊 Algorithm Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Brute Force</th>
+<th>Rabin-Karp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time Complexity (Worst)</td>
+<td>O(mn)</td>
+<td>O(mn)</td>
+</tr>
+<tr>
+<td>Time Complexity (Average)</td>
+<td>O(mn)</td>
+<td>O(n+m)</td>
+</tr>
+<tr>
+<td>Space Complexity</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Preprocessing</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Multiple Patterns</td>
+<td>Inefficient</td>
+<td>Efficient</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Simple</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Best Case</td>
+<td>O(n)</td>
+<td>O(n+m)</td>
+</tr>
+<tr>
+<td>Hash Function</td>
+<td>N/A</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementation-best-practices_3">💡 Implementation Best Practices</h3>
+<h3 id="general-tips_5">🎯 General Tips</h3>
+<ul>
+<li>Validate input parameters</li>
+<li>Handle edge cases</li>
+<li>Consider pattern/text lengths</li>
+<li>Use appropriate data structures</li>
+</ul>
+<h3 id="common-pitfalls_6">⚠️ Common Pitfalls</h3>
+<ul>
+<li>Integer overflow in hash calculation</li>
+<li>Not handling collisions</li>
+<li>Inefficient hash updates</li>
+<li>Missing edge cases</li>
+</ul>
+<h1 id="advanced-substring-search-algorithms">🔍 Advanced Substring Search Algorithms</h1>
+<h2 id="overview_3">📘 Overview</h2>
+<p>These advanced substring search algorithms use preprocessing for more efficient pattern matching. They are crucial for:</p>
+<ul>
+<li>🚀  <strong>High Performance Search</strong>: Fast pattern matching</li>
+<li>📊  <strong>Big Data Analysis</strong>: Processing large text efficiently</li>
+<li>🔄  <strong>Real-time Matching</strong>: Stream processing</li>
+<li>📝  <strong>Text Editors</strong>: Efficient find/replace operations</li>
+<li>🧬  <strong>Bioinformatics</strong>: DNA sequence matching</li>
+</ul>
+<h2 id="advanced-algorithms">🔍 Advanced Algorithms</h2>
+<h3 id="1-knuth-morris-pratt-kmp">1️⃣ Knuth-Morris-Pratt (KMP)</h3>
+<p>An efficient pattern matching algorithm that utilizes a failure table to avoid unnecessary comparisons.</p>
+<h3 id="properties_18">📊 Properties</h3>
+<ul>
+<li>✅ Linear time complexity</li>
+<li>✅ Preprocesses pattern</li>
+<li>✅ No backward movement in text</li>
+<li>🔄 Time: O(n + m)</li>
+<li>💾 Space: O(m)</li>
+</ul>
+<h3 id="best-used-for_16">💡 Best Used For:</h3>
+<ul>
+<li>Long patterns</li>
+<li>Repetitive patterns</li>
+<li>Streaming data</li>
+<li>Real-time matching</li>
+<li>When text cannot be buffered</li>
+</ul>
+<pre><code class="language-java">public static List&lt;Integer&gt; kmp(CharSequence pattern, CharSequence text,
+                              CharacterComparator comparator) {
+    if (pattern == null || pattern.length() == 0) {
+        throw new IllegalArgumentException(&quot;Pattern cannot be null or empty&quot;);
+    }
+    if (text == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Text and comparator cannot be null&quot;);
+    }
+
+    List&lt;Integer&gt; matches = new ArrayList&lt;&gt;();
+    if (pattern.length() &gt; text.length()) {
+        return matches;
+    }
+
+    // Build failure table
+    int[] failureTable = buildFailureTable(pattern, comparator);
+
+    int i = 0;  // text index
+    int j = 0;  // pattern index
+
+    while (i &lt;= text.length() - pattern.length()) {
+        while (j &lt; pattern.length() &amp;&amp; 
+               comparator.compare(text.charAt(i + j), pattern.charAt(j)) == 0) {
+            j++;
+        }
+
+        if (j == 0) {
+            i++;
+        } else {
+            if (j == pattern.length()) {
+                matches.add(i);
+            }
+            int nextAlignment = failureTable[j - 1];
+            i = i + j - nextAlignment;
+            j = nextAlignment;
+        }
+    }
+    return matches;
+}
+
+public static int[] buildFailureTable(CharSequence pattern, 
+                                    CharacterComparator comparator) {
+    int[] failureTable = new int[pattern.length()];
+
+    int i = 0;
+    int j = 1;
+    failureTable[0] = 0;
+
+    while (j &lt; pattern.length()) {
+        if (comparator.compare(pattern.charAt(i), pattern.charAt(j)) == 0) {
+            failureTable[j] = i + 1;
+            i++;
+            j++;
+        } else {
+            if (i == 0) {
+                failureTable[j] = 0;
+                j++;
+            } else {
+                i = failureTable[i - 1];
+            }
+        }
+    }
+
+    return failureTable;
+}
+</code></pre>
+<h3 id="key-tips_17">🔑 Key Tips:</h3>
+<ul>
+<li>Build failure table efficiently</li>
+<li>Handle pattern prefixes</li>
+<li>Avoid backing up in text</li>
+<li>Consider pattern preprocessing time</li>
+</ul>
+<h3 id="references_16">References</h3>
+<p><a href="https://youtu.be/pu2aO_3R118?si=AvU_3RsXi2KdozQh">Knuth-Morris-Pratt Algorithm</a></p>
+<h3 id="2-boyer-moore-algorithm">2️⃣ Boyer-Moore Algorithm</h3>
+<p>A pattern matching algorithm that uses two heuristics: bad character and good suffix rules.</p>
+<h3 id="properties_19">📊 Properties</h3>
+<ul>
+<li>✅ Sublinear time in practice</li>
+<li>✅ Two preprocessing tables</li>
+<li>✅ Right-to-left scanning</li>
+<li>🔄 Time: O(n/m) best, O(mn) worst</li>
+<li>💾 Space: O(k) where k is alphabet size</li>
+</ul>
+<h3 id="best-used-for_17">💡 Best Used For:</h3>
+<ul>
+<li>Long patterns</li>
+<li>Large alphabets</li>
+<li>Natural language text</li>
+<li>When pattern is rare in text</li>
+<li>When preprocessing time is acceptable</li>
+</ul>
+<pre><code class="language-java">public static List&lt;Integer&gt; boyerMoore(CharSequence pattern, CharSequence text,
+                                     CharacterComparator comparator) {
+    if (pattern == null || pattern.length() == 0) {
+        throw new IllegalArgumentException(&quot;Pattern cannot be null or empty&quot;);
+    }
+    if (text == null || comparator == null) {
+        throw new IllegalArgumentException(&quot;Text and comparator cannot be null&quot;);
+    }
+
+    List&lt;Integer&gt; matches = new ArrayList&lt;&gt;();
+    if (pattern.length() &gt; text.length()) {
+        return matches;
+    }
+
+    // Build last occurrence table
+    Map&lt;Character, Integer&gt; lastTable = buildLastTable(pattern);
+
+    int i = 0;
+    while (i &lt;= text.length() - pattern.length()) {
+        int j = pattern.length() - 1;
+
+        // Match pattern from right to left
+        while (j &gt;= 0 &amp;&amp; 
+               comparator.compare(pattern.charAt(j), text.charAt(i + j)) == 0) {
+            j--;
+        }
+
+        if (j == -1) {
+            matches.add(i);
+            i++;
+        } else {
+            // Get last occurrence of mismatched character
+            char mismatchChar = text.charAt(i + j);
+            int lastOccurrence = lastTable.getOrDefault(mismatchChar, -1);
+
+            // Calculate shift
+            if (lastOccurrence &lt; j) {
+                i += j - lastOccurrence;
+            } else {
+                i++;
+            }
+        }
+    }
+    return matches;
+}
+
+public static Map&lt;Character, Integer&gt; buildLastTable(CharSequence pattern) {
+    Map&lt;Character, Integer&gt; lastTable = new HashMap&lt;&gt;();
+
+    // Record last occurrence of each character in pattern
+    for (int i = 0; i &lt; pattern.length(); i++) {
+        lastTable.put(pattern.charAt(i), i);
+    }
+
+    return lastTable;
+}
+</code></pre>
+<h3 id="key-tips_18">🔑 Key Tips:</h3>
+<ul>
+<li>Implement both heuristics correctly</li>
+<li>Handle character set efficiently</li>
+<li>Consider preprocessing overhead</li>
+<li>Use appropriate shift calculations</li>
+</ul>
+<h3 id="references_17">References</h3>
+<p><a href="https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/">Boyer-Moore Algorithm</a></p>
+<h2 id="algorithm-comparison_6">📊 Algorithm Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>KMP</th>
+<th>Boyer-Moore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time Complexity (Worst)</td>
+<td>O(n + m)</td>
+<td>O(mn)</td>
+</tr>
+<tr>
+<td>Time Complexity (Average)</td>
+<td>O(n + m)</td>
+<td>O(n/m)</td>
+</tr>
+<tr>
+<td>Space Complexity</td>
+<td>O(m)</td>
+<td>O(k)</td>
+</tr>
+<tr>
+<td>Pattern Scan Direction</td>
+<td>Left to Right</td>
+<td>Right to Left</td>
+</tr>
+<tr>
+<td>Preprocessing</td>
+<td>Failure Table</td>
+<td>Last Occurrence Table</td>
+</tr>
+<tr>
+<td>Best Case</td>
+<td>O(n)</td>
+<td>O(n/m)</td>
+</tr>
+<tr>
+<td>Text Scan Direction</td>
+<td>Forward Only</td>
+<td>Can Skip Characters</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Moderate</td>
+<td>Complex</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementation-best-practices_4">💡 Implementation Best Practices</h3>
+<h3 id="general-tips_6">🎯 General Tips</h3>
+<ul>
+<li>Use efficient preprocessing</li>
+<li>Handle border cases</li>
+<li>Consider alphabet size</li>
+<li>Choose algorithm based on pattern characteristics</li>
+</ul>
+<h3 id="common-pitfalls_7">⚠️ Common Pitfalls</h3>
+<ul>
+<li>Incorrect preprocessing tables</li>
+<li>Inefficient character comparisons</li>
+<li>Wrong shift calculations</li>
+<li>Missing edge cases</li>
+</ul>
+<h3 id="final-reference-to-algorithm-notes">Final Reference to Algorithm Notes</h3>
+<p><a href="https://drive.google.com/file/d/1LaF74WE-jMvdlZ0FLwSWRxKVjO75iv8z/view?usp=sharing">CS 1332 Data Structures and Algorithms</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
