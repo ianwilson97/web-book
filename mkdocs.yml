@@ -1,1 +1,25 @@
 site_name: My Docs
+
+# Navigation structure
+nav:
+  - Fundamentals:
+    - Programming Principles: 1.Fundamentals/a_programming_principles.md
+    - Data Structures: 1.Fundamentals/b_data_structures.md
+    - Algorithms: 1.Fundamentals/c_algorithms.md
+  - Interviews:
+    - Technical Interviews: 2.Interviews/a_technical_interviews.md
+
+# Theme configuration
+theme: readthedocs
+
+# Extensions for better markdown support
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true

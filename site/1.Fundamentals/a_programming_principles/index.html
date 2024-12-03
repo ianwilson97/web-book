@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Programming Principles - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Programming Principles";
+        var mkdocs_page_input_path = "1.Fundamentals/a_programming_principles.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Fundamentals</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Programming Principles</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-object-oriented-programming">Why Object-Oriented Programming?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#when-to-use-oop">✅ When to Use OOP</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#when-not-to-use-oop">❌ When Not to Use OOP</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#core-concepts">📘 Core Concepts</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#classes-and-objects">📦 Classes and Objects</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-are-they">What Are They?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-create-a-class">When to Create a Class</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#encapsulation">🔒 Encapsulation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-is-it">What Is It?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use">✅ When to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#inheritance">🧬 Inheritance</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-is-it_1">What Is It?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use_1">✅ When to Use</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-not-to-use">❌ When Not to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#polymorphism">🔄 Polymorphism</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-is-it_2">What Is It?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#types-of-polymorphism">Types of Polymorphism</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use_2">✅ When to Use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#association-aggregation-and-composition">🔗 Association, Aggregation, and Composition</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#association">🤝 Association</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-association">✅ When to Use Association</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#one-to-one-association">One-to-One Association</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#one-to-many-association">One-to-Many Association</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#many-to-many-association">Many-to-Many Association</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#key-points-about-associations">Key Points About Associations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices">💡 Best Practices</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#when-to-use-each-type">When to Use Each Type</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#aggregation-has-a">📦 Aggregation (Has-A)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-aggregation">When to Use Aggregation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#composition-part-of">🧩 Composition (Part-Of)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-composition">When to Use Composition</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices_1">💡 Best Practices</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-class-design">1. Class Design</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-encapsulation">2. Encapsulation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-code-organization">3. Code Organization</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../b_data_structures/">Data Structures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../c_algorithms/">Algorithms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Interviews</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../2.Interviews/a_technical_interviews/">Technical Interviews</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Fundamentals</li>
+      <li class="breadcrumb-item active">Programming Principles</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="programming-fundamentals">🔮 Programming Fundamentals<a class="headerlink" href="#programming-fundamentals" title="Permanent link">&para;</a></h1>
+<p><img alt="enter image description here" src="https://i.postimg.cc/k5bN3wFQ/temp-Image-KDO9-RC.avif" /></p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>As a software engineer, mastering programming fundamentals is fundamental to writing maintainable, scalable, and efficient code. This guide focuses on Object-Oriented Programming (OOP), one of the most important paradigms in modern software development.</p>
+<h2 id="why-object-oriented-programming">Why Object-Oriented Programming?<a class="headerlink" href="#why-object-oriented-programming" title="Permanent link">&para;</a></h2>
+<p>I've personally found OOP to be crucial so far in my journey as a software engineer. OOP is important because:</p>
+<ul>
+<li>It helps manage complex systems by breaking them into manageable pieces</li>
+<li>Promotes code reuse and reduces redundancy</li>
+<li>Makes code more maintainable and easier to debug</li>
+<li>Facilitates team collaboration through clear interfaces</li>
+</ul>
+<h3 id="when-to-use-oop">✅ When to Use OOP<a class="headerlink" href="#when-to-use-oop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When building medium to large-scale applications</li>
+<li>Working on long-term maintainable projects</li>
+<li>Developing systems with clear entity relationships</li>
+<li>Creating frameworks or libraries</li>
+<li>Working with domain-driven design</li>
+</ul>
+<h3 id="when-not-to-use-oop">❌ When Not to Use OOP<a class="headerlink" href="#when-not-to-use-oop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Simple script-like programs</li>
+<li>One-off automation tasks</li>
+<li>Performance-critical systems where procedural code might be more efficient</li>
+<li>Functional programming scenarios</li>
+</ul>
+<h2 id="core-concepts">📘 Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="classes-and-objects">📦 Classes and Objects<a class="headerlink" href="#classes-and-objects" title="Permanent link">&para;</a></h3>
+<h4 id="what-are-they">What Are They?<a class="headerlink" href="#what-are-they" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Class: A blueprint for creating objects, defining their properties and behaviors</li>
+<li>Object: An instance of a class with actual values</li>
+</ul>
+<h4 id="when-to-create-a-class">When to Create a Class<a class="headerlink" href="#when-to-create-a-class" title="Permanent link">&para;</a></h4>
+<ul>
+<li>When modeling real-world entities (e.g., User, Product)</li>
+<li>When grouping related functionality</li>
+<li>When you need multiple instances with similar properties</li>
+<li>When implementing a design pattern</li>
+</ul>
+<pre class="highlight"><code class="language-java">public class User {
+    // Properties (state)
+    private String username;
+    private String email;
+
+    // Constructor
+    public User(String username, String email) {
+        this.username = username;
+        this.email = email;
+    }
+
+    // Methods (behavior)
+    public void updateEmail(String newEmail) {
+        this.email = newEmail;
+    }
+}</code></pre>
+<h3 id="encapsulation">🔒 Encapsulation<a class="headerlink" href="#encapsulation" title="Permanent link">&para;</a></h3>
+<h4 id="what-is-it">What Is It?<a class="headerlink" href="#what-is-it" title="Permanent link">&para;</a></h4>
+<p>Encapsulation bundles data and the methods that it operates on within a single unit, restricting direct access to some of an object's components.</p>
+<h4 id="when-to-use">✅ When to Use<a class="headerlink" href="#when-to-use" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Protecting internal state of objects</li>
+<li>Controlling access to data</li>
+<li>Hiding implementation details</li>
+<li>Enforcing validation logic</li>
+</ul>
+<pre class="highlight"><code class="language-java">public class BankAccount {
+    private double balance;  // Encapsulated data
+
+    public void deposit(double amount) {
+        if (amount &gt; 0) {
+            balance += amount;
+        } else {
+            throw new IllegalArgumentException("Deposit amount must be positive");
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}</code></pre>
+<h3 id="inheritance">🧬 Inheritance<a class="headerlink" href="#inheritance" title="Permanent link">&para;</a></h3>
+<h4 id="what-is-it_1">What Is It?<a class="headerlink" href="#what-is-it_1" title="Permanent link">&para;</a></h4>
+<p>Inheritance allows a class to inherit attributes and methods from another class, establishing an "is-a" relationship.</p>
+<h4 id="when-to-use_1">✅ When to Use<a class="headerlink" href="#when-to-use_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Creating specialized versions of classes</li>
+<li>Sharing common functionality among related classes</li>
+<li>Implementing polymorphic behavior</li>
+<li>Building class hierarchies</li>
+</ul>
+<h4 id="when-not-to-use">❌ When Not to Use<a class="headerlink" href="#when-not-to-use" title="Permanent link">&para;</a></h4>
+<ul>
+<li>When there's no clear "is-a" relationship</li>
+<li>When you need flexibility in changing behavior</li>
+<li>When inheritance would create deep hierarchies</li>
+<li>When composition would be more appropriate</li>
+</ul>
+<pre class="highlight"><code class="language-java">public abstract class Vehicle {
+    protected String brand;
+
+    public abstract void start();
+}
+
+public class Car extends Vehicle {
+    @Override
+    public void start() {
+        System.out.println("Car starting...");
+    }
+}</code></pre>
+<h3 id="polymorphism">🔄 Polymorphism<a class="headerlink" href="#polymorphism" title="Permanent link">&para;</a></h3>
+<h4 id="what-is-it_2">What Is It?<a class="headerlink" href="#what-is-it_2" title="Permanent link">&para;</a></h4>
+<p>Polymorphism allows objects to take multiple forms, enabling you to perform the same action in different ways.</p>
+<h4 id="types-of-polymorphism">Types of Polymorphism<a class="headerlink" href="#types-of-polymorphism" title="Permanent link">&para;</a></h4>
+<h5 id="1-compile-time-method-overloading">1. Compile-time (Method Overloading)<a class="headerlink" href="#1-compile-time-method-overloading" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Same method name, different parameters</li>
+<li>Resolve at compile time</li>
+</ul>
+<h5 id="2-runtime-method-overriding">2. Runtime (Method Overriding)<a class="headerlink" href="#2-runtime-method-overriding" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Same method signature in parent and child classes</li>
+<li>Resolved at runtime</li>
+</ul>
+<h4 id="when-to-use_2">✅ When to Use<a class="headerlink" href="#when-to-use_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Creating flexible and extensible APIs</li>
+<li>Implementing plugins or extensions</li>
+<li>Working with collections of related objects</li>
+<li>Building framework-level code
+<pre class="highlight"><code class="language-java">// Method Overloading
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
+// Method Overriding
+public interface PaymentProcessor {
+    void processPayment(double amount);
+}
+
+public class CreditCardProcessor implements PaymentProcessor {
+    @Override
+    public void processPayment(double amount) {
+        // Credit card specific logic
+    }
+}</code></pre></li>
+</ul>
+<h3 id="association-aggregation-and-composition">🔗 Association, Aggregation, and Composition<a class="headerlink" href="#association-aggregation-and-composition" title="Permanent link">&para;</a></h3>
+<h4 id="association">🤝 Association<a class="headerlink" href="#association" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Represents relationships between objects</li>
+<li>Can be one-to-one, one-to-many, or many-to-many</li>
+<li>Objects have independent lifecycles</li>
+</ul>
+<h4 id="when-to-use-association">✅ When to Use Association<a class="headerlink" href="#when-to-use-association" title="Permanent link">&para;</a></h4>
+<ul>
+<li>When objects need to communicate</li>
+<li>When representing relationships between independent entities</li>
+<li>When objects can exist independently</li>
+</ul>
+<h4 id="one-to-one-association">One-to-One Association<a class="headerlink" href="#one-to-one-association" title="Permanent link">&para;</a></h4>
+<pre class="highlight"><code class="language-java">public class Person {
+    private Passport passport;  // One person has exactly one passport
+
+    public Person() {}
+
+    public void setPassport(Passport passport) {
+        this.passport = passport;
+    }
+
+    public Passport getPassport() {
+        return passport;
+    }
+}
+
+public class Passport {
+    private Person owner;  // One passport belongs to exactly one person
+    private String passportNumber;
+
+    public Passport(String passportNumber) {
+        this.passportNumber = passportNumber;
+    }
+
+    public void setOwner(Person person) {
+        this.owner = person;
+    }
+}</code></pre>
+<h4 id="one-to-many-association">One-to-Many Association<a class="headerlink" href="#one-to-many-association" title="Permanent link">&para;</a></h4>
+<pre class="highlight"><code class="language-java">public class Department {
+    private String name;
+    private List&lt;Employee&gt; employees;  // One department has many employees
+
+    public Department(String name) {
+        this.name = name;
+        this.employees = new ArrayList&lt;&gt;();
+    }
+
+    public void addEmployee(Employee employee) {
+        employees.add(employee);
+    }
+
+    public List&lt;Employee&gt; getEmployees() {
+        return new ArrayList&lt;&gt;(employees);  // Return copy for encapsulation
+    }
+}
+
+public class Employee {
+    private String name;
+    private Department department;  // One employee belongs to one department
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+}</code></pre>
+<h4 id="many-to-many-association">Many-to-Many Association<a class="headerlink" href="#many-to-many-association" title="Permanent link">&para;</a></h4>
+<pre class="highlight"><code class="language-java">public class Student {
+    private String name;
+    private List&lt;Course&gt; courses;  // One student can enroll in many courses
+
+    public Student(String name) {
+        this.name = name;
+        this.courses = new ArrayList&lt;&gt;();
+    }
+
+    public void enrollInCourse(Course course) {
+        if (!courses.contains(course)) {
+            courses.add(course);
+            course.addStudent(this);
+        }
+    }
+
+    public List&lt;Course&gt; getCourses() {
+        return new ArrayList&lt;&gt;(courses);
+    }
+}
+
+public class Course {
+    private String courseName;
+    private List&lt;Student&gt; students;  // One course can have many students
+
+    public Course(String courseName) {
+        this.courseName = courseName;
+        this.students = new ArrayList&lt;&gt;();
+    }
+
+    public void addStudent(Student student) {
+        if (!students.contains(student)) {
+            students.add(student);
+        }
+    }
+
+    public List&lt;Student&gt; getStudents() {
+        return new ArrayList&lt;&gt;(students);
+    }
+}
+
+// Usage Example
+public class Main {
+    public static void main(String[] args) {
+        // Creating courses
+        Course java = new Course("Java Programming");
+        Course python = new Course("Python Programming");
+
+        // Creating students
+        Student alice = new Student("Alice");
+        Student bob = new Student("Bob");
+
+        // Enrolling students in multiple courses
+        alice.enrollInCourse(java);
+        alice.enrollInCourse(python);
+        bob.enrollInCourse(java);
+
+        // Now:
+        // - Alice is enrolled in both Java and Python courses
+        // - Bob is enrolled in Java course
+        // - Java course has two students (Alice and Bob)
+        // - Python course has one student (Alice)
+    }
+}</code></pre>
+<h4 id="key-points-about-associations">Key Points About Associations<a class="headerlink" href="#key-points-about-associations" title="Permanent link">&para;</a></h4>
+<h5 id="1-one-to-one">1. <strong>One-to-One</strong> 🔗<a class="headerlink" href="#1-one-to-one" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Each object is related to exactly one instance of another object</li>
+<li>Example: Person-Passport relationship</li>
+<li>Use when: representing unique pairings</li>
+</ul>
+<h5 id="2-one-to-many">2. <strong>One-to-Many</strong> 📦<a class="headerlink" href="#2-one-to-many" title="Permanent link">&para;</a></h5>
+<ul>
+<li>One object can be related to multiple instances of another object</li>
+<li>Example: Department-Employee relationship</li>
+<li>Use when: representing hierarchical relationships</li>
+</ul>
+<h5 id="3-many-to-many">3. Many-to-Many 🔄<a class="headerlink" href="#3-many-to-many" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Multiple objects can be related to multiple instances of another object</li>
+<li>Example: Student-Course relationship</li>
+<li>Use when: representing complex relationships where both sides can have multiple connections</li>
+</ul>
+<h3 id="best-practices">💡 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Always protect collections using defensive copying</li>
+<li>✅ Consider using bi-directional relationships when necessary</li>
+<li>✅ Implement proper encapsulation for associated objects</li>
+<li>⚠️ Be careful with circular references in bi-directional relationships</li>
+<li>🔒 Use appropriate access modifiers</li>
+<li>📝 Document the nature of the relationship</li>
+</ul>
+<h3 id="when-to-use-each-type">When to Use Each Type<a class="headerlink" href="#when-to-use-each-type" title="Permanent link">&para;</a></h3>
+<p>Choose the appropriate association type based on your business requirements:</p>
+<ul>
+<li>One-to-One: for unique pairings (Person-Passport)</li>
+<li>One-to-Many: For hierarchical relationships (Department-Employees)</li>
+<li>Many-to-Many: For complex relationships requiring multiple connections (Students-Courses)</li>
+</ul>
+<h4 id="aggregation-has-a">📦 Aggregation (Has-A)<a class="headerlink" href="#aggregation-has-a" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Special form of association</li>
+<li>Represents ownership</li>
+<li>Objects can exist independently</li>
+</ul>
+<h4 id="when-to-use-aggregation">When to Use Aggregation<a class="headerlink" href="#when-to-use-aggregation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>When one class "has" another class</li>
+<li>When child objects can exist independently</li>
+<li>When sharing objects across owners
+<pre class="highlight"><code class="language-java">public class Department {
+    private List&lt;Professor&gt; professors;  // Aggregation
+}</code></pre></li>
+</ul>
+<h4 id="composition-part-of">🧩 Composition (Part-Of)<a class="headerlink" href="#composition-part-of" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Stronger form of of aggregation</li>
+<li>Child objects cannot exist without parent</li>
+<li>Represents a "part-of" relationship</li>
+</ul>
+<h4 id="when-to-use-composition">When to Use Composition<a class="headerlink" href="#when-to-use-composition" title="Permanent link">&para;</a></h4>
+<ul>
+<li>When child objects are essential parts of parent</li>
+<li>When child objects shouldn't exist independently</li>
+<li>When enforcing tight coupling is desired
+<pre class="highlight"><code class="language-java">public class Car {
+    private final Engine engine;  // Composition
+
+    public Car() {
+        engine = new Engine();  // Engine cannot exist without Car
+    }
+}</code></pre></li>
+</ul>
+<h3 id="best-practices_1">💡 Best Practices<a class="headerlink" href="#best-practices_1" title="Permanent link">&para;</a></h3>
+<h4 id="1-class-design">1. Class Design<a class="headerlink" href="#1-class-design" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Keep classes focused (Single Responsibility Principle)</li>
+<li>Favor composition over inheritance</li>
+<li>Use meaningful names</li>
+<li>Keep inheritance hierarchies shallow</li>
+</ul>
+<h4 id="2-encapsulation">2. Encapsulation<a class="headerlink" href="#2-encapsulation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Make fields private unless there's a good reason not to</li>
+<li>Provide getters/setters only when necessary</li>
+<li>Validate data in setters</li>
+<li>Use immutable objects when possible</li>
+</ul>
+<h4 id="3-code-organization">3. Code Organization<a class="headerlink" href="#3-code-organization" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Group related classes in packages</li>
+<li>Maintain clear separation of concerns</li>
+<li>Document public APIs and complex logic</li>
+<li>Follow consistent naming conventions</li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p><a href="https://drive.google.com/file/d/1tj-HtdPZGs-XS0BvCb50f9Fjr9aVyBBd/view?usp=share_link">Object Oriented Programming Notes</a>
+<a href="https://youtube.com/playlist?list=PLxuuH5GnCIlcGnesYMkGQOqokyI2Fwu3g&amp;si=-ExJ6GzRu8ThQiPN">OOP Principles Playlist</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../b_data_structures/" class="btn btn-neutral float-right" title="Data Structures">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="../b_data_structures/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
