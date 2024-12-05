@@ -410,7 +410,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 -   💭 Use Case: When elements must be added at the beginning</p>
 <h4 id="internal-helper-method-adding">🛠️ Internal Helper Method (Adding)<a class="headerlink" href="#internal-helper-method-adding" title="Permanent link">&para;</a></h4>
 <h5 id="addhelperint-index-t-data">addHelper(int index, T data)<a class="headerlink" href="#addhelperint-index-t-data" title="Permanent link">&para;</a></h5>
-<p><pre class="highlight"><code class="language-java">@SuppressWarnings("unchecked")
+<pre class="highlight"><code class="language-java">@SuppressWarnings("unchecked")
 private void addHelper(int index, T data) {
     // If array is full, create new array with double capacity
     if (size == backingArray.length) {
@@ -437,37 +437,30 @@ private void addHelper(int index, T data) {
         backingArray[index] = data;
     }
     size++;
-}
-````
-#### Removing Elements
-##### removeFromBack()
-````java
-public T removeFromBack() {
+}</code></pre>
+<h4 id="removing-elements">Removing Elements<a class="headerlink" href="#removing-elements" title="Permanent link">&para;</a></h4>
+<h5 id="removefromback">removeFromBack()<a class="headerlink" href="#removefromback" title="Permanent link">&para;</a></h5>
+<p><pre class="highlight"><code class="language-java">public T removeFromBack() {
     if (size == 0) {
         throw new java.util.NoSuchElementException("Cannot remove from an empty list");
     }
     return removeHelper(size - 1);
-}
-````
+}</code></pre>
 -   ⏱️ Time Complexity: O(1)
 -   💫 Most efficient removal operation
--   ⚠️ Checks for empty list
-##### removeFromFront()
-````java
-public T removeFromFront() {
+-   ⚠️ Checks for empty list</p>
+<h5 id="removefromfront">removeFromFront()<a class="headerlink" href="#removefromfront" title="Permanent link">&para;</a></h5>
+<p><pre class="highlight"><code class="language-java">public T removeFromFront() {
     if (size == 0) {
         throw new java.util.NoSuchElementException("Cannot remove from an empty list");
     }
     return removeHelper(0);
-}
-````
+}</code></pre>
 -   ⏱️ Time Complexity: O(n)
 -   ⚠️ Requires shifting all elements
--   💭 Use sparingly due to performance cost
-
-##### removeAtIndex(int index)
-```java
-public T removeAtIndex(int index) {
+-   💭 Use sparingly due to performance cost</p>
+<h5 id="removeatindexint-index">removeAtIndex(int index)<a class="headerlink" href="#removeatindexint-index" title="Permanent link">&para;</a></h5>
+<p><pre class="highlight"><code class="language-java">public T removeAtIndex(int index) {
     if (index &lt; 0 || index &gt;= size) {
         throw new IndexOutOfBoundsException("Index cannot be outside the "
             + "range [0, " + size + ")");
@@ -713,8 +706,8 @@ list.addToFront(element); // O(n) - expensive!</code></pre>
     -   Invalid index
     -   Null data
     -   Front insertion</p>
-<h4 id="removing-elements">Removing Elements<a class="headerlink" href="#removing-elements" title="Permanent link">&para;</a></h4>
-<h5 id="removefromfront">removeFromFront()<a class="headerlink" href="#removefromfront" title="Permanent link">&para;</a></h5>
+<h4 id="removing-elements_1">Removing Elements<a class="headerlink" href="#removing-elements_1" title="Permanent link">&para;</a></h4>
+<h5 id="removefromfront_1">removeFromFront()<a class="headerlink" href="#removefromfront_1" title="Permanent link">&para;</a></h5>
 <p><pre class="highlight"><code class="language-java">public T removeFromFront() {
     if (isEmpty()) {
         throw new NoSuchElementException("List is empty");
@@ -730,7 +723,7 @@ list.addToFront(element); // O(n) - expensive!</code></pre>
 -   ⚠️ Edge Cases:
     -   Empty list
     -   Single element</p>
-<h5 id="removefromback">removeFromBack()<a class="headerlink" href="#removefromback" title="Permanent link">&para;</a></h5>
+<h5 id="removefromback_1">removeFromBack()<a class="headerlink" href="#removefromback_1" title="Permanent link">&para;</a></h5>
 <p><pre class="highlight"><code class="language-java">public T removeFromBack() {
     if (isEmpty()) {
         throw new NoSuchElementException("List is empty");
@@ -989,7 +982,7 @@ if (head == null) {
     -   Null data
     -   Front/back insertions</p>
 <h4 id="remove-elements">Remove Elements<a class="headerlink" href="#remove-elements" title="Permanent link">&para;</a></h4>
-<h5 id="removefromfront_1">removeFromFront()<a class="headerlink" href="#removefromfront_1" title="Permanent link">&para;</a></h5>
+<h5 id="removefromfront_2">removeFromFront()<a class="headerlink" href="#removefromfront_2" title="Permanent link">&para;</a></h5>
 <p><pre class="highlight"><code class="language-java">public T removeFromFront() {
     if (isEmpty()) {
         throw new NoSuchElementException("List is empty");
@@ -1013,7 +1006,7 @@ if (head == null) {
     -   Empty list
     -   Single element
     -   Maintaining tail reference</p>
-<h5 id="removefromback_1">removeFromBack()<a class="headerlink" href="#removefromback_1" title="Permanent link">&para;</a></h5>
+<h5 id="removefromback_2">removeFromBack()<a class="headerlink" href="#removefromback_2" title="Permanent link">&para;</a></h5>
 <p><pre class="highlight"><code class="language-java">public T removeFromBack() {
     if (isEmpty()) {
         throw new NoSuchElementException("List is empty");
@@ -1226,8 +1219,8 @@ head = newHead;</code></pre>
 -   ⏱️ Time Complexity: O(1)
 -   💡 Key Point: Tail reference makes this efficient
 -   ⚠️ Edge Cases: Empty list, single element</p>
-<h4 id="removing-elements_1">Removing Elements<a class="headerlink" href="#removing-elements_1" title="Permanent link">&para;</a></h4>
-<h5 id="removefromfront_2">removeFromFront()<a class="headerlink" href="#removefromfront_2" title="Permanent link">&para;</a></h5>
+<h4 id="removing-elements_2">Removing Elements<a class="headerlink" href="#removing-elements_2" title="Permanent link">&para;</a></h4>
+<h5 id="removefromfront_3">removeFromFront()<a class="headerlink" href="#removefromfront_3" title="Permanent link">&para;</a></h5>
 <p><pre class="highlight"><code class="language-java">public T removeFromFront() {
     if (isEmpty()) {
         throw new NoSuchElementException("List is empty");
@@ -1245,7 +1238,7 @@ head = newHead;</code></pre>
 -   ⏱️ Time Complexity: O(1)
 -   💡 Key Point: Maintain circular structure
 -   ⚠️ Edge Cases: Empty list, single element</p>
-<h5 id="removefromback_2">removeFromBack()<a class="headerlink" href="#removefromback_2" title="Permanent link">&para;</a></h5>
+<h5 id="removefromback_3">removeFromBack()<a class="headerlink" href="#removefromback_3" title="Permanent link">&para;</a></h5>
 <p><pre class="highlight"><code class="language-java">public T removeFromBack() {
     if (isEmpty()) {
         throw new NoSuchElementException("List is empty");
