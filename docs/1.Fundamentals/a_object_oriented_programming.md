@@ -1,4 +1,4 @@
-﻿# 🔮 Programming Fundamentals
+﻿# 🔮 Object Oriented Programming
 ![enter image description here](https://i.postimg.cc/k5bN3wFQ/temp-Image-KDO9-RC.avif)
 ## Introduction
 As a software engineer, mastering programming fundamentals is fundamental to writing maintainable, scalable, and efficient code. This guide focuses on Object-Oriented Programming (OOP), one of the most important paradigms in modern software development.

@@ -172,7 +172,7 @@ public void addToFront(T data) {
 #### 🛠️ Internal Helper Method (Adding)
 
 ##### addHelper(int index, T data)
-```java
+````java
 @SuppressWarnings("unchecked")
 private void addHelper(int index, T data) {
     // If array is full, create new array with double capacity
@@ -202,6 +202,7 @@ private void addHelper(int index, T data) {
     size++;
 }
 ````
+
 #### Removing Elements
 ##### removeFromBack()
 ````java
