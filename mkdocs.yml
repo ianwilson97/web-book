@@ -1,5 +1,28 @@
 site_name: My Docs
 
+# Theme configuration
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.instant
+    - navigation.instant.progress
+    - content.code.copy
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
 # Navigation structure
 nav:
   - Fundamentals:
@@ -10,9 +33,6 @@ nav:
     - Java: 1.Fundamentals/e_java.md
   - Interviews:
     - Technical Interviews: 2.Interviews/a_technical_interviews.md
-
-# Theme configuration
-theme: readthedocs
 
 # Extensions for better markdown support
 markdown_extensions:

@@ -3,7 +3,7 @@
 ## Introduction
 As a software engineer, mastering programming fundamentals is fundamental to writing maintainable, scalable, and efficient code. This guide focuses on Object-Oriented Programming (OOP), one of the most important paradigms in modern software development.
 
-## Why Object-Oriented Programming?
+### Why Object-Oriented Programming?
 I've personally found OOP to be crucial so far in my journey as a software engineer. OOP is important because:
 
 - It helps manage complex systems by breaking them into manageable pieces

@@ -1,6 +1,7 @@
 ﻿# Python Programming Language
 ![Python](https://i.postimg.cc/Jh5Mm3NS/temp-Image-AUkf47.avif)
-## Introduction to Python
+
+## 1. Introduction to Python
 Python stands as one of the most influential programming languages in modern software development. Created by Guido van Rossum and first released in 1991, Python embodies a philosophy that emphasizes code readability and simplicity, captured in "The Zen of Python" - a collection of guiding principles that shape the language's design and usage.
 ### Historical Background
 The journey of Python began in the late 1980s at the Centrum Wiskunde & Informatica (CWI) in the Netherlands. Van Rossum envisioned a successor to the ABC programming language that would emphasize code readability while maintaining powerful programming capabilities. He chose the name "Python" inspired by the British comedy series "Monty Python's Flying Circus," setting the tone for a community that often embraces both serious programming and playful creativity.
@@ -40,7 +41,7 @@ In the following sections, we'll explore Python's fundamental concepts, syntax, 
 Reference:
 https://roadmap.sh/python
 
-## Python Syntax Guide
+## 2. Python Syntax Guide
 ### Introduction
 Python's syntax is designed with readability and simplicity in mind, setting it apart from other programming languages through its use of significant whitespace and clear, expressive constructs. This guide will explore the fundamental syntax rules that govern how we write Python code.
 ### Code Structure and Execution Modes
@@ -176,7 +177,7 @@ def process_data(data):
 4.  Include docstrings for functions, classes, and modules
 5.  Use comments to explain complex logic, not obvious code
 
-## Python Variables: A Complete Guide
+## 3. Python Variables: A Complete Guide
 ### Introduction
 Variables are foundational to Python programming - they allow us to store, track, and manipulate data throughout our code. At their core, variables act as labels or names that reference values stored in a computer's memory. Understanding how variables work is essential for writing effective Python programs.
 ### Core Concepts
@@ -346,7 +347,7 @@ def demo_memory():
 Understanding these concepts helps write more efficient and bug-free code while letting Python handle the low-level details of memory management.
 
 
-## Python Conditional Statements Guide
+## 4. Python Conditional Statements Guide
 ### Understanding Control Flow with `if` Statements
 Control flow is a fundamental concept in programming that determines how a program executes based on different conditions and choices. Python's `if` statement serves as the primary mechanism for implementing conditional logic, allowing programs to make decisions and adapt their behavior dynamically.
 ### Basic Syntax and Structure
@@ -478,7 +479,7 @@ def process_data(data):
         raise ValueError("Invalid data")
 ````
 This documentation provides a comprehensive overview of Python's conditional statements, emphasizing both the technical aspects and the idiomatic ways to use them effectively in your code. Remember that clear, readable code is often more valuable than clever, condensed solutions.
-## Python Loop Structures
+## 5. Python Loop Structures
 ### Introduction
 Loops are fundamental control structures that enable code reuse and iteration in Python programs. By understanding how to effectively use loops, developers can write more efficient and maintainable code for processing collections, implementing algorithms, and handling repetitive tasks.
 ### While Loops: Indefinite Iteration
@@ -679,7 +680,7 @@ def process_large_file(filename):
             process_line(line)
 ````
 This documentation provides a comprehensive overview of Python's loop structures, from basic usage to advanced techniques. Remember that choosing the right loop structure and following best practices can significantly impact your code's readability and performance.
-## Python Type Conversion
+## 6. Python Type Conversion
 ### Understanding Type Conversion in Python
 Type conversion is a fundamental concept in Python where we transform data from one type to another, enabling our code to work with different data representations. This capability is essential for building robust applications that can handle various forms of input and data processing.
 ### Two Approaches to Type Conversion
@@ -848,7 +849,7 @@ def parse_user_input(raw_input: str) -> str:
     return raw_input.encode('utf-8').decode('utf-8')
 ````
 By understanding these concepts and following these practices, you can handle type conversions safely and effectively in your Python applications, leading to more robust and maintainable code.
-## Python Exception Handling
+## 7. Python Exception Handling
 ### Introduction to Error Handling
 Error handling is a critical aspect of writing robust Python applications. When things go wrong in our code, Python provides a sophisticated mechanism for detecting, reporting, and handling errors through exceptions. Understanding this system is essential for writing reliable software.
 ### Understanding Python's Error Types
@@ -1055,7 +1056,7 @@ try:
 except ValueError as ve:
     raise RuntimeError("Failed to process user input") from ve
 ````
-## Python Functions
+## 8. Python Functions
 ### Introduction
 Functions are the fundamental building blocks of modular and maintainable Python code. They allow us to encapsulate reusable logic, make our code more readable, and create abstractions that help manage complexity. In this comprehensive guide, we'll explore how to define and use functions effectively in Python.
 ### Core Function Concepts
@@ -1277,7 +1278,7 @@ print(double(5))  # Output: 10
 print(triple(5))  # Output: 15
 ````
 By following these patterns and practices, you'll create more maintainable, readable, and robust Python code. Remember that functions are the building blocks of your programs - investing time in writing them well will pay dividends in code quality and developer productivity.
-## Python Collections Guide: Lists, Sets, and Tuples
+## 9. Python Collections Guide: Lists, Sets, and Tuples
 ### Introduction
 Python provides several built-in collection types to store and organize data. Understanding their characteristics, trade-offs, and best use cases is crucial for writing efficient and maintainable code. This guide explores the three main sequence types: lists, sets, and tuples.
 ### Core Collection Types Overview
@@ -1462,7 +1463,7 @@ def demonstrate_nesting():
         {"eve", "frank"}
     ]
 ````
-## Python List Methods and Data Structures: A Comprehensive Guide
+## 10. Python List Methods and Data Structures: A Comprehensive Guide
 ### Introduction
 
 Python's list data structure is one of its most versatile and commonly used features. Lists provide a flexible way to store and manipulate sequences of data, offering a rich set of methods to modify, analyze, and transform their contents. Let's explore how these methods work and how we can effectively use lists in different scenarios.
@@ -1643,7 +1644,7 @@ def demonstrate_performance_patterns():
 
 Lists are a fundamental building block in Python, and mastering their methods and patterns is essential for writing efficient and maintainable code. By understanding these concepts, you can choose the right approaches for your specific use cases and write more elegant solutions to complex problems.
 
-## Python Dictionaries: A Comprehensive Guide
+## 11. Python Dictionaries: A Comprehensive Guide
 ### Understanding Dictionary Fundamentals
 
 Dictionaries are one of Python's most powerful built-in data structures. At their core, they provide a way to store and retrieve values using keys instead of numeric indices. Let's explore how they work and when to use them.
@@ -1855,7 +1856,7 @@ def show_defaultdict_usage():
 ````
 Understanding dictionaries is crucial for Python development, as they're used extensively in configuration, caching, counting, and data organization. By mastering these concepts and patterns, you'll be better equipped to write more efficient and maintainable Python code.
 
-## Python Modules: A Complete Guide to Code Organization
+## 12. Python Modules: A Complete Guide to Code Organization
 ### Understanding Modules: The Building Blocks of Python Programs
 
 When our Python programs grow beyond a few dozen lines, we need a way to organize code into logical, reusable pieces. This is where modules come in - they're Python's fundamental mechanism for code organization and reuse.
@@ -2037,7 +2038,7 @@ Following these guidelines helps create maintainable, reusable code that others 
 
 By mastering Python's module system, you'll be able to create well-organized, professional-quality code that's a pleasure to work with and maintain.
 
-## Python Built-in and Custom Modules: A Comprehensive Guide
+## 13. Python Built-in and Custom Modules: A Comprehensive Guide
 ## Understanding Python's Module System
 
 Python's module system is like a well-organized library, where each module is a book containing specific functions and tools. Let's explore the most useful built-in modules and learn how to create our own custom modules.
@@ -5567,19 +5568,6 @@ Consider a scenario where you're working on two different Python projects:
 -   Project B needs Django 4.0 for newer features
 
 Without virtual environments, you would face a dilemma: installing either version globally would break one of your projects. Virtual environments solve this by creating isolated spaces where each project can have its own dependencies without interfering with others.
-
-#### How Virtual Environments Work
-
-A virtual environment consists of:
-
-1.  A specific Python interpreter version
-2.  An isolated directory structure containing:
-    -   A copy of the Python binary
-    -   A dedicated pip installation
-    -   Project-specific packages and dependencies
-    -   Environment activation scripts
-
-When activated, a virtual environment modifies your shell's environment variables, particularly  `PATH`, to prioritize its own Python interpreter and packages over the system-wide installation.
 ![Virtual Environments](https://i.postimg.cc/jqhssXDY/temp-Imageac-Zf-Vj.avif)
 
 ### Creating and Managing Virtual Environments
