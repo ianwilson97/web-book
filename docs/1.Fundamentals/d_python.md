@@ -1,5 +1,4 @@
 ﻿# Python Programming Language
-![Python](https://i.postimg.cc/Jh5Mm3NS/temp-Image-AUkf47.avif)
 
 ## 1. Introduction to Python
 Python stands as one of the most influential programming languages in modern software development. Created by Guido van Rossum and first released in 1991, Python embodies a philosophy that emphasizes code readability and simplicity, captured in "The Zen of Python" - a collection of guiding principles that shape the language's design and usage.

@@ -1,17 +1,16 @@
 ﻿
-# 🔮 Data Structures
-![Data Structures](https://i.postimg.cc/rsFzdHwb/temp-Image-.avif)
+# Data Structures
 ## 📘 Introduction
 Data structures are specialized formats for organizing, processing, retrieving, and storing data. Understanding data structures is fundamental to writing efficient and scalable code. This guide explores various data structures, their implementations, and practical applications in software development.
 
 ### Why Data Structures Matter
--   🎯  **Efficient Problem-Solving**: Choosing the right data structure can dramatically improve program performance
--   💼  **Career Development**: Essential for technical interviews at top tech companies
--   🔧  **Code Optimization**: Enables writing more efficient and maintainable code
--   🌐  **Real-World Applications**: Critical for building scalable software systems
--   🏆  **Competitive Edge**: Fundamental for algorithmic problem-solving and competitions
+-   **Efficient Problem-Solving**: Choosing the right data structure can dramatically improve program performance
+-   **Career Development**: Essential for technical interviews at top tech companies
+-   **Code Optimization**: Enables writing more efficient and maintainable code
+-   **Real-World Applications**: Critical for building scalable software systems
+-   **Competitive Edge**: Fundamental for algorithmic problem-solving and competitions
 
-## Guide Structure
+### Guide Structure
 Each data structure section will cover:
 - Core concepts and characteristics
 - Implementation details
@@ -20,8 +19,8 @@ Each data structure section will cover:
 - Best practices and use cases
 - Code examples and tips
   
-## Categories of Data Structures
-### 📚 Linear Data Structures
+### Categories of Data Structures
+#### Linear Data Structures
 Structures where elements are stored sequentially:
 
 -   **Arrays & ArrayLists**:
@@ -39,7 +38,7 @@ Structures where elements are stored sequentially:
     -   FIFO (First-In-First-Out)
     -   Best for: Task scheduling, resource management
 
-### 🌳 Tree-Based Structures
+#### Tree-Based Structures
 Hierarchical structures with parent-child relationships:
 
 - **Priority Queues**:
@@ -52,7 +51,7 @@ Hierarchical structures with parent-child relationships:
     -   Ordered nodes
     -   Best for: Fast search, insert, delete
 
-### 🌲 Advanced Tree-Based Structures
+#### Advanced Tree-Based Structures
 Specialized tree structures for specific use cases:
 
 -   **AVL Trees**: Balanced binary search trees    
@@ -61,7 +60,7 @@ Specialized tree structures for specific use cases:
 -   **B-Trees**: Optimized for disk storage
 -   **K-D Trees**: Space partitioning structure
 -   **M-Ary Trees**: Nodes with multiple children
-### 🎯 Hash-Based Structures
+#### Hash-Based Structures
 Structures using hash functions:
 
 -   **Hash Tables**:
@@ -69,7 +68,7 @@ Structures using hash functions:
     -   O(1) average access
     -   Best for: Caching, dictionaries
 
-### 🕸️ Graph-Based Structures
+#### Graph-Based Structures
 Structures representing connections:
 
 -   **Directed Graphs**: One-way connections
@@ -80,7 +79,7 @@ Structures representing connections:
 
 
 
-### 📚 Advanced Structures
+#### Advanced Structures
 Specialized data structures:
 
 -   **Tries**:
@@ -90,10 +89,10 @@ Specialized data structures:
     -   Probabilistic alternative to balanced trees
     -   Best for: Fast search with simple implementation
 
-## Time Complexity Overview
+### Time Complexity Overview
 
 
-## 📊 Performance Overview
+#### 📊 Performance Overview
 
 | Data Structure | Access | Search | Insertion | Deletion | Space |
 |----------------|---------|---------|------------|-----------|--------|
@@ -123,19 +122,19 @@ Specialized data structures:
 
  
 
-## References
+#### References
 [Data Structures and Algorithms Notes](https://drive.google.com/file/d/1LaF74WE-jMvdlZ0FLwSWRxKVjO75iv8z/view?usp=share_link)
-#  📚 LINEAR DATA STRUCTURESine Data Structures
-# 📚 ArrayList
+#  LINEAR DATA STRUCTURES
+## ArrayList
 ![ArrayLists](https://i.postimg.cc/C10R05Tw/temp-Image-PLc-FLQ.avif)
 An ArrayList is a dynamic array implementation that automatically handles resizing as elements are added or removed. It provides fast random access and is one of the most used data structures in Java.
-## Core Characteristics
-- 📈 Dynamic sizing
-- 📊 Contiguous memory storage
-- 🔍 Fast random access
-- 📝 Mutable length
-### Implementation Details
-#### Structure
+### Core Characteristics
+- Dynamic sizing
+- Contiguous memory storage
+- Fast random access
+- Mutable length
+#### Implementation Details
+##### Structure
 ````java
 public class ArrayList<T> {
     private T[] backingArray;    // Internal array to store elements
@@ -143,9 +142,9 @@ public class ArrayList<T> {
     public static final int INITIAL_CAPACITY = 9;
 }
 ````
-### 🔧 Core Operations & Time Complexities
-#### Adding Elements
-##### addToBack(T data)
+#### Core Operations & Time Complexities
+##### Adding Elements
+###### addToBack(T data)
 ````java
 public void addToBack(T data) {
     if (data == null) {
@@ -154,10 +153,10 @@ public void addToBack(T data) {
     addHelper(size, data);
 }
 ````
--   ⏱️ Time Complexity: Amortized O(1)
--   💭 Best for: Adding elements when order doesn't matter
--   ⚠️ Note: May trigger resizing of backing array
-##### addToFront(T data)
+-   Time Complexity: Amortized O(1)
+-   Best for: Adding elements when order doesn't matter
+-   Note: May trigger resizing of backing array
+###### addToFront(T data)
 ````java
 public void addToFront(T data) {
     if (data == null) {
@@ -166,12 +165,12 @@ public void addToFront(T data) {
     addHelper(0, data);
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   ⚠️ Warning: Requires shifting all elements
--   💭 Use Case: When elements must be added at the beginning
-#### 🛠️ Internal Helper Method (Adding)
+-   Time Complexity: O(n)
+-   Warning: Requires shifting all elements
+-   Use Case: When elements must be added at the beginning
+##### Internal Helper Method (Adding)
 
-##### addHelper(int index, T data)
+###### addHelper(int index, T data)
 ````java
 @SuppressWarnings("unchecked")
 private void addHelper(int index, T data) {
@@ -203,8 +202,8 @@ private void addHelper(int index, T data) {
 }
 ````
 
-#### Removing Elements
-##### removeFromBack()
+##### Removing Elements
+###### removeFromBack()
 ````java
 public T removeFromBack() {
     if (size == 0) {
@@ -213,10 +212,10 @@ public T removeFromBack() {
     return removeHelper(size - 1);
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💫 Most efficient removal operation
--   ⚠️ Checks for empty list
-##### removeFromFront()
+-   Time Complexity: O(1)
+-   Most efficient removal operation
+-   Checks for empty list
+###### removeFromFront()
 ````java
 public T removeFromFront() {
     if (size == 0) {
@@ -225,11 +224,11 @@ public T removeFromFront() {
     return removeHelper(0);
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   ⚠️ Requires shifting all elements
--   💭 Use sparingly due to performance cost
+-   Time Complexity: O(n)
+-   Requires shifting all elements
+-   Use sparingly due to performance cost
 
-##### removeAtIndex(int index)
+###### removeAtIndex(int index)
 ```java
 public T removeAtIndex(int index) {
     if (index < 0 || index >= size) {
@@ -239,18 +238,18 @@ public T removeAtIndex(int index) {
     return removeHelper(index);
 }
 ```
--   ⏱️ Time Complexity:
+-   Time Complexity:
     -   Best Case (last element): O(1)
     -   Average/Worst Case: O(n)
--   🎯 Purpose: Removes and returns element at specified index
--   ⚠️ Validation: Checks for valid index range
--   💫 Process:
+-   Purpose: Removes and returns element at specified index
+-   Validation: Checks for valid index range
+-   Process:
     1.  Validates index bounds
     2.  Calls removeHelper for actual removal
     3.  Returns removed element
 
-#### 🛠️ Internal Helper Method (Removing)
-##### removeHelper(int index)
+##### 🛠️ Internal Helper Method (Removing)
+###### removeHelper(int index)
 
 ````java
 private T removeHelper(int index) {
@@ -263,15 +262,15 @@ private T removeHelper(int index) {
     return removed;
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   🎯 Purpose: Internal method for handling element removal and shifting
--   💫 Key Operations:
+-   Time Complexity: O(n)
+-   Purpose: Internal method for handling element removal and shifting
+-   Key Operations:
     1.  Element removal at specified index
     2.  Left-shifting remaining elements
     3.  Cleanup and size management
 
-#### Access Operations
-##### get(int index)
+##### Access Operations
+###### get(int index)
 ````java
 public T get(int index) {
     if (index < 0 || index >= size) {
@@ -281,11 +280,11 @@ public T get(int index) {
     return backingArray[index];
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   🎯 Direct index access
--   ⚠️ Bounds checking included
+-   Time Complexity: O(1)
+-   Direct index access
+-   Bounds checking included
 
-## 📊 Performance Summary
+#### Performance Summary
 
 | Operation | Time Complexity | Notes |
 |-----------|----------------|-------|
@@ -300,11 +299,11 @@ public T get(int index) {
 
 \* Amortized time complexity - occasional resizing operations are averaged over many operations
 
-### 💡 Best Practices
-#### 1. Initialization
+#### Best Practices
+##### 1. Initialization
 - State with reasonable initial capacity
 - Consider expected size for optimal performance
-#### 2. Usage Tips
+##### 2. Usage Tips
 ````java
 // Prefer adding to back when possible
 list.addToBack(element);  // O(1)
@@ -312,28 +311,28 @@ list.addToBack(element);  // O(1)
 // Avoid frequent front operations
 list.addToFront(element); // O(n) - expensive!
 ````
-#### 3. Memory Management
+##### 3. Memory Management
 - Clear references when removing elements
 - Reset to initial capacity when clearing
 
-### 🎯 Common Use Cases
--   📝 Dynamic lists of elements
--   📊 Buffer implementation
--   🔄 Stack implementation
--   📚 Collection management
+#### Common Use Cases
+-   Dynamic lists of elements
+-   Buffer implementation
+-   Stack implementation
+-   Collection management
 
-### ⚠️ Common Pitfalls
+#### Common Pitfalls
 1. Frequent front operations
 2. Not considering capacity growth
 3. Not handling null elements
 4. Ignoring bounds checking
 
-### 🔍 When to Use ArrayList
+#### When to Use ArrayList
 - Need dynamic sizing
 - Frequent random access
 - Mostly back-end operations
 - Memory locality is important
-### 🚫 When Not to Use ArrayList
+#### When Not to Use ArrayList
 - Frequent insertions/deletions at front/middle
 - Fixed size is sufficient
 - Memory is extremely constrained
@@ -341,18 +340,18 @@ list.addToFront(element); // O(n) - expensive!
 
 #### References
 https://youtu.be/PEnFFiQe1pM?si=KfpsngEBI0gesUbC
-# 📚 Linked Lists
+# Linked Lists
 ![enter image description here](https://i.postimg.cc/fLKGM96B/temp-Imageq-Jb-Lbh.avif)
 
-## 🔗 Singly Linked List
+## Singly Linked List
 A Singly Linked List is a fundamental data structure where elements are stored in nodes, each containing data and a reference to the next node in the sequence. Unlike arrays, linked lists don't require contiguous memory allocation, making them ideal for dynamic data management.
 
 ### Core Characteristics
--   🔄 Dynamic sizing (no fixed capacity)
--   📝 Sequential access pattern
--   🧩 Node-based structure
--   🎯 Efficient insertions and deletions at known positions
--   🔍 Linear time search operations
+-   Dynamic sizing (no fixed capacity)
+-   Sequential access pattern
+-   Node-based structure
+-   Efficient insertions and deletions at known positions
+-   Linear time search operations
 
 ### Implementation Details
 #### Structure
@@ -372,9 +371,9 @@ public class LinkedList<T> {
     }
 }
 ````
-### 🔧 Core Operations & Time Complexities
-#### Adding Elements
-##### addToFront(T data)
+#### Core Operations & Time Complexities
+##### Adding Elements
+###### addToFront(T data)
 ````java
 public void addToFront(T data) {
     if (data == null) {
@@ -387,12 +386,12 @@ public void addToFront(T data) {
     size++;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💭 Best for: Stack-like operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(1)
+-   Best for: Stack-like operations
+-   Edge Cases:
     -   Null data
     -   First element (empty list)
-##### addToBack(T data)
+###### addToBack(T data)
 ````java
 public void addToBack(T data) {
     if (data == null) {
@@ -419,7 +418,7 @@ public void addToBack(T data) {
     -   Null data
     -   Empty list
     -   Consider tracking tail pointer for O(1) operation
-##### addAtIndex(int index, T data)
+###### addAtIndex(int index, T data)
 ````java
 public void addAtIndex(int index, T data) {
     if (index < 0 || index > size) {
@@ -445,14 +444,14 @@ public void addAtIndex(int index, T data) {
     size++;
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   💭 Best for: Ordered insertions
--   ⚠️ Edge Cases:
+-   Time Complexity: O(n)
+-   Best for: Ordered insertions
+-   Edge Cases:
     -   Invalid index
     -   Null data
     -   Front insertion
-#### Removing Elements
-##### removeFromFront()
+##### Removing Elements
+###### removeFromFront()
 ````java
 public T removeFromFront() {
     if (isEmpty()) {
@@ -465,12 +464,12 @@ public T removeFromFront() {
     return data;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💭 Best for: Stack operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(1)
+-   Best for: Stack operations
+-   Edge Cases:
     -   Empty list
     -   Single element
-##### removeFromBack()
+###### removeFromBack()
 ````java
 public T removeFromBack() {
     if (isEmpty()) {
@@ -495,14 +494,14 @@ public T removeFromBack() {
     return data;
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   💭 Best for: Queue operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(n)
+-   Best for: Queue operations
+-   Edge Cases:
     -   Empty list
     -   Single element
     -   Consider tail pointer optimization
-#### Access Operations
-##### get(int index)
+##### Access Operations
+###### get(int index)
 ````java
 public T get(int index) {
     if (index < 0 || index >= size) {
@@ -516,12 +515,12 @@ public T get(int index) {
     return current.data;
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   💭 Best for: Sequential access
--   ⚠️ Edge Cases:
+-   Time Complexity: O(n)
+-   Best for: Sequential access
+-   Edge Cases:
     -   Invalid index
     -   Empty list
-## 📊 Performance Summary
+#### Performance Summary
 
 | Operation | Time Complexity | Notes |
 |-----------|----------------|--------|
@@ -533,8 +532,8 @@ public T get(int index) {
 | Get | O(n) | Linear traversal |
 | Size | O(1) | Tracked variable |
 
-### 💡 Best Practices
-#### 1. Null Handling
+#### Best Practices
+##### 1. Null Handling
 ````java
 private void validateNotNull(T data) {
     if (data == null) {
@@ -542,7 +541,7 @@ private void validateNotNull(T data) {
     }
 }
 ````
-#### 2. Index Validation
+##### 2. Index Validation
 ````java
 private void validateIndex(int index, boolean isAdd) {
     int maxIndex = isAdd ? size : size - 1;
@@ -551,11 +550,11 @@ private void validateIndex(int index, boolean isAdd) {
     }
 }
 ````
-#### 3. Memory Management
+##### 3. Memory Management
 -   Clear references when removing nodes
 -   Consider garbage collection implications
 -   Track size for O(1) length checks
-### ⚠️ Common Pitfalls
+#### ⚠️ Common Pitfalls
 #### 1. Losing References
 ````java
 // WRONG - Lost reference to rest of list

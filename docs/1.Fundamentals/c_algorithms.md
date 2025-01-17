@@ -1,8 +1,6 @@
 ﻿
 # 📘 Introduction to Algorithms
 
-![Algorithms](https://i.postimg.cc/gjyywYK3/temp-Image-VGnp-Ri.avif)
-
 Algorithms are systematic procedures for solving computational problems and manipulating data. Understanding algorithms is crucial for developing efficient software solutions and optimizing program performance. This guide explores essential algorithms, their implementations, and practical applications in software engineering.
 
 ### 🎯 Why Algorithms Matter

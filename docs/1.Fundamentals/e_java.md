@@ -1,5 +1,5 @@
 ﻿# Java Programming Language
-![Java](https://i.postimg.cc/28fZN5bX/temp-Imagegz-FZs-I.avif)
+
 ## Introduction
 Java stands as one of the most influential programming languages in the history of computing, powering everything from web applications and mobile devices to enterprise software and embedded systems. First released in 1995 by Sun Microsystems, Java has evolved to become a cornerstone of modern software development, known for its platform independence, robustness, and versatility.
 

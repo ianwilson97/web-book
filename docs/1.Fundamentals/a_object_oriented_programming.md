@@ -1,5 +1,4 @@
-﻿# 🔮 Object Oriented Programming
-![enter image description here](https://i.postimg.cc/k5bN3wFQ/temp-Image-KDO9-RC.avif)
+﻿# Object Oriented Programming
 ## Introduction
 As a software engineer, mastering programming fundamentals is fundamental to writing maintainable, scalable, and efficient code. This guide focuses on Object-Oriented Programming (OOP), one of the most important paradigms in modern software development.
 
@@ -11,22 +10,22 @@ I've personally found OOP to be crucial so far in my journey as a software engin
 - Makes code more maintainable and easier to debug
 - Facilitates team collaboration through clear interfaces
 
-### ✅ When to Use OOP
+### When to Use OOP
 - When building medium to large-scale applications
 - Working on long-term maintainable projects
 - Developing systems with clear entity relationships
 - Creating frameworks or libraries
 - Working with domain-driven design
 
-### ❌ When Not to Use OOP 
+### When Not to Use OOP 
 
 - Simple script-like programs
 - One-off automation tasks
 - Performance-critical systems where procedural code might be more efficient
 - Functional programming scenarios
 
-## 📘 Core Concepts
-### 📦 Classes and Objects
+## Core Concepts
+### Classes and Objects
 #### What Are They?
 - Class: A blueprint for creating objects, defining their properties and behaviors
 - Object: An instance of a class with actual values
@@ -57,11 +56,11 @@ public class User {
 }
 ````
 
-### 🔒 Encapsulation
+### Encapsulation
 #### What Is It?
 Encapsulation bundles data and the methods that it operates on within a single unit, restricting direct access to some of an object's components.
 
-#### ✅ When to Use
+#### When to Use
 - Protecting internal state of objects
 - Controlling access to data
 - Hiding implementation details
@@ -85,17 +84,17 @@ public class BankAccount {
 }
 ````
 
-### 🧬 Inheritance
+### Inheritance
 #### What Is It?
 Inheritance allows a class to inherit attributes and methods from another class, establishing an "is-a" relationship.
 
-#### ✅ When to Use
+#### When to Use
 - Creating specialized versions of classes
 - Sharing common functionality among related classes
 - Implementing polymorphic behavior
 - Building class hierarchies
 
-#### ❌ When Not to Use
+#### When Not to Use
 - When there's no clear "is-a" relationship
 - When you need flexibility in changing behavior
 - When inheritance would create deep hierarchies
@@ -116,7 +115,7 @@ public class Car extends Vehicle {
 }
 ````
 
-### 🔄 Polymorphism
+### Polymorphism
 #### What Is It?
 Polymorphism allows objects to take multiple forms, enabling you to perform the same action in different ways.
 #### Types of Polymorphism
@@ -127,7 +126,7 @@ Polymorphism allows objects to take multiple forms, enabling you to perform the 
 - Same method signature in parent and child classes
 - Resolved at runtime
 
-#### ✅ When to Use
+#### When to Use
 - Creating flexible and extensible APIs
 - Implementing plugins or extensions
 - Working with collections of related objects
@@ -156,12 +155,12 @@ public class CreditCardProcessor implements PaymentProcessor {
     }
 }
 ````
-### 🔗 Association, Aggregation, and Composition
-#### 🤝 Association
+### Association, Aggregation, and Composition
+#### Association
 - Represents relationships between objects
 - Can be one-to-one, one-to-many, or many-to-many
 - Objects have independent lifecycles
-#### ✅ When to Use Association
+#### When to Use Association
 - When objects need to communicate
 -  When representing relationships between independent entities
 - When objects can exist independently
@@ -295,33 +294,33 @@ public class Main {
 }
 ````
 #### Key Points About Associations
-##### 1. **One-to-One** 🔗 
+##### 1. **One-to-One**  
 - Each object is related to exactly one instance of another object
 - Example: Person-Passport relationship
 - Use when: representing unique pairings
-##### 2. **One-to-Many** 📦
+##### 2. **One-to-Many** 
 - One object can be related to multiple instances of another object
 - Example: Department-Employee relationship
 - Use when: representing hierarchical relationships
-##### 3. Many-to-Many 🔄
+##### 3. Many-to-Many 
 - Multiple objects can be related to multiple instances of another object
 - Example: Student-Course relationship
 - Use when: representing complex relationships where both sides can have multiple connections
 
 ### 💡 Best Practices
-- ✅ Always protect collections using defensive copying
-- ✅ Consider using bi-directional relationships when necessary
-- ✅ Implement proper encapsulation for associated objects
-- ⚠️ Be careful with circular references in bi-directional relationships
-- 🔒 Use appropriate access modifiers
-- 📝 Document the nature of the relationship
+- Always protect collections using defensive copying
+- Consider using bi-directional relationships when necessary
+- Implement proper encapsulation for associated objects
+- Be careful with circular references in bi-directional relationships
+- Use appropriate access modifiers
+- Document the nature of the relationship
 ### When to Use Each Type
 Choose the appropriate association type based on your business requirements:
 
 - One-to-One: for unique pairings (Person-Passport)
 - One-to-Many: For hierarchical relationships (Department-Employees)
 - Many-to-Many: For complex relationships requiring multiple connections (Students-Courses)
-#### 📦 Aggregation (Has-A)
+#### Aggregation (Has-A)
 - Special form of association
 - Represents ownership
 - Objects can exist independently
@@ -334,7 +333,7 @@ public class Department {
     private List<Professor> professors;  // Aggregation
 }
 ````
-#### 🧩 Composition (Part-Of)
+#### Composition (Part-Of)
 - Stronger form of of aggregation
 - Child objects cannot exist without parent
 - Represents a "part-of" relationship
@@ -351,7 +350,7 @@ public class Car {
     }
 }
 ````
-### 💡 Best Practices
+### Best Practices
 #### 1. Class Design
 - Keep classes focused (Single Responsibility Principle)
 - Favor composition over inheritance
@@ -370,4 +369,3 @@ public class Car {
 ## References
 [Object Oriented Programming Notes](https://drive.google.com/file/d/1tj-HtdPZGs-XS0BvCb50f9Fjr9aVyBBd/view?usp=share_link)
 [OOP Principles Playlist](https://youtube.com/playlist?list=PLxuuH5GnCIlcGnesYMkGQOqokyI2Fwu3g&si=-ExJ6GzRu8ThQiPN)
-
