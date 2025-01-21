@@ -1053,8 +1053,7 @@
 <p><a href="https://drive.google.com/file/d/1LaF74WE-jMvdlZ0FLwSWRxKVjO75iv8z/view?usp=share_link">Data Structures and Algorithms Notes</a></p>
 <h1 id="linear-data-structures_1">LINEAR DATA STRUCTURES<a class="headerlink" href="#linear-data-structures_1" title="Permanent link">&para;</a></h1>
 <h2 id="arraylist">ArrayList<a class="headerlink" href="#arraylist" title="Permanent link">&para;</a></h2>
-<p><img alt="ArrayLists" src="https://i.postimg.cc/C10R05Tw/temp-Image-PLc-FLQ.avif" />
-An ArrayList is a dynamic array implementation that automatically handles resizing as elements are added or removed. It provides fast random access and is one of the most used data structures in Java.</p>
+<p>An ArrayList is a dynamic array implementation that automatically handles resizing as elements are added or removed. It provides fast random access and is one of the most used data structures in Java.</p>
 <h3 id="core-characteristics">Core Characteristics<a class="headerlink" href="#core-characteristics" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Dynamic sizing</li>
@@ -1299,7 +1298,6 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <h4 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">&para;</a></h4>
 <p>https://youtu.be/PEnFFiQe1pM?si=KfpsngEBI0gesUbC</p>
 <h1 id="linked-lists">Linked Lists<a class="headerlink" href="#linked-lists" title="Permanent link">&para;</a></h1>
-<p><img alt="enter image description here" src="https://i.postimg.cc/fLKGM96B/temp-Imageq-Jb-Lbh.avif" /></p>
 <h2 id="singly-linked-list">Singly Linked List<a class="headerlink" href="#singly-linked-list" title="Permanent link">&para;</a></h2>
 <p>A Singly Linked List is a fundamental data structure where elements are stored in nodes, each containing data and a reference to the next node in the sequence. Unlike arrays, linked lists don't require contiguous memory allocation, making them ideal for dynamic data management.</p>
 <h3 id="core-characteristics_1">Core Characteristics<a class="headerlink" href="#core-characteristics_1" title="Permanent link">&para;</a></h3>
@@ -1366,9 +1364,9 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">    </span><span class="n">size</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(n)
--   💭 Best for: Queue-like operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(n)
+-   Best for: Queue-like operations
+-   Edge Cases:
     -   Null data
     -   Empty list
     -   Consider tracking tail pointer for O(1) operation</p>
@@ -1539,7 +1537,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <li>Consider garbage collection implications</li>
 <li>Track size for O(1) length checks</li>
 </ul>
-<h4 id="common-pitfalls_1">⚠️ Common Pitfalls<a class="headerlink" href="#common-pitfalls_1" title="Permanent link">&para;</a></h4>
+<h4 id="common-pitfalls_1">Common Pitfalls<a class="headerlink" href="#common-pitfalls_1" title="Permanent link">&para;</a></h4>
 <h4 id="1-losing-references">1. Losing References<a class="headerlink" href="#1-losing-references" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">// WRONG - Lost reference to rest of list</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w">  </span><span class="c1">// Overwrites head reference</span>
@@ -1562,18 +1560,18 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 </code></pre></div>
 <h4 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h4>
 <p><a href="https://youtu.be/-Yn5DU0_-lw?si=uyhzn4hUV9ZGr4zj">Singly Linked List Video</a></p>
-<h1 id="doubly-linked-list">🔗 Doubly Linked List<a class="headerlink" href="#doubly-linked-list" title="Permanent link">&para;</a></h1>
+<h2 id="doubly-linked-list">Doubly Linked List<a class="headerlink" href="#doubly-linked-list" title="Permanent link">&para;</a></h2>
 <p>A Doubly Linked List is a bidirectional linked data structure where each node contains data and references to both the next and previous nodes. This bidirectional linking enables efficient traversal in both directions and simplifies certain operations compared to singly linked lists.</p>
-<h3 id="core-characteristics_2">Core Characteristics<a class="headerlink" href="#core-characteristics_2" title="Permanent link">&para;</a></h3>
+<h4 id="core-characteristics_2">Core Characteristics<a class="headerlink" href="#core-characteristics_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li>🔄 Bi-directional traversal</li>
-<li>📝 Dynamic sizing</li>
-<li>🎯 O(1) operations at both ends</li>
-<li>🔍 Efficient insertions and deletions</li>
-<li>💾 Higher memory usage per node</li>
+<li>Bi-directional traversal</li>
+<li>Dynamic sizing</li>
+<li>O(1) operations at both ends</li>
+<li>Efficient insertions and deletions</li>
+<li>Higher memory usage per node</li>
 </ul>
-<h3 id="implementation-details_2">Implementation Details<a class="headerlink" href="#implementation-details_2" title="Permanent link">&para;</a></h3>
-<h4 id="structure_2">Structure<a class="headerlink" href="#structure_2" title="Permanent link">&para;</a></h4>
+<h4 id="implementation-details_2">Implementation Details<a class="headerlink" href="#implementation-details_2" title="Permanent link">&para;</a></h4>
+<h5 id="structure_2">Structure<a class="headerlink" href="#structure_2" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DoublyLinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tail</span><span class="p">;</span>
@@ -1598,9 +1596,9 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="core-operations-time-complexities_2">🔧 Core Operations &amp; Time Complexities<a class="headerlink" href="#core-operations-time-complexities_2" title="Permanent link">&para;</a></h3>
-<h4 id="adding-elements_2">Adding Elements<a class="headerlink" href="#adding-elements_2" title="Permanent link">&para;</a></h4>
-<h5 id="addtofrontt-data_2">addToFront(T data)<a class="headerlink" href="#addtofrontt-data_2" title="Permanent link">&para;</a></h5>
+<h4 id="core-operations-time-complexities_2">Core Operations &amp; Time Complexities<a class="headerlink" href="#core-operations-time-complexities_2" title="Permanent link">&para;</a></h4>
+<h5 id="adding-elements_2">Adding Elements<a class="headerlink" href="#adding-elements_2" title="Permanent link">&para;</a></h5>
+<h6 id="addtofrontt-data_2">addToFront(T data)<a class="headerlink" href="#addtofrontt-data_2" title="Permanent link">&para;</a></h6>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addToFront</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Data cannot be null&quot;</span><span class="p">);</span>
@@ -1615,13 +1613,13 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="w">    </span><span class="n">size</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💭 Best for: Stack-like operations, maintaining recent items
--   ⚠️ Edge Cases:
+-   Time Complexity: O(1)
+-   Best for: Stack-like operations, maintaining recent items
+-   Edge Cases:
     -   Empty list
     -   Null data
     -   Maintaining tail reference</p>
-<h5 id="addtobackt-data_2">addToBack(T data)<a class="headerlink" href="#addtobackt-data_2" title="Permanent link">&para;</a></h5>
+<h6 id="addtobackt-data_2">addToBack(T data)<a class="headerlink" href="#addtobackt-data_2" title="Permanent link">&para;</a></h6>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addToBack</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Data cannot be null&quot;</span><span class="p">);</span>
@@ -1637,13 +1635,13 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">    </span><span class="n">size</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💭 Best for: Queue-like operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(1)
+-   Best for: Queue-like operations
+-   Edge Cases:
     -   Empty list
     -   Null data
     -   Maintaining head reference</p>
-<h5 id="addatindexint-index-t-data_1">addAtIndex(int index, T data)<a class="headerlink" href="#addatindexint-index-t-data_1" title="Permanent link">&para;</a></h5>
+<h6 id="addatindexint-index-t-data_1">addAtIndex(int index, T data)<a class="headerlink" href="#addatindexint-index-t-data_1" title="Permanent link">&para;</a></h6>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addAtIndex</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IndexOutOfBoundsException</span><span class="p">(</span><span class="s">&quot;Index: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Size: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
@@ -1683,14 +1681,14 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-24-37" name="__codelineno-24-37" href="#__codelineno-24-37"></a><span class="w">    </span><span class="n">size</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-24-38" name="__codelineno-24-38" href="#__codelineno-24-38"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(n)
--   💡 Optimization: Chooses optimal traversal direction
--   ⚠️ Edge Cases:
+-   Time Complexity: O(n)
+-   Optimization: Chooses optimal traversal direction
+-   Edge Cases:
     -   Index bounds
     -   Null data
     -   Front/back insertions</p>
-<h4 id="remove-elements">Remove Elements<a class="headerlink" href="#remove-elements" title="Permanent link">&para;</a></h4>
-<h5 id="removefromfront_2">removeFromFront()<a class="headerlink" href="#removefromfront_2" title="Permanent link">&para;</a></h5>
+<h5 id="remove-elements">Remove Elements<a class="headerlink" href="#remove-elements" title="Permanent link">&para;</a></h5>
+<h6 id="removefromfront_2">removeFromFront()<a class="headerlink" href="#removefromfront_2" title="Permanent link">&para;</a></h6>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">removeFromFront</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NoSuchElementException</span><span class="p">(</span><span class="s">&quot;List is empty&quot;</span><span class="p">);</span>
@@ -1709,13 +1707,13 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💭 Best for: Stack operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(1)
+-   Best for: Stack operations
+-  Edge Cases:
     -   Empty list
     -   Single element
     -   Maintaining tail reference</p>
-<h5 id="removefromback_2">removeFromBack()<a class="headerlink" href="#removefromback_2" title="Permanent link">&para;</a></h5>
+<h6 id="removefromback_2">removeFromBack()<a class="headerlink" href="#removefromback_2" title="Permanent link">&para;</a></h6>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">removeFromBack</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NoSuchElementException</span><span class="p">(</span><span class="s">&quot;List is empty&quot;</span><span class="p">);</span>
@@ -1734,14 +1732,14 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-26-17" name="__codelineno-26-17" href="#__codelineno-26-17"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💭 Best for: Queue operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(1)
+-   Best for: Queue operations
+-   Edge Cases:
     -   Empty list
     -   Single element
     -   Maintaining head reference</p>
-<h4 id="access-operations_2">Access Operations<a class="headerlink" href="#access-operations_2" title="Permanent link">&para;</a></h4>
-<h5 id="getint-index_2">get(int index)<a class="headerlink" href="#getint-index_2" title="Permanent link">&para;</a></h5>
+<h5 id="access-operations_2">Access Operations<a class="headerlink" href="#access-operations_2" title="Permanent link">&para;</a></h5>
+<h6 id="getint-index_2">get(int index)<a class="headerlink" href="#getint-index_2" title="Permanent link">&para;</a></h6>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IndexOutOfBoundsException</span><span class="p">(</span><span class="s">&quot;Index: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Size: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
@@ -1762,12 +1760,12 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">data</span><span class="p">;</span>
 <a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(n)
--   💡 Optimization: Bi-directional traversal
--   ⚠️ Edge Cases:
+-   Time Complexity: O(n)
+-   Optimization: Bi-directional traversal
+-   Edge Cases:
     -   Invalid index
     -   Empty list</p>
-<h2 id="performance-summary_2">📊 Performance Summary<a class="headerlink" href="#performance-summary_2" title="Permanent link">&para;</a></h2>
+<h3 id="performance-summary_2">Performance Summary<a class="headerlink" href="#performance-summary_2" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1814,15 +1812,15 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 </tr>
 </tbody>
 </table>
-<h3 id="best-practices_2">💡 Best Practices<a class="headerlink" href="#best-practices_2" title="Permanent link">&para;</a></h3>
-<h4 id="1-bi-directional-link-maintenance">1. Bi-directional Link Maintenance<a class="headerlink" href="#1-bi-directional-link-maintenance" title="Permanent link">&para;</a></h4>
+<h4 id="best-practices_2">Best Practices<a class="headerlink" href="#best-practices_2" title="Permanent link">&para;</a></h4>
+<h5 id="1-bi-directional-link-maintenance">1. Bi-directional Link Maintenance<a class="headerlink" href="#1-bi-directional-link-maintenance" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="c1">// Always update both next and previous references</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="n">newNode</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">next</span><span class="p">;</span>
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="n">newNode</span><span class="p">.</span><span class="na">previous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">;</span>
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="n">current</span><span class="p">.</span><span class="na">next</span><span class="p">.</span><span class="na">previous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span>
 <a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="n">current</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span>
 </code></pre></div>
-<h4 id="2-headtail-management">2. Head/Tail Management<a class="headerlink" href="#2-headtail-management" title="Permanent link">&para;</a></h4>
+<h5 id="2-headtail-management">2. Head/Tail Management<a class="headerlink" href="#2-headtail-management" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1">// For single element</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
@@ -1830,7 +1828,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">    </span><span class="c1">// Update references appropriately</span>
 <a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="3-traversal-optimization">3. Traversal Optimization<a class="headerlink" href="#3-traversal-optimization" title="Permanent link">&para;</a></h4>
+<h5 id="3-traversal-optimization">3. Traversal Optimization<a class="headerlink" href="#3-traversal-optimization" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="c1">// Choose optimal direction based on index</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span><span class="n">traverseFromHead</span><span class="p">();</span>
@@ -1838,8 +1836,8 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="w">    </span><span class="n">traverseFromTail</span><span class="p">();</span>
 <a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="common-pitfalls_2">⚠️ Common Pitfalls<a class="headerlink" href="#common-pitfalls_2" title="Permanent link">&para;</a></h3>
-<h4 id="1-incomplete-link-updates">1. Incomplete Link Updates<a class="headerlink" href="#1-incomplete-link-updates" title="Permanent link">&para;</a></h4>
+<h4 id="common-pitfalls_2">Common Pitfalls<a class="headerlink" href="#common-pitfalls_2" title="Permanent link">&para;</a></h4>
+<h5 id="1-incomplete-link-updates">1. Incomplete Link Updates<a class="headerlink" href="#1-incomplete-link-updates" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1">// WRONG - Only updating one direction</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="n">current</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>
@@ -1847,7 +1845,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="n">current</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span>
 <a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="n">newNode</span><span class="p">.</span><span class="na">previous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">;</span>
 </code></pre></div>
-<h4 id="2-memory-leaks">2. Memory Leaks<a class="headerlink" href="#2-memory-leaks" title="Permanent link">&para;</a></h4>
+<h5 id="2-memory-leaks">2. Memory Leaks<a class="headerlink" href="#2-memory-leaks" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1">// WRONG - Leaving dangling references</span>
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">.</span><span class="na">next</span><span class="p">;</span>
 <a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>
@@ -1860,21 +1858,20 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="p">}</span>
 <a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newHead</span><span class="p">;</span>
 </code></pre></div>
-<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Permanent link">&para;</a></h4>
+<h5 id="references_2">References<a class="headerlink" href="#references_2" title="Permanent link">&para;</a></h5>
 <p><a href="https://youtu.be/m-8ZBO2ywaU?si=c7-K9iDSFlmzCuD0">Doubly Linked List Video</a></p>
-<h1 id="circular-singly-linked-list">🔄 Circular Singly Linked List<a class="headerlink" href="#circular-singly-linked-list" title="Permanent link">&para;</a></h1>
-<p><img alt="enter image description here" src="https://i.postimg.cc/4Ns3vDv9/temp-Image-PUv-Kxt.avif" /></p>
+<h2 id="circular-singly-linked-list">Circular Singly Linked List<a class="headerlink" href="#circular-singly-linked-list" title="Permanent link">&para;</a></h2>
 <p>A Circular Singly Linked List is a variant of linked lists where the last node points back to the first node, creating a circle. This structure is particularly useful when I need continuous traversal or cyclic operations, like round-robin scheduling.</p>
-<h3 id="core-characteristics_3">Core Characteristics<a class="headerlink" href="#core-characteristics_3" title="Permanent link">&para;</a></h3>
+<h4 id="core-characteristics_3">Core Characteristics<a class="headerlink" href="#core-characteristics_3" title="Permanent link">&para;</a></h4>
 <ul>
-<li>🔄 Last node connects to first node</li>
-<li>📝 Sequential access pattern</li>
-<li>🎯 No null references</li>
-<li>🔍 Continuous traversal capability</li>
-<li>💫 Efficient for cyclic operations</li>
+<li>Last node connects to first node</li>
+<li>Sequential access pattern</li>
+<li>No null references</li>
+<li>Continuous traversal capability</li>
+<li>Efficient for cyclic operations</li>
 </ul>
-<h3 id="implementation-details_3">Implementation Details<a class="headerlink" href="#implementation-details_3" title="Permanent link">&para;</a></h3>
-<h4 id="structure_3">Structure<a class="headerlink" href="#structure_3" title="Permanent link">&para;</a></h4>
+<h4 id="implementation-details_3">Implementation Details<a class="headerlink" href="#implementation-details_3" title="Permanent link">&para;</a></h4>
+<h5 id="structure_3">Structure<a class="headerlink" href="#structure_3" title="Permanent link">&para;</a></h5>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CircularLinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tail</span><span class="p">;</span><span class="w">  </span><span class="c1">// Points to last node</span>
 <a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">;</span>
@@ -1896,9 +1893,9 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <li>Easy access to both first and last nodes</li>
 <li>More efficient for common operations</li>
 </ul>
-<h3 id="core-operations">🔧 Core Operations<a class="headerlink" href="#core-operations" title="Permanent link">&para;</a></h3>
-<h4 id="adding-elements_3">Adding Elements<a class="headerlink" href="#adding-elements_3" title="Permanent link">&para;</a></h4>
-<h5 id="addingtofrontt-data">addingToFront(T data)<a class="headerlink" href="#addingtofrontt-data" title="Permanent link">&para;</a></h5>
+<h4 id="core-operations">Core Operations<a class="headerlink" href="#core-operations" title="Permanent link">&para;</a></h4>
+<h5 id="adding-elements_3">Adding Elements<a class="headerlink" href="#adding-elements_3" title="Permanent link">&para;</a></h5>
+<h6 id="addingtofrontt-data">addingToFront(T data)<a class="headerlink" href="#addingtofrontt-data" title="Permanent link">&para;</a></h6>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addToFront</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Data cannot be null&quot;</span><span class="p">);</span>
@@ -1915,10 +1912,10 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a><span class="w">    </span><span class="n">size</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💡 Important: Maintain circular nature
--   ⚠️ Edge Cases: Empty list handling</p>
-<h5 id="addtobackt-data_3">addToBack(T data)<a class="headerlink" href="#addtobackt-data_3" title="Permanent link">&para;</a></h5>
+-   Time Complexity: O(1)
+-   Important: Maintain circular nature
+-   Edge Cases: Empty list handling</p>
+<h6 id="addtobackt-data_3">addToBack(T data)<a class="headerlink" href="#addtobackt-data_3" title="Permanent link">&para;</a></h6>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addToBack</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Data cannot be null&quot;</span><span class="p">);</span>
@@ -1935,11 +1932,11 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a><span class="w">    </span><span class="n">size</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-35-15" name="__codelineno-35-15" href="#__codelineno-35-15"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💡 Key Point: Tail reference makes this efficient
--   ⚠️ Edge Cases: Empty list, single element</p>
-<h4 id="removing-elements_2">Removing Elements<a class="headerlink" href="#removing-elements_2" title="Permanent link">&para;</a></h4>
-<h5 id="removefromfront_3">removeFromFront()<a class="headerlink" href="#removefromfront_3" title="Permanent link">&para;</a></h5>
+-   Time Complexity: O(1)
+-   Key Point: Tail reference makes this efficient
+-   Edge Cases: Empty list, single element</p>
+<h5 id="removing-elements_2">Removing Elements<a class="headerlink" href="#removing-elements_2" title="Permanent link">&para;</a></h5>
+<h6 id="removefromfront_3">removeFromFront()<a class="headerlink" href="#removefromfront_3" title="Permanent link">&para;</a></h6>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">removeFromFront</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NoSuchElementException</span><span class="p">(</span><span class="s">&quot;List is empty&quot;</span><span class="p">);</span>
@@ -1955,10 +1952,10 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💡 Key Point: Maintain circular structure
--   ⚠️ Edge Cases: Empty list, single element</p>
-<h5 id="removefromback_3">removeFromBack()<a class="headerlink" href="#removefromback_3" title="Permanent link">&para;</a></h5>
+-   Time Complexity: O(1)
+-   Key Point: Maintain circular structure
+-   Edge Cases: Empty list, single element</p>
+<h6 id="removefromback_3">removeFromBack()<a class="headerlink" href="#removefromback_3" title="Permanent link">&para;</a></h6>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">removeFromBack</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NoSuchElementException</span><span class="p">(</span><span class="s">&quot;List is empty&quot;</span><span class="p">);</span>
@@ -1979,10 +1976,10 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-37-18" name="__codelineno-37-18" href="#__codelineno-37-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-37-19" name="__codelineno-37-19" href="#__codelineno-37-19"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(n)
--   💡 Note: Requires traversal to find second-to-last node
--   ⚠️ Edge Cases: Empty list, single element</p>
-<h4 id="search-operation">Search Operation<a class="headerlink" href="#search-operation" title="Permanent link">&para;</a></h4>
+-   Time Complexity: O(n)
+-   Note: Requires traversal to find second-to-last node
+-   Edge Cases: Empty list, single element</p>
+<h5 id="search-operation">Search Operation<a class="headerlink" href="#search-operation" title="Permanent link">&para;</a></h5>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">contains</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
@@ -1999,10 +1996,10 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(n)
--   💡 Important: Use do-while for circular traversal
--   ⚠️ Handle: Null data, empty list</p>
-<h2 id="performance-summary_3">📊 Performance Summary<a class="headerlink" href="#performance-summary_3" title="Permanent link">&para;</a></h2>
+-   Time Complexity: O(n)
+-   Important: Use do-while for circular traversal
+-   Handle: Null data, empty list</p>
+<h3 id="performance-summary_3">📊 Performance Summary<a class="headerlink" href="#performance-summary_3" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2044,28 +2041,28 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 </tr>
 </tbody>
 </table>
-<h3 id="best-practices_3">💡 Best Practices<a class="headerlink" href="#best-practices_3" title="Permanent link">&para;</a></h3>
-<h4 id="1-circular-reference-maintenance">1. Circular Reference Maintenance<a class="headerlink" href="#1-circular-reference-maintenance" title="Permanent link">&para;</a></h4>
+<h4 id="best-practices_3">Best Practices<a class="headerlink" href="#best-practices_3" title="Permanent link">&para;</a></h4>
+<h5 id="1-circular-reference-maintenance">1. Circular Reference Maintenance<a class="headerlink" href="#1-circular-reference-maintenance" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="c1">// Always ensure last node points to first</span>
 <a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="n">tail</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail</span><span class="p">.</span><span class="na">next</span><span class="p">.</span><span class="na">next</span><span class="p">;</span><span class="w">  </span><span class="c1">// When removing</span>
 <a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="n">newNode</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail</span><span class="p">.</span><span class="na">next</span><span class="p">;</span><span class="w">    </span><span class="c1">// When adding</span>
 </code></pre></div>
-<h4 id="2-empty-list-handling">2. Empty List Handling<a class="headerlink" href="#2-empty-list-handling" title="Permanent link">&para;</a></h4>
+<h5 id="2-empty-list-handling">2. Empty List Handling<a class="headerlink" href="#2-empty-list-handling" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">    </span><span class="c1">// New node points to itself</span>
 <a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span><span class="n">newNode</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span>
 <a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">    </span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span>
 <a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="3-single-element-handling">3. Single Element Handling<a class="headerlink" href="#3-single-element-handling" title="Permanent link">&para;</a></h4>
+<h5 id="3-single-element-handling">3. Single Element Handling<a class="headerlink" href="#3-single-element-handling" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="w">    </span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">  </span><span class="c1">// For removal</span>
 <a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">    </span><span class="c1">// OR</span>
 <a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="w">    </span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span><span class="w">  </span><span class="c1">// For insertion</span>
 <a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="common-pitfalls_3">⚠️ Common Pitfalls<a class="headerlink" href="#common-pitfalls_3" title="Permanent link">&para;</a></h3>
-<h4 id="1-infinite-loops">1. Infinite Loops<a class="headerlink" href="#1-infinite-loops" title="Permanent link">&para;</a></h4>
+<h4 id="common-pitfalls_3">Common Pitfalls<a class="headerlink" href="#common-pitfalls_3" title="Permanent link">&para;</a></h4>
+<h5 id="1-infinite-loops">1. Infinite Loops<a class="headerlink" href="#1-infinite-loops" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="c1">// WRONG - May loop forever</span>
 <a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">current</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Never true in circular list</span>
 <a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="w">    </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">next</span><span class="p">;</span>
@@ -2076,7 +2073,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a><span class="w">    </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">next</span><span class="p">;</span>
 <a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">current</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">tail</span><span class="p">.</span><span class="na">next</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="2-lost-circular-reference">2. Lost Circular Reference<a class="headerlink" href="#2-lost-circular-reference" title="Permanent link">&para;</a></h4>
+<h5 id="2-lost-circular-reference">2. Lost Circular Reference<a class="headerlink" href="#2-lost-circular-reference" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="c1">// WRONG - Loses circular structure</span>
 <a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="n">tail</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span>
 <a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>
@@ -2086,19 +2083,18 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 </code></pre></div>
 <h4 id="reference_1">Reference<a class="headerlink" href="#reference_1" title="Permanent link">&para;</a></h4>
 <p><a href="https://youtube.com/playlist?list=PLBlnK6fEyqRjW4jK-CbshJuX20nc_3IaN&amp;si=X7n0-QAF54ZSsf0_">Circular Linked List Playlist</a></p>
-<h1 id="stack">📚 Stack<a class="headerlink" href="#stack" title="Permanent link">&para;</a></h1>
-<p><img alt="enter image description here" src="https://i.postimg.cc/02Pp6Hbt/temp-Image-Ic-V6uh.avif" /></p>
-<h3 id="introduction_1">Introduction<a class="headerlink" href="#introduction_1" title="Permanent link">&para;</a></h3>
+<h2 id="stack">Stack<a class="headerlink" href="#stack" title="Permanent link">&para;</a></h2>
+<h4 id="introduction_1">Introduction<a class="headerlink" href="#introduction_1" title="Permanent link">&para;</a></h4>
 <p>A Stack is a linear data structure that follows the LIFO (Last In First Out) principle. Like a stack of plates, elements are added and removed from the same end, called the top of the stack. This fundamental data structure is ideal for scenarios where we need strict order control over our operations.</p>
-<h3 id="core-characteristics_4">Core Characteristics<a class="headerlink" href="#core-characteristics_4" title="Permanent link">&para;</a></h3>
+<h4 id="core-characteristics_4">Core Characteristics<a class="headerlink" href="#core-characteristics_4" title="Permanent link">&para;</a></h4>
 <ul>
-<li>📥 LIFO (Last In, First Out) principle</li>
-<li>🎯 Single point of access (top)</li>
-<li>📏 Dynamic sizing through array resizing</li>
-<li>🔄 Ordered operations</li>
-<li>⚡ Constant time operations (amortized)</li>
+<li>LIFO (Last In, First Out) principle</li>
+<li>Single point of access (top)</li>
+<li>Dynamic sizing through array resizing</li>
+<li>Ordered operations</li>
+<li>Constant time operations (amortized)</li>
 </ul>
-<h3 id="implementation-details_4">Implementation Details<a class="headerlink" href="#implementation-details_4" title="Permanent link">&para;</a></h3>
+<h4 id="implementation-details_4">Implementation Details<a class="headerlink" href="#implementation-details_4" title="Permanent link">&para;</a></h4>
 <h4 id="structure_4">Structure<a class="headerlink" href="#structure_4" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span><span class="c1">// Default capacity when no size is specified</span>
@@ -2128,8 +2124,8 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-44-26" name="__codelineno-44-26" href="#__codelineno-44-26"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-44-27" name="__codelineno-44-27" href="#__codelineno-44-27"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="core-operations_1">🔧 Core Operations<a class="headerlink" href="#core-operations_1" title="Permanent link">&para;</a></h3>
-<h4 id="push-operation">Push Operation<a class="headerlink" href="#push-operation" title="Permanent link">&para;</a></h4>
+<h4 id="core-operations_1">Core Operations<a class="headerlink" href="#core-operations_1" title="Permanent link">&para;</a></h4>
+<h5 id="push-operation">Push Operation<a class="headerlink" href="#push-operation" title="Permanent link">&para;</a></h5>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">push</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Cannot push null data&quot;</span><span class="p">);</span>
@@ -2153,13 +2149,13 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-45-21" name="__codelineno-45-21" href="#__codelineno-45-21"></a><span class="w">    </span><span class="n">backingArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newArray</span><span class="p">;</span>
 <a id="__codelineno-45-22" name="__codelineno-45-22" href="#__codelineno-45-22"></a><span class="p">}</span><span class="w">  </span>
 </code></pre></div>
-   ⏱️ Time Complexity: O(1) amortized
--   💭 When to Use: Adding new elements to the stack
--   ⚠️ Key Points:
+   Time Complexity: O(1) amortized
+-   When to Use: Adding new elements to the stack
+-   Key Points:
     -   Handles null check
     -   Automatic resizing
     -   Maintains LIFO order</p>
-<h4 id="pop-operation">Pop Operation<a class="headerlink" href="#pop-operation" title="Permanent link">&para;</a></h4>
+<h5 id="pop-operation">Pop Operation<a class="headerlink" href="#pop-operation" title="Permanent link">&para;</a></h5>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">pop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NoSuchElementException</span><span class="p">(</span><span class="s">&quot;Cannot pop from empty stack&quot;</span><span class="p">);</span>
@@ -2171,13 +2167,13 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💭 When to Use: Removing and retrieving the most recently added element
--   ⚠️ Key Points:
+-   Time Complexity: O(1)
+-   When to Use: Removing and retrieving the most recently added element
+-   Key Points:
     -   Checks for empty stack
     -   Cleans up references
     -   Maintains LIFO order</p>
-<h4 id="peek-operation">Peek Operation<a class="headerlink" href="#peek-operation" title="Permanent link">&para;</a></h4>
+<h5 id="peek-operation">Peek Operation<a class="headerlink" href="#peek-operation" title="Permanent link">&para;</a></h5>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">peek</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NoSuchElementException</span><span class="p">(</span><span class="s">&quot;Cannot peek empty stack&quot;</span><span class="p">);</span>
@@ -2185,9 +2181,9 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">backingArray</span><span class="o">[</span><span class="n">size</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
 <a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💭 When to Use: Viewing top element without removal
--   ⚠️ Key Points:
+-   Time Complexity: O(1)
+-   When to Use: Viewing top element without removal
+-   Key Points:
     -   No modification to stack
     -   Preserves state
     -   Checks for empty stack</p>
@@ -2209,8 +2205,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-48-15" name="__codelineno-48-15" href="#__codelineno-48-15"></a><span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <a id="__codelineno-48-16" name="__codelineno-48-16" href="#__codelineno-48-16"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="performance-summary_4">📊 Performance Summary<a class="headerlink" href="#performance-summary_4" title="Permanent link">&para;</a></h3>
-<h2 id="performance-summary_5">📊 Performance Summary<a class="headerlink" href="#performance-summary_5" title="Permanent link">&para;</a></h2>
+<h4 id="performance-summary_4">📊 Performance Summary<a class="headerlink" href="#performance-summary_4" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -2253,8 +2248,8 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 </tbody>
 </table>
 <p>* Amortized time complexity accounts for occasional resizing operations</p>
-<h3 id="best-practices_4">💡 Best Practices<a class="headerlink" href="#best-practices_4" title="Permanent link">&para;</a></h3>
-<h4 id="1-memory-management">1. Memory Management<a class="headerlink" href="#1-memory-management" title="Permanent link">&para;</a></h4>
+<h4 id="best-practices_4">Best Practices<a class="headerlink" href="#best-practices_4" title="Permanent link">&para;</a></h4>
+<h5 id="1-memory-management">1. Memory Management<a class="headerlink" href="#1-memory-management" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="c1">// Always clear references when removing elements</span>
 <a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">pop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">backingArray</span><span class="o">[--</span><span class="n">size</span><span class="o">]</span><span class="p">;</span>
@@ -2262,7 +2257,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="2-capacity-handling">2. Capacity Handling<a class="headerlink" href="#2-capacity-handling" title="Permanent link">&para;</a></h4>
+<h5 id="2-capacity-handling">2. Capacity Handling<a class="headerlink" href="#2-capacity-handling" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="c1">// Consider shrinking array when usage is low</span>
 <a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">shrinkIfNeeded</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">backingArray</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2270,7 +2265,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="3-null-checking">3. Null Checking<a class="headerlink" href="#3-null-checking" title="Permanent link">&para;</a></h4>
+<h5 id="3-null-checking">3. Null Checking<a class="headerlink" href="#3-null-checking" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="c1">// Always validate input</span>
 <a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">push</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2279,8 +2274,8 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a><span class="w">    </span><span class="c1">// push implementation</span>
 <a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="common-pitfalls_4">⚠️ Common Pitfalls<a class="headerlink" href="#common-pitfalls_4" title="Permanent link">&para;</a></h3>
-<h4 id="1-memory-leaks">1. Memory Leaks<a class="headerlink" href="#1-memory-leaks" title="Permanent link">&para;</a></h4>
+<h4 id="common-pitfalls_4">Common Pitfalls<a class="headerlink" href="#common-pitfalls_4" title="Permanent link">&para;</a></h4>
+<h5 id="1-memory-leaks">1. Memory Leaks<a class="headerlink" href="#1-memory-leaks" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="c1">// WRONG - Memory leak</span>
 <a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">pop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">backingArray</span><span class="o">[--</span><span class="n">size</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// Reference still held</span>
@@ -2293,7 +2288,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-52-10" name="__codelineno-52-10" href="#__codelineno-52-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-52-11" name="__codelineno-52-11" href="#__codelineno-52-11"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="2-bound-checking">2. Bound Checking<a class="headerlink" href="#2-bound-checking" title="Permanent link">&para;</a></h4>
+<h5 id="2-bound-checking">2. Bound Checking<a class="headerlink" href="#2-bound-checking" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="c1">// WRONG - No empty check</span>
 <a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">peek</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">backingArray</span><span class="o">[</span><span class="n">size</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// Possible IndexOutOfBoundsException</span>
@@ -2307,15 +2302,15 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-53-11" name="__codelineno-53-11" href="#__codelineno-53-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">backingArray</span><span class="o">[</span><span class="n">size</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
 <a id="__codelineno-53-12" name="__codelineno-53-12" href="#__codelineno-53-12"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="common-use-cases_1">🎯 Common Use Cases<a class="headerlink" href="#common-use-cases_1" title="Permanent link">&para;</a></h3>
-<h4 id="1-function-call-stack">1. Function Call Stack<a class="headerlink" href="#1-function-call-stack" title="Permanent link">&para;</a></h4>
+<h4 id="common-use-cases_1">Common Use Cases<a class="headerlink" href="#common-use-cases_1" title="Permanent link">&para;</a></h4>
+<h5 id="1-function-call-stack">1. Function Call Stack<a class="headerlink" href="#1-function-call-stack" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="n">Stack</span><span class="o">&lt;</span><span class="n">FunctionCall</span><span class="o">&gt;</span><span class="w"> </span><span class="n">callStack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="n">callStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FunctionCall</span><span class="p">(</span><span class="s">&quot;main&quot;</span><span class="p">));</span>
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="n">callStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FunctionCall</span><span class="p">(</span><span class="s">&quot;helper&quot;</span><span class="p">));</span>
 <a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="c1">// Current function is helper</span>
 <a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a><span class="n">callStack</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span><span class="w">  </span><span class="c1">// Return to main</span>
 </code></pre></div>
-<h4 id="2-expression-evaluation">2. Expression Evaluation<a class="headerlink" href="#2-expression-evaluation" title="Permanent link">&para;</a></h4>
+<h5 id="2-expression-evaluation">2. Expression Evaluation<a class="headerlink" href="#2-expression-evaluation" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="n">Stack</span><span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parentheses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">expression</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;(&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2329,7 +2324,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-55-11" name="__codelineno-55-11" href="#__codelineno-55-11"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-55-12" name="__codelineno-55-12" href="#__codelineno-55-12"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="3-undoredo-operations">3. Undo/Redo Operations<a class="headerlink" href="#3-undoredo-operations" title="Permanent link">&para;</a></h4>
+<h5 id="3-undoredo-operations">3. Undo/Redo Operations<a class="headerlink" href="#3-undoredo-operations" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="n">Stack</span><span class="o">&lt;</span><span class="n">Command</span><span class="o">&gt;</span><span class="w"> </span><span class="n">undoStack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="n">Stack</span><span class="o">&lt;</span><span class="n">Command</span><span class="o">&gt;</span><span class="w"> </span><span class="n">redoStack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>
@@ -2339,23 +2334,23 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-56-7" name="__codelineno-56-7" href="#__codelineno-56-7"></a><span class="w">    </span><span class="n">redoStack</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="w">  </span><span class="c1">// Clear redo history</span>
 <a id="__codelineno-56-8" name="__codelineno-56-8" href="#__codelineno-56-8"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="references_3">References<a class="headerlink" href="#references_3" title="Permanent link">&para;</a></h3>
+<h4 id="references_3">References<a class="headerlink" href="#references_3" title="Permanent link">&para;</a></h4>
 <p><a href="https://youtu.be/L3ud3rXpIxA?si=m0pon3ja-WW28DON">Stack Introduction</a>
 <a href="https://youtu.be/RAMqDLI6_1c?si=OAPRPe-3-4nyqBCK">Stack Implementation</a></p>
-<h1 id="queue">🎯 Queue<a class="headerlink" href="#queue" title="Permanent link">&para;</a></h1>
-<p><img alt="Queues" src="https://i.postimg.cc/CMfGSBqV/temp-Imagee-Hk-FO3.avif" /></p>
-<h3 id="introduction_2">Introduction<a class="headerlink" href="#introduction_2" title="Permanent link">&para;</a></h3>
+<p>TODO: Add LinkedStack implementation</p>
+<h2 id="queue">Queue<a class="headerlink" href="#queue" title="Permanent link">&para;</a></h2>
+<h4 id="introduction_2">Introduction<a class="headerlink" href="#introduction_2" title="Permanent link">&para;</a></h4>
 <p>A Queue is a linear data structure following the FIFO (First In, First Out) principle. Using a circular array implementation allows for efficient space usage and constant time operations by reusing array spaces that have been dequeued.</p>
-<h3 id="core-characteristics_5">Core Characteristics<a class="headerlink" href="#core-characteristics_5" title="Permanent link">&para;</a></h3>
+<h4 id="core-characteristics_5">Core Characteristics<a class="headerlink" href="#core-characteristics_5" title="Permanent link">&para;</a></h4>
 <ul>
-<li>📥 FIFO (First In, First Out) ordering</li>
-<li>🔄 Circular array implementation</li>
-<li>📏 Dynamic sizing</li>
-<li>⚡ Constant time operations (amortized)</li>
-<li>🎯 Space efficient</li>
+<li>FIFO (First In, First Out) ordering</li>
+<li>Circular array implementation</li>
+<li>Dynamic sizing</li>
+<li>Constant time operations (amortized)</li>
+<li>Space efficient</li>
 </ul>
-<h3 id="implementation-details_5">Implementation Details<a class="headerlink" href="#implementation-details_5" title="Permanent link">&para;</a></h3>
-<h3 id="structure_5">Structure<a class="headerlink" href="#structure_5" title="Permanent link">&para;</a></h3>
+<h4 id="implementation-details_5">Implementation Details<a class="headerlink" href="#implementation-details_5" title="Permanent link">&para;</a></h4>
+<h4 id="structure_5">Structure<a class="headerlink" href="#structure_5" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">T</span><span class="o">[]</span><span class="w"> </span><span class="n">backingArray</span><span class="p">;</span>
 <a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">front</span><span class="p">;</span><span class="w">      </span><span class="c1">// Index of the front element</span>
@@ -2370,8 +2365,8 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-57-12" name="__codelineno-57-12" href="#__codelineno-57-12"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-57-13" name="__codelineno-57-13" href="#__codelineno-57-13"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="core-operations_2">🔧 Core Operations<a class="headerlink" href="#core-operations_2" title="Permanent link">&para;</a></h3>
-<h4 id="enqueue-operation">Enqueue Operation<a class="headerlink" href="#enqueue-operation" title="Permanent link">&para;</a></h4>
+<h4 id="core-operations_2">Core Operations<a class="headerlink" href="#core-operations_2" title="Permanent link">&para;</a></h4>
+<h5 id="enqueue-operation">Enqueue Operation<a class="headerlink" href="#enqueue-operation" title="Permanent link">&para;</a></h5>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">enqueue</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Cannot enqueue null data&quot;</span><span class="p">);</span>
@@ -2399,13 +2394,13 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-58-25" name="__codelineno-58-25" href="#__codelineno-58-25"></a><span class="w">    </span><span class="n">front</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Reset front to beginning of new array</span>
 <a id="__codelineno-58-26" name="__codelineno-58-26" href="#__codelineno-58-26"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1) amortized
--   💭 When to Use: Adding elements to queue
--   ⚠️ Key Points:
+-   Time Complexity: O(1) amortized
+-   When to Use: Adding elements to queue
+-   Key Points:
     -   Handles null check
     -   Circular indexing with modulo
     -   Resizes when full</p>
-<h4 id="dequeue-operation">Dequeue Operation<a class="headerlink" href="#dequeue-operation" title="Permanent link">&para;</a></h4>
+<h5 id="dequeue-operation">Dequeue Operation<a class="headerlink" href="#dequeue-operation" title="Permanent link">&para;</a></h5>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">dequeue</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NoSuchElementException</span><span class="p">(</span><span class="s">&quot;Queue is empty&quot;</span><span class="p">);</span>
@@ -2418,13 +2413,13 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-59-10" name="__codelineno-59-10" href="#__codelineno-59-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-59-11" name="__codelineno-59-11" href="#__codelineno-59-11"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💭 When to Use: Removing elements from front
--   ⚠️ Key Points:
+-   Time Complexity: O(1)
+-   When to Use: Removing elements from front
+-   Key Points:
     -   Handles empty queue
     -   Maintains circular structure
     -   Cleans up references</p>
-<h4 id="peek-operation_1">Peek Operation<a class="headerlink" href="#peek-operation_1" title="Permanent link">&para;</a></h4>
+<h5 id="peek-operation_1">Peek Operation<a class="headerlink" href="#peek-operation_1" title="Permanent link">&para;</a></h5>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">peek</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NoSuchElementException</span><span class="p">(</span><span class="s">&quot;Queue is empty&quot;</span><span class="p">);</span>
@@ -2432,12 +2427,12 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">backingArray</span><span class="o">[</span><span class="n">front</span><span class="o">]</span><span class="p">;</span>
 <a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a><span class="p">}</span>
 </code></pre></div>
--   ⏱️ Time Complexity: O(1)
--   💭 When to Use: Examining front element
--   ⚠️ Key Points:
+-   Time Complexity: O(1)
+-   When to Use: Examining front element
+-   Key Points:
     -   No modification to queue
     -   Front element access</p>
-<h4 id="utility-operations_1">Utility Operations<a class="headerlink" href="#utility-operations_1" title="Permanent link">&para;</a></h4>
+<h5 id="utility-operations_1">Utility Operations<a class="headerlink" href="#utility-operations_1" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a><span class="p">}</span>
@@ -2453,8 +2448,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-61-13" name="__codelineno-61-13" href="#__codelineno-61-13"></a><span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <a id="__codelineno-61-14" name="__codelineno-61-14" href="#__codelineno-61-14"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="performance-summary_6">📊 Performance Summary<a class="headerlink" href="#performance-summary_6" title="Permanent link">&para;</a></h3>
-<h2 id="performance-summary_7">📊 Performance Summary<a class="headerlink" href="#performance-summary_7" title="Permanent link">&para;</a></h2>
+<h4 id="performance-summary_5">Performance Summary<a class="headerlink" href="#performance-summary_5" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -2497,8 +2491,8 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 </tbody>
 </table>
 <p>* Amortized time complexity accounts for occasional resizing operations</p>
-<h3 id="best-practices_5">💡 Best Practices<a class="headerlink" href="#best-practices_5" title="Permanent link">&para;</a></h3>
-<h4 id="1-circular-index-calculation">1. Circular Index Calculation<a class="headerlink" href="#1-circular-index-calculation" title="Permanent link">&para;</a></h4>
+<h4 id="best-practices_5">Best Practices<a class="headerlink" href="#best-practices_5" title="Permanent link">&para;</a></h4>
+<h5 id="1-circular-index-calculation">1. Circular Index Calculation<a class="headerlink" href="#1-circular-index-calculation" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="c1">// Calculate next index with modulo</span>
 <a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNextIndex</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">currentIndex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">currentIndex</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">backingArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
@@ -2509,7 +2503,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-62-8" name="__codelineno-62-8" href="#__codelineno-62-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">front</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">backingArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
 <a id="__codelineno-62-9" name="__codelineno-62-9" href="#__codelineno-62-9"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="2-resizing-strategy">2. Resizing Strategy<a class="headerlink" href="#2-resizing-strategy" title="Permanent link">&para;</a></h4>
+<h5 id="2-resizing-strategy">2. Resizing Strategy<a class="headerlink" href="#2-resizing-strategy" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">resize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a><span class="w">    </span><span class="c1">// Double size for amortized O(1)</span>
 <a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a><span class="w">    </span><span class="n">T</span><span class="o">[]</span><span class="w"> </span><span class="n">newArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Object</span><span class="o">[</span><span class="n">backingArray</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
@@ -2522,7 +2516,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-63-10" name="__codelineno-63-10" href="#__codelineno-63-10"></a><span class="w">    </span><span class="n">backingArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newArray</span><span class="p">;</span>
 <a id="__codelineno-63-11" name="__codelineno-63-11" href="#__codelineno-63-11"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="3-memory-management_2">3. Memory Management<a class="headerlink" href="#3-memory-management_2" title="Permanent link">&para;</a></h4>
+<h5 id="3-memory-management_2">3. Memory Management<a class="headerlink" href="#3-memory-management_2" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">dequeue</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">backingArray</span><span class="o">[</span><span class="n">front</span><span class="o">]</span><span class="p">;</span>
 <a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a><span class="w">    </span><span class="n">backingArray</span><span class="o">[</span><span class="n">front</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">  </span><span class="c1">// Clear reference</span>
@@ -2531,8 +2525,8 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="common-pitfalls_5">⚠️ Common Pitfalls<a class="headerlink" href="#common-pitfalls_5" title="Permanent link">&para;</a></h3>
-<h4 id="1-incorrect-circular-indexing">1. Incorrect Circular Indexing<a class="headerlink" href="#1-incorrect-circular-indexing" title="Permanent link">&para;</a></h4>
+<h4 id="common-pitfalls_5">Common Pitfalls<a class="headerlink" href="#common-pitfalls_5" title="Permanent link">&para;</a></h4>
+<h5 id="1-incorrect-circular-indexing">1. Incorrect Circular Indexing<a class="headerlink" href="#1-incorrect-circular-indexing" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="c1">// WRONG - May cause overflow</span>
 <a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="n">rear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rear</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rear</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">backingArray</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="n">rear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -2540,7 +2534,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-65-5" name="__codelineno-65-5" href="#__codelineno-65-5"></a><span class="c1">// CORRECT - Use modulo</span>
 <a id="__codelineno-65-6" name="__codelineno-65-6" href="#__codelineno-65-6"></a><span class="n">rear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">rear</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">backingArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
 </code></pre></div>
-<h4 id="2-resizing-issues">2. Resizing Issues<a class="headerlink" href="#2-resizing-issues" title="Permanent link">&para;</a></h4>
+<h5 id="2-resizing-issues">2. Resizing Issues<a class="headerlink" href="#2-resizing-issues" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="c1">// WRONG - Doesn&#39;t maintain order</span>
 <a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a><span class="n">System</span><span class="p">.</span><span class="na">arraycopy</span><span class="p">(</span><span class="n">backingArray</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">newArray</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">backingArray</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
 <a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>
@@ -2549,8 +2543,8 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-66-6" name="__codelineno-66-6" href="#__codelineno-66-6"></a><span class="w">    </span><span class="n">newArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">backingArray</span><span class="o">[</span><span class="p">(</span><span class="n">front</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">backingArray</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
 <a id="__codelineno-66-7" name="__codelineno-66-7" href="#__codelineno-66-7"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="common-use-cases_2">🎯 Common Use Cases<a class="headerlink" href="#common-use-cases_2" title="Permanent link">&para;</a></h3>
-<h4 id="1-task-scheduling">1. Task Scheduling<a class="headerlink" href="#1-task-scheduling" title="Permanent link">&para;</a></h4>
+<h4 id="common-use-cases_2">Common Use Cases<a class="headerlink" href="#common-use-cases_2" title="Permanent link">&para;</a></h4>
+<h5 id="1-task-scheduling">1. Task Scheduling<a class="headerlink" href="#1-task-scheduling" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="n">Queue</span><span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;</span><span class="w"> </span><span class="n">taskQueue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Queue</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a><span class="n">taskQueue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Task</span><span class="p">(</span><span class="s">&quot;Process payment&quot;</span><span class="p">));</span>
 <a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a><span class="n">taskQueue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Task</span><span class="p">(</span><span class="s">&quot;Send email&quot;</span><span class="p">));</span>
@@ -2560,7 +2554,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-67-7" name="__codelineno-67-7" href="#__codelineno-67-7"></a><span class="w">    </span><span class="n">processTask</span><span class="p">(</span><span class="n">nextTask</span><span class="p">);</span>
 <a id="__codelineno-67-8" name="__codelineno-67-8" href="#__codelineno-67-8"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="2-bfs-implementation">2. BFS Implementation<a class="headerlink" href="#2-bfs-implementation" title="Permanent link">&para;</a></h4>
+<h5 id="2-bfs-implementation">2. BFS Implementation<a class="headerlink" href="#2-bfs-implementation" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">bfs</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="n">root</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a><span class="w">    </span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">queue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Queue</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a><span class="w">    </span><span class="n">queue</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
@@ -2573,7 +2567,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-68-10" name="__codelineno-68-10" href="#__codelineno-68-10"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-68-11" name="__codelineno-68-11" href="#__codelineno-68-11"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="3-buffer-implementation">3. Buffer Implementation<a class="headerlink" href="#3-buffer-implementation" title="Permanent link">&para;</a></h4>
+<h5 id="3-buffer-implementation">3. Buffer Implementation<a class="headerlink" href="#3-buffer-implementation" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Buffer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">queue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Queue</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">capacity</span><span class="p">;</span>
@@ -2589,9 +2583,10 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 <a id="__codelineno-69-13" name="__codelineno-69-13" href="#__codelineno-69-13"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-69-14" name="__codelineno-69-14" href="#__codelineno-69-14"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="references_4">References<a class="headerlink" href="#references_4" title="Permanent link">&para;</a></h3>
+<h4 id="references_4">References<a class="headerlink" href="#references_4" title="Permanent link">&para;</a></h4>
 <p><a href="https://youtu.be/KxzhEQ-zpDc?si=kiGsG9eco3fsXaHR">Queue Introduction</a>
 <a href="https://youtu.be/EoisnPvUkOA?si=qoqVyM2dcjYFMrVa">Queue Implementation</a></p>
+<p>TODO: Add LinkedQueue Implementation</p>
 <h1 id="tree-based-structures_1">🌳 Tree-Based Structures<a class="headerlink" href="#tree-based-structures_1" title="Permanent link">&para;</a></h1>
 <h1 id="priority-queue">📊 Priority Queue<a class="headerlink" href="#priority-queue" title="Permanent link">&para;</a></h1>
 <p><img alt="Priority Queue" src="https://i.postimg.cc/7ZSt6tJw/temp-Imagez-FB1-Iv.avif" /></p>
@@ -2705,8 +2700,8 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 -   ⚠️ Key Points:
     -   No modification to structure
     -   Empty check</p>
-<h3 id="performance-summary_8">📊 Performance Summary<a class="headerlink" href="#performance-summary_8" title="Permanent link">&para;</a></h3>
-<h2 id="performance-summary_9">📊 Performance Summary<a class="headerlink" href="#performance-summary_9" title="Permanent link">&para;</a></h2>
+<h3 id="performance-summary_6">📊 Performance Summary<a class="headerlink" href="#performance-summary_6" title="Permanent link">&para;</a></h3>
+<h2 id="performance-summary_7">📊 Performance Summary<a class="headerlink" href="#performance-summary_7" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3074,8 +3069,8 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
 -   ⏱️ Time Complexity: O(n)
 -   💭 When to Use: Finding elements in the tree
 -   ⚠️ Key Points: Must traverse potentially entire tree</p>
-<h3 id="performance-summary_10">📊 Performance Summary<a class="headerlink" href="#performance-summary_10" title="Permanent link">&para;</a></h3>
-<h2 id="performance-summary_11">📊 Performance Summary<a class="headerlink" href="#performance-summary_11" title="Permanent link">&para;</a></h2>
+<h3 id="performance-summary_8">📊 Performance Summary<a class="headerlink" href="#performance-summary_8" title="Permanent link">&para;</a></h3>
+<h2 id="performance-summary_9">📊 Performance Summary<a class="headerlink" href="#performance-summary_9" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3348,7 +3343,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
     -   In-order gives sorted sequence
     -   Pre-order for copying tree
     -   Post-order for deletion</p>
-<h2 id="performance-summary_12">📊 Performance Summary<a class="headerlink" href="#performance-summary_12" title="Permanent link">&para;</a></h2>
+<h2 id="performance-summary_10">📊 Performance Summary<a class="headerlink" href="#performance-summary_10" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3601,7 +3596,7 @@ An ArrayList is a dynamic array implementation that automatically handles resizi
     -   BST properties maintained
     -   Auto-balancing after insertion
     -   Uses pointer reinforcement</p>
-<h3 id="performance-summary_13">📊 Performance Summary<a class="headerlink" href="#performance-summary_13" title="Permanent link">&para;</a></h3>
+<h3 id="performance-summary_11">📊 Performance Summary<a class="headerlink" href="#performance-summary_11" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
