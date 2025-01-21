@@ -174,3 +174,93 @@ class Stack:
     def is_empty(self):
         return len(self.stack) == 0
 ```
+
+### Queues
+
+A queue is a fundamental data structure that follows the First-In-First-Out (FIFO) principle, meaning the first element added is the first one to be removed. Think of it like a line of people waiting - the first person to join the line is the first to be served.
+
+#### Basic Operations
+
+##### Enqueue (Put)
+
+-   Adds an element to the back of the queue
+-   Like a person joining the end of a line
+```python title="queue.py" linenums="1"
+def put(self, item):
+    self.queue.append(item)
+```
+
+##### Dequeue (Get)
+
+-   Removes and returns the front element from the queue
+-   Like the first person in line being served and leaving
+```python title="queue.py" linenums="1"
+def get(self):
+    if not self.queue:
+        raise IndexError("Queue is empty")
+    return self.queue.pop(0)
+```
+
+##### Peek (Front)
+
+-   Returns the front element without removing it
+-   Like checking who's first in line without serving them
+```python title="queue.py" linenums="1"
+def get_front(self):
+    if not self.queue:
+        raise IndexError("Queue is empty")
+    return self.queue[0]
+```
+#### Common Properties
+
+##### Length Check
+```python title="queue.py" linenums="1"
+def __len__(self):
+    return len(self.queue)
+```
+
+##### Is Empty
+```python title="queue.py" linenums="1"
+def is_empty(self):
+    return len(self.queue) == 0
+```
+
+#### Implementation Example
+
+Here's a simple implementation of a queue:
+```python title="queue.py" linenums="1"
+class Queue:
+    def __init__(self):
+        self.queue = []
+    
+    def put(self, item):
+        self.queue.append(item)
+    
+    def get(self):
+        if not self.queue:
+            raise IndexError("Queue is empty")
+        return self.queue.pop(0)
+    
+    def get_front(self):
+        if not self.queue:
+            raise IndexError("Queue is empty")
+        return self.queue[0]
+    
+    def is_empty(self):
+        return len(self.queue) == 0
+```
+
+#### Common Use Cases
+
+1.  Print job scheduling in printers
+2.  Process scheduling in operating systems
+3.  Breadth-first search in graphs
+4.  Customer service systems
+5.  Message buffers in communication systems
+
+#### Important Notes
+
+1.  Unlike stacks, queues process elements in the order they were added
+2.  The internal list implementation shown here is simple but not optimal for large queues (due to pop(0) being O(n))
+3.  Python's  `collections.deque`  is more efficient for real-world applications
+4.  Queues can have variations like priority queues or circular queues
