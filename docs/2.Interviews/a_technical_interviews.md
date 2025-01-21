@@ -266,3 +266,92 @@ class Queue:
 2.  The internal list implementation shown here is simple but not optimal for large queues (due to pop(0) being O(n))
 3.  Python's  `collections.deque`  is more efficient for real-world applications
 4.  Queues can have variations like priority queues or circular queues
+
+### Singly Linked List
+
+![Singly Linked List](https://i.postimg.cc/Bt9x0PqN/temp-Imager77kla.avif)
+
+A singly linked list works like a chain, where each link (node) points to the next link. Think of it as a train where each car (node) is connected to the next car in line. Let me explain each key operation in simple terms.
+
+#### Basic Structure
+
+##### Node
+```python title="list.py" linenums="1"
+class Node:
+    def __init__(self, data):
+        self.data = data  # Stores the actual value
+        self.next = None  # Points to the next node, like a pointer to the next train car
+```
+
+#### Core Operations
+
+##### Insert at Beginning (Head)
+```python title="list.py" linenums="1"
+def insert_head(self, data):
+    new_node = Node(data)
+    new_node.next = self.head  # New node points to current first node
+    self.head = new_node      # Make new node the first node
+```
+Think of this as adding a new car to the front of the train. The new car needs to be hooked up to the existing front car, then becomes the new front of the train.
+
+##### Insert at End (Tail)
+```python title="list.py" linenums="1"
+def insert_tail(self, data):
+    new_node = Node(data)
+    if not self.head:         # If list is empty
+        self.head = new_node  # New node becomes the head
+        return
+    
+    current = self.head       # Start at the front
+    while current.next:       # Walk to the end
+        current = current.next
+    current.next = new_node   # Add new node at the end
+```
+Like adding a new car to the end of the train. We need to walk all the way to the last car first, then attach our new car to it.
+
+##### Insert at Index
+```python title="list.py" linenums="1"
+def insert_nth(self, index, data):
+    new_node = Node(data)
+    if index == 0:                # If inserting at front
+        new_node.next = self.head # Do the same as insert_head
+        self.head = new_node
+        return
+        
+    current = self.head           # Start at front
+    for _ in range(index - 1):    # Walk to position just before index
+        current = current.next
+    
+    new_node.next = current.next  # New node points to next node
+    current.next = new_node       # Previous node points to new node
+```
+Imagine adding a train car in the middle of the train. You need to walk to the right spot, unhook the connection there, and insert the new car by connecting it on both sides.
+
+##### Delete from Beginning
+```python title="list.py" linenums="1"
+def delete_head(self):
+    if not self.head:          # If list is empty, can't delete
+        raise IndexError("List is empty")
+    data = self.head.data      # Remember the value we're removing
+    self.head = self.head.next # Second node becomes the new head
+    return data                # Return removed value
+```
+Like removing the first car of the train. You just need to make the second car the new front of the train.
+
+##### Delete at Index
+```python title="list.py" linenums="1"
+def delete_nth(self, index):
+    if index == 0:             # If deleting first node
+        data = self.head.data  # Do the same as delete_head
+        self.head = self.head.next
+        return data
+        
+    current = self.head        # Start at front
+    for _ in range(index - 1): # Walk to node just before the one to delete
+        current = current.next
+        
+    data = current.next.data   # Remember value being removed
+    current.next = current.next.next  # Skip over the removed node
+    return data
+```
+Similar to removing a car from the middle of the train. Walk to the spot just before it, then reconnect the cars on either side, bypassing the car you're removing.
