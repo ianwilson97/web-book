@@ -177,6 +177,8 @@ class Stack:
 
 ### Queues
 
+![Queues](https://i.postimg.cc/DZBKb1Wp/temp-Image-Er-OH4-J.avif)
+
 A queue is a fundamental data structure that follows the First-In-First-Out (FIFO) principle, meaning the first element added is the first one to be removed. Think of it like a line of people waiting - the first person to join the line is the first to be served.
 
 #### Basic Operations
