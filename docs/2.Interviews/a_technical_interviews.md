@@ -88,3 +88,88 @@ flowchart TD
     o1 -->|Yes| p1@{ shape: rounded, label: "Dynamic Programming" }
     l1 -->|No| q1@{ shape: rounded, label: "Stack/Two Pointer" }
 ```
+## Data Structures
+
+### Stacks
+
+A stack is one of the most fundamental data structures in computer science. It follows the Last-In-First-Out (LIFO) principle, meaning the last element added is the first one to be removed.
+
+#### Basic Operations
+
+##### Push
+
+-   Adds an element to the top of the stack
+-   Think of it like placing a plate on top of a stack of plates
+```python title="stack.py" linenums="1"
+def push(self, item):
+    if len(self.stack) >= self.limit:
+        raise StackOverflowError
+    self.stack.append(item)
+```
+##### Pop
+
+-   Removes and returns the top element from the stack
+-   Like taking the topmost plate off a stack of plates
+```python title="stack.py" linenums="1"
+def pop(self):
+    if not self.stack:
+        raise StackUnderflowError
+    return self.stack.pop()
+```
+##### Peek (or Top)
+
+-   Returns the top element without removing it
+-   Like looking at the top plate without taking it off
+```python title="stack.py" linenums="1"
+def peek(self):
+    if not self.stack:
+        raise StackUnderflowError
+    return self.stack[-1]
+```
+
+#### Common Properties
+
+##### Empty Check
+```python title="stack.py" linenums="1"
+def is_empty(self):
+    return len(self.stack) == 0
+```
+##### Full Check
+```python title="stack.py" linenums="1"
+def is_full(self):
+    return len(self.stack) == self.limit
+```
+
+#### Common Use Cases
+
+1.  Function call stack (managing program execution)
+2.  Undo operations in text editors
+3.  Browser history (back button functionality)
+4.  Expression evaluation in calculators
+5.  Backtracking algorithms
+
+#### Implementation Example
+```python title="stack.py" linenums="1"
+class Stack:
+    def __init__(self, limit=10):
+        self.stack = []
+        self.limit = limit
+    
+    def push(self, item):
+        if len(self.stack) >= self.limit:
+            raise StackOverflowError
+        self.stack.append(item)
+    
+    def pop(self):
+        if not self.stack:
+            raise StackUnderflowError
+        return self.stack.pop()
+    
+    def peek(self):
+        if not self.stack:
+            raise StackUnderflowError
+        return self.stack[-1]
+    
+    def is_empty(self):
+        return len(self.stack) == 0
+```
