@@ -126,7 +126,6 @@ Specialized data structures:
 [Data Structures and Algorithms Notes](https://drive.google.com/file/d/1LaF74WE-jMvdlZ0FLwSWRxKVjO75iv8z/view?usp=share_link)
 #  LINEAR DATA STRUCTURES
 ## ArrayList
-![ArrayLists](https://i.postimg.cc/C10R05Tw/temp-Image-PLc-FLQ.avif)
 An ArrayList is a dynamic array implementation that automatically handles resizing as elements are added or removed. It provides fast random access and is one of the most used data structures in Java.
 ### Core Characteristics
 - Dynamic sizing
@@ -341,7 +340,6 @@ list.addToFront(element); // O(n) - expensive!
 #### References
 https://youtu.be/PEnFFiQe1pM?si=KfpsngEBI0gesUbC
 # Linked Lists
-![enter image description here](https://i.postimg.cc/fLKGM96B/temp-Imageq-Jb-Lbh.avif)
 
 ## Singly Linked List
 A Singly Linked List is a fundamental data structure where elements are stored in nodes, each containing data and a reference to the next node in the sequence. Unlike arrays, linked lists don't require contiguous memory allocation, making them ideal for dynamic data management.
@@ -412,9 +410,9 @@ public void addToBack(T data) {
     size++;
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   💭 Best for: Queue-like operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(n)
+-   Best for: Queue-like operations
+-   Edge Cases:
     -   Null data
     -   Empty list
     -   Consider tracking tail pointer for O(1) operation
@@ -554,7 +552,7 @@ private void validateIndex(int index, boolean isAdd) {
 -   Clear references when removing nodes
 -   Consider garbage collection implications
 -   Track size for O(1) length checks
-#### ⚠️ Common Pitfalls
+#### Common Pitfalls
 #### 1. Losing References
 ````java
 // WRONG - Lost reference to rest of list
@@ -580,16 +578,16 @@ if (head == null) {
 
 #### Reference
 [Singly Linked List Video](https://youtu.be/-Yn5DU0_-lw?si=uyhzn4hUV9ZGr4zj)
-# 🔗 Doubly Linked List
+## Doubly Linked List
 A Doubly Linked List is a bidirectional linked data structure where each node contains data and references to both the next and previous nodes. This bidirectional linking enables efficient traversal in both directions and simplifies certain operations compared to singly linked lists.
-### Core Characteristics
--   🔄 Bi-directional traversal
--   📝 Dynamic sizing
--   🎯 O(1) operations at both ends
--   🔍 Efficient insertions and deletions
--   💾 Higher memory usage per node
-### Implementation Details
-#### Structure
+#### Core Characteristics
+-   Bi-directional traversal
+-   Dynamic sizing
+-   O(1) operations at both ends
+-   Efficient insertions and deletions
+-   Higher memory usage per node
+#### Implementation Details
+##### Structure
 ````java
 public class DoublyLinkedList<T> {
     private Node<T> head;
@@ -615,9 +613,9 @@ public class DoublyLinkedList<T> {
     }
 }
 ````
-### 🔧 Core Operations & Time Complexities
-#### Adding Elements
-##### addToFront(T data)
+#### Core Operations & Time Complexities
+##### Adding Elements
+###### addToFront(T data)
 ````java
 public void addToFront(T data) {
     if (data == null) {
@@ -633,13 +631,13 @@ public void addToFront(T data) {
     size++;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💭 Best for: Stack-like operations, maintaining recent items
--   ⚠️ Edge Cases:
+-   Time Complexity: O(1)
+-   Best for: Stack-like operations, maintaining recent items
+-   Edge Cases:
     -   Empty list
     -   Null data
     -   Maintaining tail reference
-##### addToBack(T data)
+###### addToBack(T data)
 ````java
 public void addToBack(T data) {
     if (data == null) {
@@ -656,13 +654,13 @@ public void addToBack(T data) {
     size++;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💭 Best for: Queue-like operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(1)
+-   Best for: Queue-like operations
+-   Edge Cases:
     -   Empty list
     -   Null data
     -   Maintaining head reference
-##### addAtIndex(int index, T data)
+###### addAtIndex(int index, T data)
 ````java
 public void addAtIndex(int index, T data) {
     if (index < 0 || index > size) {
@@ -703,14 +701,14 @@ public void addAtIndex(int index, T data) {
     size++;
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   💡 Optimization: Chooses optimal traversal direction
--   ⚠️ Edge Cases:
+-   Time Complexity: O(n)
+-   Optimization: Chooses optimal traversal direction
+-   Edge Cases:
     -   Index bounds
     -   Null data
     -   Front/back insertions
-#### Remove Elements
-##### removeFromFront()
+##### Remove Elements
+###### removeFromFront()
 ````java
 public T removeFromFront() {
     if (isEmpty()) {
@@ -730,13 +728,13 @@ public T removeFromFront() {
     return data;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💭 Best for: Stack operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(1)
+-   Best for: Stack operations
+-  Edge Cases:
     -   Empty list
     -   Single element
     -   Maintaining tail reference
-##### removeFromBack()
+###### removeFromBack()
 ````java
 public T removeFromBack() {
     if (isEmpty()) {
@@ -756,14 +754,14 @@ public T removeFromBack() {
     return data;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💭 Best for: Queue operations
--   ⚠️ Edge Cases:
+-   Time Complexity: O(1)
+-   Best for: Queue operations
+-   Edge Cases:
     -   Empty list
     -   Single element
     -   Maintaining head reference
-#### Access Operations
-##### get(int index)
+##### Access Operations
+###### get(int index)
 ````java
 public T get(int index) {
     if (index < 0 || index >= size) {
@@ -785,12 +783,12 @@ public T get(int index) {
     return current.data;
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   💡 Optimization: Bi-directional traversal
--   ⚠️ Edge Cases:
+-   Time Complexity: O(n)
+-   Optimization: Bi-directional traversal
+-   Edge Cases:
     -   Invalid index
     -   Empty list
-## 📊 Performance Summary
+### Performance Summary
 
 | Operation | Time Complexity | Notes |
 |-----------|----------------|--------|
@@ -802,8 +800,8 @@ public T get(int index) {
 | Get | O(n) | Optimal traversal direction |
 | Size | O(1) | Tracked variable |
 
-### 💡 Best Practices
-#### 1. Bi-directional Link Maintenance
+#### Best Practices
+##### 1. Bi-directional Link Maintenance
 ````java
 // Always update both next and previous references
 newNode.next = current.next;
@@ -811,7 +809,7 @@ newNode.previous = current;
 current.next.previous = newNode;
 current.next = newNode;
 ````
-#### 2. Head/Tail Management
+##### 2. Head/Tail Management
 ````java
 // For single element
 if (size == 1) {
@@ -820,7 +818,7 @@ if (size == 1) {
     // Update references appropriately
 }
 ````
-#### 3. Traversal Optimization
+##### 3. Traversal Optimization
 ````java
 // Choose optimal direction based on index
 if (index < size / 2) {
@@ -829,8 +827,8 @@ if (index < size / 2) {
     traverseFromTail();
 }
 ````
-### ⚠️ Common Pitfalls
-#### 1. Incomplete Link Updates
+#### Common Pitfalls
+##### 1. Incomplete Link Updates
 ````java
 // WRONG - Only updating one direction
 current.next = newNode;
@@ -839,7 +837,7 @@ current.next = newNode;
 current.next = newNode;
 newNode.previous = current;
 ````
-#### 2. Memory Leaks
+##### 2. Memory Leaks
 ````java
 // WRONG - Leaving dangling references
 head = head.next;
@@ -853,22 +851,21 @@ if (newHead != null) {
 }
 head = newHead;
 ````
-#### References
+##### References
 [Doubly Linked List Video](https://youtu.be/m-8ZBO2ywaU?si=c7-K9iDSFlmzCuD0)
 
-# 🔄 Circular Singly Linked List
-![enter image description here](https://i.postimg.cc/4Ns3vDv9/temp-Image-PUv-Kxt.avif)
+## Circular Singly Linked List
 
 A Circular Singly Linked List is a variant of linked lists where the last node points back to the first node, creating a circle. This structure is particularly useful when I need continuous traversal or cyclic operations, like round-robin scheduling.
 
-### Core Characteristics
--   🔄 Last node connects to first node
--   📝 Sequential access pattern
--   🎯 No null references
--   🔍 Continuous traversal capability
--   💫 Efficient for cyclic operations
-### Implementation Details
-#### Structure
+#### Core Characteristics
+-  Last node connects to first node
+-  Sequential access pattern
+-  No null references
+-   Continuous traversal capability
+-   Efficient for cyclic operations
+#### Implementation Details
+##### Structure
 ````java
 public class CircularLinkedList<T> {
     private Node<T> tail;  // Points to last node
@@ -890,9 +887,9 @@ public class CircularLinkedList<T> {
 -   O(1) insertions at both ends
 -   Easy access to both first and last nodes
 -   More efficient for common operations
-### 🔧 Core Operations
-#### Adding Elements
-##### addingToFront(T data)
+#### Core Operations
+##### Adding Elements
+###### addingToFront(T data)
 ````java
 public void addToFront(T data) {
     if (data == null) {
@@ -910,10 +907,10 @@ public void addToFront(T data) {
     size++;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💡 Important: Maintain circular nature
--   ⚠️ Edge Cases: Empty list handling
-##### addToBack(T data)
+-   Time Complexity: O(1)
+-   Important: Maintain circular nature
+-   Edge Cases: Empty list handling
+###### addToBack(T data)
 ````java
 public void addToBack(T data) {
     if (data == null) {
@@ -931,11 +928,11 @@ public void addToBack(T data) {
     size++;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💡 Key Point: Tail reference makes this efficient
--   ⚠️ Edge Cases: Empty list, single element
-#### Removing Elements
-##### removeFromFront()
+-   Time Complexity: O(1)
+-   Key Point: Tail reference makes this efficient
+-   Edge Cases: Empty list, single element
+##### Removing Elements
+###### removeFromFront()
 ````java
 public T removeFromFront() {
     if (isEmpty()) {
@@ -952,10 +949,10 @@ public T removeFromFront() {
     return data;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💡 Key Point: Maintain circular structure
--   ⚠️ Edge Cases: Empty list, single element
-##### removeFromBack()
+-   Time Complexity: O(1)
+-   Key Point: Maintain circular structure
+-   Edge Cases: Empty list, single element
+###### removeFromBack()
 ````java
 public T removeFromBack() {
     if (isEmpty()) {
@@ -977,10 +974,10 @@ public T removeFromBack() {
     return data;
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   💡 Note: Requires traversal to find second-to-last node
--   ⚠️ Edge Cases: Empty list, single element
-#### Search Operation
+-   Time Complexity: O(n)
+-   Note: Requires traversal to find second-to-last node
+-   Edge Cases: Empty list, single element
+##### Search Operation
 ````java
 public boolean contains(T data) {
     if (isEmpty() || data == null) {
@@ -998,10 +995,10 @@ public boolean contains(T data) {
     return false;
 }
 ````
--   ⏱️ Time Complexity: O(n)
--   💡 Important: Use do-while for circular traversal
--   ⚠️ Handle: Null data, empty list
-## 📊 Performance Summary
+-   Time Complexity: O(n)
+-   Important: Use do-while for circular traversal
+-   Handle: Null data, empty list
+### 📊 Performance Summary
 
 | Operation | Time Complexity | Notes |
 |-----------|----------------|--------|
@@ -1012,14 +1009,14 @@ public boolean contains(T data) {
 | Search | O(n) | Linear traversal |
 | Size | O(1) | Tracked variable |
 
-### 💡 Best Practices
-#### 1. Circular Reference Maintenance
+#### Best Practices
+##### 1. Circular Reference Maintenance
 ````java
 // Always ensure last node points to first
 tail.next = tail.next.next;  // When removing
 newNode.next = tail.next;    // When adding
 ````
-#### 2. Empty List Handling
+##### 2. Empty List Handling
 ````java
 if (isEmpty()) {
     // New node points to itself
@@ -1027,7 +1024,7 @@ if (isEmpty()) {
     tail = newNode;
 }
 ````
-#### 3. Single Element Handling
+##### 3. Single Element Handling
 ````java
 if (size == 1) {
     tail = null;  // For removal
@@ -1035,8 +1032,8 @@ if (size == 1) {
     tail = newNode;  // For insertion
 }
 ````
-### ⚠️ Common Pitfalls
-#### 1. Infinite Loops
+#### Common Pitfalls
+##### 1. Infinite Loops
 ````java
 // WRONG - May loop forever
 while (current.next != null) {  // Never true in circular list
@@ -1048,7 +1045,7 @@ do {
     current = current.next;
 } while (current != tail.next);
 ````
-#### 2. Lost Circular Reference
+##### 2. Lost Circular Reference
 ````java
 // WRONG - Loses circular structure
 tail.next = newNode;
@@ -1061,19 +1058,16 @@ tail.next = newNode;
 #### Reference
 [Circular Linked List Playlist](https://youtube.com/playlist?list=PLBlnK6fEyqRjW4jK-CbshJuX20nc_3IaN&si=X7n0-QAF54ZSsf0_)
 
-# 📚 Stack
-
-![enter image description here](https://i.postimg.cc/02Pp6Hbt/temp-Image-Ic-V6uh.avif)
-
-### Introduction
+## Stack
+#### Introduction
 A Stack is a linear data structure that follows the LIFO (Last In First Out) principle. Like a stack of plates, elements are added and removed from the same end, called the top of the stack. This fundamental data structure is ideal for scenarios where we need strict order control over our operations.
-### Core Characteristics
--   📥 LIFO (Last In, First Out) principle
--   🎯 Single point of access (top)
--   📏 Dynamic sizing through array resizing
--   🔄 Ordered operations
--   ⚡ Constant time operations (amortized)
-### Implementation Details
+#### Core Characteristics
+-   LIFO (Last In, First Out) principle
+-   Single point of access (top)
+-   Dynamic sizing through array resizing
+-   Ordered operations
+-   Constant time operations (amortized)
+#### Implementation Details
 #### Structure
 ````java
 public class Stack<T> {
@@ -1105,8 +1099,8 @@ public class Stack<T> {
 }
 ````
 
-### 🔧 Core Operations
-#### Push Operation
+#### Core Operations
+##### Push Operation
 ````java
 public void push(T data) {
     if (data == null) {
@@ -1131,14 +1125,14 @@ private void resize() {
     backingArray = newArray;
 }  
 ````
-   ⏱️ Time Complexity: O(1) amortized
--   💭 When to Use: Adding new elements to the stack
--   ⚠️ Key Points:
+   Time Complexity: O(1) amortized
+-   When to Use: Adding new elements to the stack
+-   Key Points:
     -   Handles null check
     -   Automatic resizing
     -   Maintains LIFO order
 
-#### Pop Operation
+##### Pop Operation
 ````java
 public T pop() {
     if (isEmpty()) {
@@ -1151,13 +1145,13 @@ public T pop() {
     return data;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💭 When to Use: Removing and retrieving the most recently added element
--   ⚠️ Key Points:
+-   Time Complexity: O(1)
+-   When to Use: Removing and retrieving the most recently added element
+-   Key Points:
     -   Checks for empty stack
     -   Cleans up references
     -   Maintains LIFO order
-#### Peek Operation
+##### Peek Operation
 ````java
 public T peek() {
     if (isEmpty()) {
@@ -1166,9 +1160,9 @@ public T peek() {
     return backingArray[size - 1];
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💭 When to Use: Viewing top element without removal
--   ⚠️ Key Points:
+-   Time Complexity: O(1)
+-   When to Use: Viewing top element without removal
+-   Key Points:
     -   No modification to stack
     -   Preserves state
     -   Checks for empty stack
@@ -1191,8 +1185,8 @@ public void clear() {
     size = 0;
 }
 ````
-### 📊 Performance Summary
-## 📊 Performance Summary
+
+#### 📊 Performance Summary
 
 | Operation | Time Complexity | Notes |
 |-----------|----------------|--------|
@@ -1204,8 +1198,8 @@ public void clear() {
 | Clear | O(1) | New array allocation |
 
 \* Amortized time complexity accounts for occasional resizing operations
-### 💡 Best Practices
-#### 1. Memory Management
+#### Best Practices
+##### 1. Memory Management
 ````java
 // Always clear references when removing elements
 public T pop() {
@@ -1214,7 +1208,7 @@ public T pop() {
     return data;
 }
 ````
-#### 2. Capacity Handling
+##### 2. Capacity Handling
 ````java
 // Consider shrinking array when usage is low
 private void shrinkIfNeeded() {
@@ -1223,7 +1217,7 @@ private void shrinkIfNeeded() {
     }
 }
 ````
-#### 3. Null Checking
+##### 3. Null Checking
 ````java
 // Always validate input
 public void push(T data) {
@@ -1233,8 +1227,8 @@ public void push(T data) {
     // push implementation
 }
 ````
-### ⚠️ Common Pitfalls
-#### 1. Memory Leaks
+#### Common Pitfalls
+##### 1. Memory Leaks
 ````java
 // WRONG - Memory leak
 public T pop() {
@@ -1248,7 +1242,7 @@ public T pop() {
     return data;
 }
 ````
-#### 2. Bound Checking
+##### 2. Bound Checking
 ````java
 // WRONG - No empty check
 public T peek() {
@@ -1263,8 +1257,8 @@ public T peek() {
     return backingArray[size - 1];
 }
 ````
-### 🎯 Common Use Cases
-#### 1. Function Call Stack
+#### Common Use Cases
+##### 1. Function Call Stack
 ````java
 Stack<FunctionCall> callStack = new Stack<>();
 callStack.push(new FunctionCall("main"));
@@ -1272,7 +1266,7 @@ callStack.push(new FunctionCall("helper"));
 // Current function is helper
 callStack.pop();  // Return to main
 ````
-#### 2. Expression Evaluation
+##### 2. Expression Evaluation
 ````java
 Stack<Character> parentheses = new Stack<>();
 for (char c : expression.toCharArray()) {
@@ -1287,7 +1281,7 @@ for (char c : expression.toCharArray()) {
     }
 }
 ````
-#### 3. Undo/Redo Operations
+##### 3. Undo/Redo Operations
 ````java
 Stack<Command> undoStack = new Stack<>();
 Stack<Command> redoStack = new Stack<>();
@@ -1299,21 +1293,22 @@ void executeCommand(Command cmd) {
 }
 ````
 
-### References
+#### References
 [Stack Introduction](https://youtu.be/L3ud3rXpIxA?si=m0pon3ja-WW28DON)
 [Stack Implementation](https://youtu.be/RAMqDLI6_1c?si=OAPRPe-3-4nyqBCK)
-# 🎯 Queue
-![Queues](https://i.postimg.cc/CMfGSBqV/temp-Imagee-Hk-FO3.avif)
-### Introduction
+
+TODO: Add LinkedStack implementation
+## Queue
+#### Introduction
 A Queue is a linear data structure following the FIFO (First In, First Out) principle. Using a circular array implementation allows for efficient space usage and constant time operations by reusing array spaces that have been dequeued.
-### Core Characteristics
--   📥 FIFO (First In, First Out) ordering
--   🔄 Circular array implementation
--   📏 Dynamic sizing
--   ⚡ Constant time operations (amortized)
--   🎯 Space efficient
-### Implementation Details
-### Structure
+#### Core Characteristics
+-   FIFO (First In, First Out) ordering
+-   Circular array implementation
+-   Dynamic sizing
+-   Constant time operations (amortized)
+-   Space efficient
+#### Implementation Details
+#### Structure
 ````java
 public class Queue<T> {
     private T[] backingArray;
@@ -1329,8 +1324,8 @@ public class Queue<T> {
     }
 }
 ````
-### 🔧 Core Operations
-#### Enqueue Operation
+#### Core Operations
+##### Enqueue Operation
 ````java
 public void enqueue(T data) {
     if (data == null) {
@@ -1359,13 +1354,13 @@ private void resize() {
     front = 0;  // Reset front to beginning of new array
 }
 ````
--   ⏱️ Time Complexity: O(1) amortized
--   💭 When to Use: Adding elements to queue
--   ⚠️ Key Points:
+-   Time Complexity: O(1) amortized
+-   When to Use: Adding elements to queue
+-   Key Points:
     -   Handles null check
     -   Circular indexing with modulo
     -   Resizes when full
-#### Dequeue Operation
+##### Dequeue Operation
 ````java
 public T dequeue() {
     if (isEmpty()) {
@@ -1379,13 +1374,13 @@ public T dequeue() {
     return data;
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💭 When to Use: Removing elements from front
--   ⚠️ Key Points:
+-   Time Complexity: O(1)
+-   When to Use: Removing elements from front
+-   Key Points:
     -   Handles empty queue
     -   Maintains circular structure
     -   Cleans up references
-#### Peek Operation
+##### Peek Operation
 ````java
 public T peek() {
     if (isEmpty()) {
@@ -1394,12 +1389,12 @@ public T peek() {
     return backingArray[front];
 }
 ````
--   ⏱️ Time Complexity: O(1)
--   💭 When to Use: Examining front element
--   ⚠️ Key Points:
+-   Time Complexity: O(1)
+-   When to Use: Examining front element
+-   Key Points:
     -   No modification to queue
     -   Front element access
-#### Utility Operations
+##### Utility Operations
 ````java
 public boolean isEmpty() {
     return size == 0;
@@ -1416,8 +1411,8 @@ public void clear() {
     size = 0;
 }
 ````
-### 📊 Performance Summary
-## 📊 Performance Summary
+
+#### Performance Summary
 
 | Operation | Time Complexity | Notes |
 |-----------|----------------|--------|
@@ -1429,8 +1424,8 @@ public void clear() {
 | Clear | O(1) | New array allocation |
 
 \* Amortized time complexity accounts for occasional resizing operations
-### 💡 Best Practices
-#### 1. Circular Index Calculation
+#### Best Practices
+##### 1. Circular Index Calculation
 ````java
 // Calculate next index with modulo
 private int getNextIndex(int currentIndex) {
@@ -1442,7 +1437,7 @@ private int getRearIndex() {
     return (front + size) % backingArray.length;
 }
 ````
-#### 2. Resizing Strategy
+##### 2. Resizing Strategy
 ````java
 private void resize() {
     // Double size for amortized O(1)
@@ -1456,7 +1451,7 @@ private void resize() {
     backingArray = newArray;
 }
 ````
-#### 3. Memory Management
+##### 3. Memory Management
 ````java
 public T dequeue() {
     T data = backingArray[front];
@@ -1466,8 +1461,8 @@ public T dequeue() {
     return data;
 }
 ````
-### ⚠️ Common Pitfalls
-#### 1. Incorrect Circular Indexing
+#### Common Pitfalls
+##### 1. Incorrect Circular Indexing
 ````java
 // WRONG - May cause overflow
 rear = rear + 1;
@@ -1476,7 +1471,7 @@ if (rear == backingArray.length) rear = 0;
 // CORRECT - Use modulo
 rear = (rear + 1) % backingArray.length;
 ````
-#### 2. Resizing Issues
+##### 2. Resizing Issues
 ````java
 // WRONG - Doesn't maintain order
 System.arraycopy(backingArray, 0, newArray, 0, backingArray.length);
@@ -1486,8 +1481,8 @@ for (int i = 0; i < size; i++) {
     newArray[i] = backingArray[(front + i) % backingArray.length];
 }
 ````
-### 🎯 Common Use Cases
-#### 1. Task Scheduling
+#### Common Use Cases
+##### 1. Task Scheduling
 ````java
 Queue<Task> taskQueue = new Queue<>();
 taskQueue.enqueue(new Task("Process payment"));
@@ -1498,7 +1493,7 @@ while (!taskQueue.isEmpty()) {
     processTask(nextTask);
 }
 ````
-#### 2. BFS Implementation
+##### 2. BFS Implementation
 ````java
 public void bfs(Node root) {
     Queue<Node> queue = new Queue<>();
@@ -1512,7 +1507,7 @@ public void bfs(Node root) {
     }
 }
 ````
-#### 3. Buffer Implementation
+##### 3. Buffer Implementation
 ````java
 public class Buffer<T> {
     private Queue<T> queue = new Queue<>();
@@ -1529,9 +1524,11 @@ public class Buffer<T> {
     }
 }
 ````
-### References
+#### References
 [Queue Introduction](https://youtu.be/KxzhEQ-zpDc?si=kiGsG9eco3fsXaHR)
 [Queue Implementation](https://youtu.be/EoisnPvUkOA?si=qoqVyM2dcjYFMrVa)
+
+TODO: Add LinkedQueue Implementation
 # 🌳 Tree-Based Structures
 # 📊 Priority Queue
 ![Priority Queue](https://i.postimg.cc/7ZSt6tJw/temp-Imagez-FB1-Iv.avif)
