@@ -355,3 +355,94 @@ def delete_nth(self, index):
     return data
 ```
 Similar to removing a car from the middle of the train. Walk to the spot just before it, then reconnect the cars on either side, bypassing the car you're removing.
+
+### Doubly Linked List
+
+![Doubly Linked List](https://i.postimg.cc/k4R01LD8/temp-Image-WX0-SJS.avif)
+
+A doubly linked list is like a chain that can be traversed in both directions. Unlike its simpler cousin, the singly linked list, each node in a doubly linked list maintains connections to both its previous and next neighbors. This bidirectional connection provides more flexibility but requires more memory and careful management of connections.
+
+#### Basic Structure
+
+Let's start with the fundamental building block - the Node:
+```python title="doubly_list.py" linenums="1"
+class Node:
+    def __init__(self, data):
+        self.data = data       # The actual value stored
+        self.previous = None   # Link to the previous node
+        self.next = None       # Link to the next node
+```
+Think of each node as a train car that has two hooks - one connecting to the car in front (previous) and one connecting to the car behind (next). This dual connection is what makes it "doubly" linked.
+
+#### Core Operations
+
+##### Insert at Beginning (Head)
+```python title="doubly_list.py" linenums="1"
+def insert_at_head(self, data):
+    new_node = Node(data)
+    if not self.head:                    # If list is empty
+        self.head = self.tail = new_node # New node becomes both head and tail
+    else:
+        new_node.next = self.head        # New node points forward to current head
+        self.head.previous = new_node    # Current head points back to new node
+        self.head = new_node             # New node becomes the head
+```
+This is like adding a new car to the front of a train. We need to connect it to the existing front car in both directions.
+
+##### Insert at End (Tail)
+```python title="doubly_list.py" linenums="1"
+def insert_at_tail(self, data):
+    new_node = Node(data)
+    if not self.head:                    # If list is empty
+        self.head = self.tail = new_node # New node becomes both head and tail
+    else:
+        self.tail.next = new_node        # Current tail points forward to new node
+        new_node.previous = self.tail     # New node points back to current tail
+        self.tail = new_node             # New node becomes the tail
+```
+Similar to adding a car at the end of the train, but we can do it efficiently since we maintain a direct reference to the tail.
+
+##### Insert at Index
+```python title="doubly_list.py" linenums="1"
+def insert_at_nth(self, index, data):
+    if index == 0:                      # Inserting at head
+        self.insert_at_head(data)
+    elif index == len(self):            # Inserting at tail
+        self.insert_at_tail(data)
+    else:
+        current = self.head
+        for _ in range(index):          # Walk to insertion point
+            current = current.next
+            
+        new_node = Node(data)           # Create new node
+        new_node.previous = current.previous  # Connect new node to previous node
+        new_node.next = current              # Connect new node to next node
+        current.previous.next = new_node     # Connect previous node to new node
+        current.previous = new_node          # Connect next node to new node
+```
+When inserting in the middle, we need to carefully update four connections (two in each direction) to maintain the chain's integrity.
+
+##### Delete Operations
+
+The delete operations mirror their insert counterparts but focus on removing connections rather than creating them. When deleting a node, we need to reconnect its neighbors to each other, bypassing the removed node:
+```python title="doubly_list.py" linenums="1"
+def delete_node(self, node):
+    if node == self.head:               # Deleting head
+        self.head = node.next
+        if self.head:
+            self.head.previous = None
+    else:
+        node.previous.next = node.next   # Connect previous node to next node
+        if node.next:                    # If not deleting tail
+            node.next.previous = node.previous
+```
+#### Advantages and Use Cases
+
+Doubly linked lists are particularly useful when you need to:
+
+1.  Traverse data in both directions (like a browser's back/forward history)
+2.  Delete nodes when you only have a reference to the node itself
+3.  Quickly add or remove elements from either end (like in a deque)
+4.  Maintain a history with undo/redo capabilities
+
+The trade-off is that doubly linked lists use more memory than singly linked lists due to the extra previous pointer, and operations need to manage more connections. However, this extra complexity often pays off in terms of flexibility and functionality.
