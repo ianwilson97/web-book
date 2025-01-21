@@ -91,6 +91,7 @@ flowchart TD
 ## Data Structures
 
 ### Stacks
+![Stack](https://i.postimg.cc/hGDDJZJq/temp-Image6dkjm-N.avif)
 
 A stack is one of the most fundamental data structures in computer science. It follows the Last-In-First-Out (LIFO) principle, meaning the last element added is the first one to be removed.
 
