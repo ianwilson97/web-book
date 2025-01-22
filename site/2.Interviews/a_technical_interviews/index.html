@@ -891,6 +891,90 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#doubly-linked-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doubly Linked List
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Doubly Linked List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-operations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert-at-beginning-head_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insert at Beginning (Head)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-at-end-tail_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insert at End (Tail)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-at-index_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insert at Index
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages and Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1365,6 +1449,90 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#doubly-linked-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doubly Linked List
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Doubly Linked List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-operations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert-at-beginning-head_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insert at Beginning (Head)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-at-end-tail_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insert at End (Tail)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-at-index_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insert at Index
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages and Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1781,6 +1949,120 @@ Like removing the first car of the train. You just need to make the second car t
 <a id="__codelineno-17-13" name="__codelineno-17-13"></a>    <span class="k">return</span> <span class="n">data</span>
 </code></pre></div></td></tr></table></div>
 Similar to removing a car from the middle of the train. Walk to the spot just before it, then reconnect the cars on either side, bypassing the car you're removing.</p>
+<h3 id="doubly-linked-list">Doubly Linked List<a class="headerlink" href="#doubly-linked-list" title="Permanent link">&para;</a></h3>
+<p><img alt="Doubly Linked List" src="https://i.postimg.cc/k4R01LD8/temp-Image-WX0-SJS.avif" /></p>
+<p>A doubly linked list is like a chain that can be traversed in both directions. Unlike its simpler cousin, the singly linked list, each node in a doubly linked list maintains connections to both its previous and next neighbors. This bidirectional connection provides more flexibility but requires more memory and careful management of connections.</p>
+<h4 id="basic-structure_1">Basic Structure<a class="headerlink" href="#basic-structure_1" title="Permanent link">&para;</a></h4>
+<p>Let's start with the fundamental building block - the Node:
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">doubly_list.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="p">:</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>       <span class="c1"># The actual value stored</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="kc">None</span>   <span class="c1"># Link to the previous node</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>       <span class="c1"># Link to the next node</span>
+</code></pre></div></td></tr></table></div>
+Think of each node as a train car that has two hooks - one connecting to the car in front (previous) and one connecting to the car behind (next). This dual connection is what makes it "doubly" linked.</p>
+<h4 id="core-operations_1">Core Operations<a class="headerlink" href="#core-operations_1" title="Permanent link">&para;</a></h4>
+<h5 id="insert-at-beginning-head_1">Insert at Beginning (Head)<a class="headerlink" href="#insert-at-beginning-head_1" title="Permanent link">&para;</a></h5>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">doubly_list.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">6</a></span>
+<span class="normal"><a href="#__codelineno-19-7">7</a></span>
+<span class="normal"><a href="#__codelineno-19-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">insert_at_head</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>    <span class="n">new_node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">:</span>                    <span class="c1"># If list is empty</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">new_node</span> <span class="c1"># New node becomes both head and tail</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>        <span class="n">new_node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>        <span class="c1"># New node points forward to current head</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">new_node</span>    <span class="c1"># Current head points back to new node</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">new_node</span>             <span class="c1"># New node becomes the head</span>
+</code></pre></div></td></tr></table></div>
+This is like adding a new car to the front of a train. We need to connect it to the existing front car in both directions.</p>
+<h5 id="insert-at-end-tail_1">Insert at End (Tail)<a class="headerlink" href="#insert-at-end-tail_1" title="Permanent link">&para;</a></h5>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">doubly_list.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span>
+<span class="normal"><a href="#__codelineno-20-7">7</a></span>
+<span class="normal"><a href="#__codelineno-20-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">insert_at_tail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>    <span class="n">new_node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">:</span>                    <span class="c1"># If list is empty</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">new_node</span> <span class="c1"># New node becomes both head and tail</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">new_node</span>        <span class="c1"># Current tail points forward to new node</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a>        <span class="n">new_node</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span>     <span class="c1"># New node points back to current tail</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">new_node</span>             <span class="c1"># New node becomes the tail</span>
+</code></pre></div></td></tr></table></div>
+Similar to adding a car at the end of the train, but we can do it efficiently since we maintain a direct reference to the tail.</p>
+<h5 id="insert-at-index_1">Insert at Index<a class="headerlink" href="#insert-at-index_1" title="Permanent link">&para;</a></h5>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">doubly_list.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">insert_at_nth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>    <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>                      <span class="c1"># Inserting at head</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">insert_at_head</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>    <span class="k">elif</span> <span class="n">index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>            <span class="c1"># Inserting at tail</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">insert_at_tail</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a>        <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>          <span class="c1"># Walk to insertion point</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>        <span class="n">new_node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>           <span class="c1"># Create new node</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a>        <span class="n">new_node</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">previous</span>  <span class="c1"># Connect new node to previous node</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>        <span class="n">new_node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">current</span>              <span class="c1"># Connect new node to next node</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a>        <span class="n">current</span><span class="o">.</span><span class="n">previous</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">new_node</span>     <span class="c1"># Connect previous node to new node</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a>        <span class="n">current</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">new_node</span>          <span class="c1"># Connect next node to new node</span>
+</code></pre></div></td></tr></table></div>
+When inserting in the middle, we need to carefully update four connections (two in each direction) to maintain the chain's integrity.</p>
+<h5 id="delete-operations">Delete Operations<a class="headerlink" href="#delete-operations" title="Permanent link">&para;</a></h5>
+<p>The delete operations mirror their insert counterparts but focus on removing connections rather than creating them. When deleting a node, we need to reconnect its neighbors to each other, bypassing the removed node:
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">doubly_list.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span>
+<span class="normal"><a href="#__codelineno-22-7">7</a></span>
+<span class="normal"><a href="#__codelineno-22-8">8</a></span>
+<span class="normal"><a href="#__codelineno-22-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">delete_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">:</span>               <span class="c1"># Deleting head</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">:</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a>        <span class="n">node</span><span class="o">.</span><span class="n">previous</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span>   <span class="c1"># Connect previous node to next node</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span><span class="p">:</span>                    <span class="c1"># If not deleting tail</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a>            <span class="n">node</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">previous</span>
+</code></pre></div></td></tr></table></div></p>
+<h4 id="advantages-and-use-cases">Advantages and Use Cases<a class="headerlink" href="#advantages-and-use-cases" title="Permanent link">&para;</a></h4>
+<p>Doubly linked lists are particularly useful when you need to:</p>
+<ol>
+<li>Traverse data in both directions (like a browser's back/forward history)</li>
+<li>Delete nodes when you only have a reference to the node itself</li>
+<li>Quickly add or remove elements from either end (like in a deque)</li>
+<li>Maintain a history with undo/redo capabilities</li>
+</ol>
+<p>The trade-off is that doubly linked lists use more memory than singly linked lists due to the extra previous pointer, and operations need to manage more connections. However, this extra complexity often pays off in terms of flexibility and functionality.</p>
 
 
 

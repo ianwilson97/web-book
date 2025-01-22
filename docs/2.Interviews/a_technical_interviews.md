@@ -446,3 +446,187 @@ Doubly linked lists are particularly useful when you need to:
 4.  Maintain a history with undo/redo capabilities
 
 The trade-off is that doubly linked lists use more memory than singly linked lists due to the extra previous pointer, and operations need to manage more connections. However, this extra complexity often pays off in terms of flexibility and functionality.
+
+### Circular Singly Linked List
+
+![Circular](https://i.postimg.cc/43MJpRCK/temp-Imager-Of-WJq.avif)
+
+A circular linked list is a variation of a linked list where the last node points back to the first node, creating a circle. Think of it like a ring where you can keep going around and never reach an end.
+
+#### Basic Structure
+
+##### Node
+```python title="circular.py" linenums="1"
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None  # Points to next node in circle
+```
+
+##### List Structure
+```python title="circular.py" linenums="1"
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None  # First node
+        self.tail = None  # Last node (points to head)
+```
+
+#### Core Operations
+
+##### Insert at Front
+
+Adds a new node at the start of the circle:
+```python title="circular.py" linenums="1"
+def insert_head(self, data):
+    new_node = Node(data)
+    if not self.head:
+        # First node points to itself
+        new_node.next = new_node
+        self.head = self.tail = new_node
+    else:
+        # Connect new node to form circle
+        new_node.next = self.head
+        self.head = new_node
+        self.tail.next = self.head
+```
+
+##### Insert at End
+
+Adds a new node while maintaining the circle:
+```python title="circular.py" linenums="1"
+def insert_tail(self, data):
+    new_node = Node(data)
+    if not self.head:
+        # First node points to itself
+        new_node.next = new_node
+        self.head = self.tail = new_node
+    else:
+        # Add to end and complete circle
+        new_node.next = self.head
+        self.tail.next = new_node
+        self.tail = new_node
+```
+
+##### Insert at Index
+
+Adds a node at any position in the circle:
+```python title="circular.py" linenums="1" hl_lines="7 23 24"
+def insert_at(self, index, data):
+    if index < 0:
+        raise IndexError("Index cannot be negative")
+        
+    # Insert at start
+    if index == 0:
+        self.insert_head(data)
+        return
+        
+    # Create new node
+    new_node = Node(data)
+    current = self.head
+    
+    # Walk to insertion point
+    for _ in range(index - 1):
+        if current is None:
+            raise IndexError("Index out of range")
+        current = current.next
+        if current == self.head:  # We've gone full circle
+            raise IndexError("Index out of range")
+            
+    # Insert the node
+    new_node.next = current.next
+    current.next = new_node
+    
+    # Update tail if inserting at end
+    if current == self.tail:
+        self.tail = new_node
+```
+
+##### Delete from Front
+
+Removes the first node while keeping the circle intact:
+```python title="circular.py" linenums="1" hl_lines="7 9 10"
+def delete_head(self):
+    if not self.head:
+        raise ValueError("List is empty")
+        
+    data = self.head.data
+    if self.head == self.tail:
+        self.head = self.tail = None
+    else:
+        self.head = self.head.next
+        self.tail.next = self.head
+    return data
+```
+
+##### Delete from End
+
+Removes the last node and reconnects the circle:
+```python title="circular.py" linenums="1" hl_lines="7 12 13"
+def delete_tail(self):
+    if not self.head:
+        raise ValueError("List is empty")
+        
+    data = self.tail.data
+    if self.head == self.tail:
+        self.head = self.tail = None
+    else:
+        current = self.head
+        while current.next != self.tail:
+            current = current.next
+        current.next = self.head
+        self.tail = current
+    return data
+```
+
+##### Delete at Index
+
+Removes a node from any position while maintaining the circle:
+```python title="circular.py" linenums="1" hl_lines="9 25"
+def delete_at(self, index):
+    if not self.head:
+        raise IndexError("List is empty")
+    if index < 0:
+        raise IndexError("Index cannot be negative")
+        
+    # Delete from start
+    if index == 0:
+        return self.delete_head()
+        
+    # Walk to node just before deletion point
+    current = self.head
+    for _ in range(index - 1):
+        current = current.next
+        if current == self.head:  # We've gone full circle
+            raise IndexError("Index out of range")
+            
+    # Get node to delete
+    to_delete = current.next
+    if to_delete == self.head:  # We've gone full circle
+        raise IndexError("Index out of range")
+        
+    # Save data and remove node
+    data = to_delete.data
+    current.next = to_delete.next
+    
+    # Update tail if deleting last node
+    if to_delete == self.tail:
+        self.tail = current
+        
+    return data
+```
+
+#### Common Use Cases
+
+1.  Round-robin scheduling
+2.  Game circles (player turns)
+3.  Circular buffers
+4.  Repeating playlists
+5.  Task scheduling
+
+#### Key Characteristics
+
+1.  No NULL at the end
+2.  Last node points to first
+3.  Can traverse entire list from any node
+4.  Any node can be a starting point
+5.  Useful for repeated cycles
