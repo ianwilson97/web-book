@@ -93,6 +93,10 @@ flowchart TD
 ### Stacks
 ![Stack](https://i.postimg.cc/Zq8wQjj0/temp-Imageq-Xcc-Jw.avif)
 
+<div style="display: flex; justify-content: center;">
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/KcT3aVgrrpU?si=bcrCiMJAuykzceq7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 A stack is one of the most fundamental data structures in computer science. It follows the Last-In-First-Out (LIFO) principle, meaning the last element added is the first one to be removed.
 
 #### Basic Operations
@@ -178,6 +182,10 @@ class Stack:
 ### Queues
 
 ![Queues](https://i.postimg.cc/DZBKb1Wp/temp-Image-Er-OH4-J.avif)
+
+<div style="display: flex; justify-content: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/D6gu-_tmEpQ?si=UZFBtkjZXdswp2ks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 A queue is a fundamental data structure that follows the First-In-First-Out (FIFO) principle, meaning the first element added is the first one to be removed. Think of it like a line of people waiting - the first person to join the line is the first to be served.
 
@@ -270,6 +278,10 @@ class Queue:
 ### Singly Linked List
 
 ![Singly Linked List](https://i.postimg.cc/Bt9x0PqN/temp-Imager77kla.avif)
+
+<div style="display: flex; justify-content: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/F8AbOfQwl1c?si=ZXkTrotmWRRIK1rv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 A singly linked list works like a chain, where each link (node) points to the next link. Think of it as a train where each car (node) is connected to the next car in line. Let me explain each key operation in simple terms.
 
